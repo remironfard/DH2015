@@ -1,0 +1,1 @@
+Joint paper for the [Digital Heritage 2015](http://www.digitalheritage2015.org/) conference by the [Spectacle en ligne(s)](http://spectacleenlignes.fr/) project consortium.
