@@ -73,8 +73,9 @@
 
 \usepackage[francais,english]{babel}
 \usepackage{aeguill}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc} %% For ISO-latin1 chars
+%\usepackage[latin1]{inputenc} %% For ISO-latin1 chars
                                 %% (accented letters).
 \usepackage{txfonts}
 
@@ -349,6 +350,9 @@
 % (Unless specifically asked to do so by the journal or conference you plan
 % to submit to, of course. )
 
+% todo macro
+\usepackage{color}
+\newcommand{\todo}[1]{\noindent\textcolor{red}{{\bf \{ToDo} #1{\bf \}}}}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -371,7 +375,7 @@ University of Grenoble, France\\
 Email: remi.ronfard@inria.fr}
 \and
 \IEEEauthorblockN{Benoit Encelle\\ Pierre-Antoine Champin\\ Thomas Steiner}
-\IEEEauthorblockA{Université Claude Bernard\\
+\IEEEauthorblockA{UniversitÃ© Claude Bernard\\
 Lyon, France\\
 Email: xxx}
 \and
@@ -451,18 +455,18 @@ Component, formatting, style, styling, insert.
 %%%%%%%%%%%%%%%%
 \section{Introduction}
 
-0.5 pages (Rémi) 
+\todo{0.5 pages (RÃ©mi)}
 
-Within the world of theatre the rehearsal room is a sacred space -- the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a place into which the public is often, if ever, invited. Until now. (reproduced from the liner notes to "in the company of actors"). This paper describes the result of a two-year project dedicated to the creation of a digital archive  of  the complete  rehearsals of a theatre production at Theatre de Lyon Célestins.
+Within the world of theatre the rehearsal room is a sacred space -- the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a place into which the public is often, if ever, invited. Until now. (reproduced from the liner notes to "in the company of actors"). This paper describes the result of a two-year project dedicated to the creation of a digital archive  of  the complete  rehearsals of a theatre production at Theatre de Lyon CÃ©lestins.
 
 Spectacle en ligne : complete workflow for a natively digital archive from capture to editorialization
-(captation/annotation/enrichissement/publication/éditorialisation)
+(captation/annotation/enrichissement/publication/Ã©ditorialisation)
 
 In 1966, Jean-Luc Godard remarked : {\em Why do theatre people never film their performances to keep  them as an archive ? This would be very simple : put the camera in the middle of the orchestra seats with a medium lens -  not  a zoom lens, because it would already be making choices and propose an interpretation} \cite{Godard66}.
 
 The objective of the Spectacle-En-Ligne(s) research project was to develop novel intuitive and interactive software tools to make it easier to 
 create and publish annotated video archives of theatre performance and rehearsals. As a case study, the project is releasing an archive of 
-the complete rehearsals of a French translation and adaptation of "Cat on a hot tin roof" by Tenessee Williams at the Theatre de Lyon Célestins
+the complete rehearsals of a French translation and adaptation of "Cat on a hot tin roof" by Tenessee Williams at the Theatre de Lyon CÃ©lestins
 in 2012. 
 
 The French title of the project refers to the multiple timelines at work in this archive   - the timeline of the production from the first readings to the opening night, and the storyline of the play. The title also refers to the important problems associated with putting such an archive "on-line" on the theatre's web site.
@@ -471,7 +475,7 @@ Paragraph on legal aspects ?
 
 Paragraph on motivations and audiences ? 
 
-Paragraph on technical achèvements of the project ?
+Paragraph on technical achÃ¨vements of the project ?
 
 The paper is organized as follows. Section 1 reviews previous work in using video as an archive for theatre. Section 2 describes
 context of theatre rehearsals and introduces the key concepts that govern the archive. Section 3 describes the workflow that was
@@ -482,7 +486,7 @@ to support access to the archive by different audiences. Section 5 reviews the l
 
 %%%%%%%%%%%%%%%%
 \section{State of the art}
-STATE OF THE ART IN THEATRE, COMPUTERS AND VIDEO (1 page - Rémi)
+STATE OF THE ART IN THEATRE, COMPUTERS AND VIDEO (1 page - RÃ©mi)
 
 Why record rehearsals ?
 Why index them ?
@@ -497,7 +501,7 @@ Not much work dedicated to document the mise-en-scene.
 Mention the Brecht archives, the Stanislavsky archives.
 
 [Regarder l'annexe technique du projet]
-[+ présentation REMI à la FFIRT ?]
+[+ prÃ©sentation REMI Ã  la FFIRT ?]
 
 Archiving the recordings of theatre performances is important for preserving  cultural heritage. 
 Yet, it is not yet a common or systematic practice, and theatre remains known as {\em the ephemeral art} \cite{}.
@@ -613,11 +617,37 @@ of the same scene temporally using the common play-script as a pivot representat
 
 \paragraph*{Hypervideo and interactive documentaries}
 
+The term \emph{hypervideo} is commonly used to refer to
+\textit{``a~displayed video stream that contains embedded user-clickable anchors''}%
+~\cite{sawhney1996hypercafe,smith2002extensible}
+and annotations, allowing for navigation between the video and other hypermedia elements.
+In a~2006 article in \emph{The Economist}, the authors write 
+\textit{``[h]yperlinking video involves the use of ``object-tracking'' software
+to make filmed objects, such as cars, clickable as they move around.
+Viewers can then click on items of interest in a~video
+to watch a~related clip; after it has played,
+the original video resumes where it left off.
+To inform viewers that a~video is hyperlinked,
+editors can add highlights to moving images, use beeps as audible cues,
+or display still images from hyperlinked videos
+next to the clip that is currently playing''}~\cite{economist2006hypervideo}.
+In standard literature, hypervideo is considered a~logical consequence
+of the related concept of \emph{hypertext}~\cite{bernerslee1990hypertext}.
+In contrast to hypertext, hypervideo necessarily includes a~time component,
+as content changes over time.
+In consequence, hypervideo has other technical and aesthetic requirements
+than hypertext, the most obvious one being appropriate segmentation in scenes
+or even objects.
+The opportunities for feature-rich semantic hypervideos are endless,
+only limited by feasibility and ease of their creation.
+In this paper, we share our approach to affordably and practically document
+the creation of theater and opera productions with video and Web technologies.
+
 
 %%%%%%%%%%%%%%%%
 \section{The rehearsal process}
 % CONTEXTE DE L'ARCHIVE (1 page - Nicolas)
-% "du terrain à la donnée" : ce qui nous a amené à structurer les données de cette façon
+% "du terrain Ã  la donnÃ©e" : ce qui nous a amenÃ© Ã  structurer les donnÃ©es de cette faÃ§on
 % description des besoins
 
 % Actors and participants:  Theatre rehearsals involve many actors and participants, not limited to actors in the play.
@@ -627,12 +657,12 @@ of the same scene temporally using the common play-script as a pivot representat
 % Performancess
 
 % Discussions
-The project aimed at compiling a video corpus and a fine and precise description of the rehearsals. The corpus and the descriptions relies strongly on the chosen fields of study (terrain d'études), i.e. in our case the play and the opera themselves, but more importantly the methodologies of the creative crew.
+The project aimed at compiling a video corpus and a fine and precise description of the rehearsals. The corpus and the descriptions relies strongly on the chosen fields of study (terrain d'Ã©tudes), i.e. in our case the play and the opera themselves, but more importantly the methodologies of the creative crew.
 
 \subsection{Play and opera (experimental fields)}
 
-Our field is based on the rehearsals of two performing show : *Chatte sur un toit brûlant* [reference] and *Elena* [reference].
-Each of these shows were rehearsed during the spring and the summer of 2013, on a period of 6 and 7 weeks respectively. The project was about documenting the entire rehearsal process, from the first *lecture à la table* where actors read the script together for the first time, to the *general*, which is supposed to end the directing work and finish the rehearsals.
+Our field is based on the rehearsals of two performing show : *Chatte sur un toit brÃ»lant* [reference] and *Elena* [reference].
+Each of these shows were rehearsed during the spring and the summer of 2013, on a period of 6 and 7 weeks respectively. The project was about documenting the entire rehearsal process, from the first *lecture Ã  la table* where actors read the script together for the first time, to the *general*, which is supposed to end the directing work and finish the rehearsals.
 However, the nature of the creative work diverges considerably from the mise en scene of a modern play to a ancient and obscure baroque opera, musically updated with a consequent adaptation work.
 Those aspects motivated us to conceive a generic system that could be deployed for other contexts.
 
@@ -655,20 +685,20 @@ Usual categories coming from the fields of theatre and opera were integrated to 
 
 %%%%%%%%%%%%%%%%
 \section{The rehearsal archive : complete workflow of construction and publication process}
- (2,5 pages)
+\todo{(2,5 pages)}
 
 This part redraws the workflow that enabled the construction and the publication of the video archive.
 
 
 \subsection{Video recording}  (nicolas)
 %Non intrusive, push-button, integral, full HD, sound
-In the context described previously, the video recording required a non-intrusive and easy set-up for non-technician operator. Indeed, its profile must belongs to dramaturgy and performing art, in order to dedicate its attention to performance and directing description. Therefore, the apparatus was designed to be fully plug&play with a single record button to start a capture session.
+In the context described previously, the video recording required a non-intrusive and easy set-up for non-technician operator. Indeed, its profile must belongs to dramaturgy and performing art, in order to dedicate its attention to performance and directing description. Therefore, the apparatus was designed to be fully plug\&play with a single record button to start a capture session.
 The collected corpus embraces the integrality of the rehearsals, from the "text walk-through" at the table to the final dress rehearsal, with about five to seven working hours a day, which make five to seven hours of recorded and indexed video every day.
 The unit for video recording and indexing is composed typically of a PC laptop, connected to a video camera on tripod and remotely controlled from the PC, of a omnidirectional microphone as input of a small sound mixing table, itself linked to the laptop. This system can be easily set and wrap-up, movable and unburdensome in a studio room. Running on a dedicated Linux distribution, the unit runs and displays only one software : an interface through which the operator can 1) remotely control the camera, 2) take notes synchronously. 
 The technical specifications of the original video files are the format mkv, the codec H264, and the resolution of 1920w1080 pixels (full HD).
 
 \subsection{Annotation}
-Simultaneously of the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The datas produced during this annotation process are encoded into xml format according to the data model Cinélab [footnote] described further, and which guaranties the synchronization of the annotations with the video stream. 
+Simultaneously of the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The datas produced during this annotation process are encoded into xml format according to the data model CinÃ©lab [footnote] described further, and which guaranties the synchronization of the annotations with the video stream. 
 Annotating the rehearsal relied on two main tasks : 1) description and 2) interpretation. The description consisted on indexing the context of the moment (performing or discussing, text lines, with or without costumes, etc.), whereas the interpretations targeted the dramaturgy and the performing themselves, with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 Different categories emerged for theatre and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
 
@@ -747,7 +777,8 @@ Important : au service d'un digital heritage, implication de l'open data pour le
 
 
 %%%%%%%%%%%%%%%%
-\section{Archive Valorisation Scenarios}  (1,5 pages)
+\section{Archive Valorisation Scenarios}
+\todo{(1,5 pages)}
 
 \subsection{Visualization and browsing strategies}
 
@@ -794,7 +825,8 @@ We can use Pascal Bouchez evaluation grids to assess the quality of the dataset 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Limitations and Future  Work} (0.25 pages)
+\section{Limitations and Future  Work}
+\todo{(0.25 pages)}
 
 Reframing and play text alignment is experimental and needs to be further validated and automated.
 
@@ -815,7 +847,8 @@ Future work is needed for assigning the virtual cameras automatically.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusion}  (0.25 pages)
+\section{Conclusion}
+\todo{(0.25 pages)}
 
 Our technology is non intrusive and well accepted by the production team
 
