@@ -365,20 +365,14 @@
 % use a multiple column layout for up to three different
 % affiliations
 \author{
-\IEEEauthorblockN{Remi Ronfard}
-\IEEEauthorblockA{INRIA, LJK, University of Grenoble, France\\
+\IEEEauthorblockN{Remi Ronfard\\ Vineet Gandhi}
+\IEEEauthorblockA{INRIA, LJK\\
+University of Grenoble, France\\
 Email: remi.ronfard@inria.fr}
 \and
-\IEEEauthorblockN{Benoit Encelle}
-\IEEEauthorblockA{LIRIS, University of Lyon, France\\
-Email: xxx}
-\and
-\IEEEauthorblockN{Pierre-Antoine Champin}
-\IEEEauthorblockA{LIRIS, University of Lyon, France\\
-Email: xxx}
-\and
-\IEEEauthorblockN{Thomas Steiner}
-\IEEEauthorblockA{LIRIS, University of Lyon, France\\
+\IEEEauthorblockN{Benoit Encelle\\ Pierre-Antoine Champin\\ Thomas Steiner}
+\IEEEauthorblockA{Université Claude Bernard\\
+Lyon, France\\
 Email: xxx}
 \and
 \IEEEauthorblockN{Nicolas Sauret}
@@ -459,11 +453,32 @@ Component, formatting, style, styling, insert.
 
 0.5 pages (Rémi) 
 
-This paper describes the result of a two-year project dedicated to the creation of a digital archive 
-of  the complete  rehearsals of a theatre production at Theatre de Lyon Célestins.
+Within the world of theatre the rehearsal room is a sacred space -- the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a place into which the public is often, if ever, invited. Until now. (reproduced from the liner notes to "in the company of actors"). This paper describes the result of a two-year project dedicated to the creation of a digital archive  of  the complete  rehearsals of a theatre production at Theatre de Lyon Célestins.
 
 Spectacle en ligne : complete workflow for a natively digital archive from capture to editorialization
 (captation/annotation/enrichissement/publication/éditorialisation)
+
+In 1966, Jean-Luc Godard remarked : {\em Why do theatre people never film their performances to keep  them as an archive ? This would be very simple : put the camera in the middle of the orchestra seats with a medium lens -  not  a zoom lens, because it would already be making choices and propose an interpretation} \cite{Godard66}.
+
+The objective of the Spectacle-En-Ligne(s) research project was to develop novel intuitive and interactive software tools to make it easier to 
+create and publish annotated video archives of theatre performance and rehearsals. As a case study, the project is releasing an archive of 
+the complete rehearsals of a French translation and adaptation of "Cat on a hot tin roof" by Tenessee Williams at the Theatre de Lyon Célestins
+in 2012. 
+
+The French title of the project refers to the multiple timelines at work in this archive   - the timeline of the production from the first readings to the opening night, and the storyline of the play. The title also refers to the important problems associated with putting such an archive "on-line" on the theatre's web site.
+
+Paragraph on legal aspects ? 
+
+Paragraph on motivations and audiences ? 
+
+Paragraph on technical achèvements of the project ?
+
+The paper is organized as follows. Section 1 reviews previous work in using video as an archive for theatre. Section 2 describes
+context of theatre rehearsals and introduces the key concepts that govern the archive. Section 3 describes the workflow that was
+created to produce, annotate and publish the archive. Section 4 describes usage scenarios and applications that were developed
+to support access to the archive by different audiences. Section 5 reviews the limitations and future work.
+
+
 
 %%%%%%%%%%%%%%%%
 \section{State of the art}
@@ -473,14 +488,131 @@ Why record rehearsals ?
 Why index them ?
 Who are the targeted audiences ? Professors, researchers, students, and amateurs
 We can use Pascal Bouchez evaluation grids to assess the quality of the dataset ?
-Our common goal is to show ?theatre at work?
+Our common goal is to show theatre at work?
 
-Not much work dedicated to document the rehearsal pro- cess.
+Not much work dedicated to document the rehearsal process.
+
 Not much work dedicated to document the mise-en-scene.
+
 Mention the Brecht archives, the Stanislavsky archives.
 
 [Regarder l'annexe technique du projet]
 [+ présentation REMI à la FFIRT ?]
+
+Archiving the recordings of theatre performances is important for preserving  cultural heritage. 
+Yet, it is not yet a common or systematic practice, and theatre remains known as {\em the ephemeral art} \cite{}.
+This is likely to change in the near future, as high-quality video recordings are becoming more widely
+available to theatres.   Many organizations around the world now actively produce and
+archive video recordings of theatre performances. The Theatre on Film and Tape Archive
+(TOFT) provides research access to video recordings of New York and regional theatre productions
+since 1970 and the collection now amounts to 7469 titles with a total of 20,000 items. 
+The National Video Archive of Performance (NVAP) at Victoria and Albert Museum London
+provides research access to video recordings of numerous renowned theatre performances produced
+across England since 1992. 
+
+Another relevant case study  is the successful ventures providing recorded
+theatre performances on the web. Recently launched companies like Digital Theater, use their
+own equipment to record theatre productions, then sell them for far less than the cost of an
+actual theatre ticket to watch online, but from the best spot possible. The website1 of French
+National Institute of Audiovisual (INA) also allows viewers to download recorded theatre plays
+at considerably low prices. You can watch the trailers of theatre performances just like movies
+on variety of devices and then download the entire play if it is of your interest. The web platforms
+have also allowed for free form experimentation with recorded sequences, which is not
+so convenient on actual TV or Cinema. For example, FranceTV channel in 2013 uploaded a
+webpage2 showing 5 different versions of the same play ?Theatre sans animaux?, showing both
+how a theatre play develops in different stages and how it can be presented to the audience in
+different styles. The web platform has also allowed several theatres to share the extracts and
+trailers of upcoming performances for publicity purposes. Importantly, web based platforms
+allow even the small production companies or individuals to easily share the recorded content
+with the desired audience.
+
+In this paper, we describe our effort to make video recordings of the complete rehearsals,
+rather than a single performance, of a theatre play and publishing it on-line. This raises original
+and interesting scientific, technological and social questions.
+
+It is a difficult task to create recorded performances to match up to the live experience
+of watching a play. When you watch a stage play you generally only get to observe the actions 
+of the performers from one static viewpoint ? your seat. But if one was to watch a recorded 
+performance from a static viewpoint covering the entire action, it could become monotonous 
+to hold the interest of the viewer. Recordings from a single static viewpoint may also fail to 
+highlight important details in the scene. Even with these limitations and inability to create a nice 
+viewing experience, this approach is still commonly practiced in small scale productions due to 
+its convenience, requiring just an single static camera covering the entire stage. 
+
+
+On the other hand, television broadcasts of theatre typically use a large variety of viewpoints, which are edited together
+in post-production or live \cite{Bouchez07}. One extreme example is John Gielgud?s 
+Hamlet starring Richard Burton in 1964, which used  the now-defunct Electronovision system of 19 cameras. 
+One problem with the multiple-camera, multiple takes technique used by television broadcasters 
+is that it is costly and time-consuming to produce; and it generates huge volumes of data, which are 
+difficult to organize into an accessible and usable archive. Or more frequently, they are just ignored
+and only the edited version is kept as an archive. Which brings us back to Godard's citation. How can we create 
+an archive which is  more than an interpretation made by a television director ? and which is more than a video surveillance 
+recording of the theatre stage ? 
+
+Our approach in this paper is to make video recordings from a single viewpoint (the director's seat) with the highest possible
+video resolution, and to augment them with detailed, high-level  annotations that make it possible to quicky  search, browse
+and even re-edit the archive interactively. 
+
+
+SHOW IMAGE OF THE CAMERA AND ROOM ?
+
+What we lose is the variety of viewpoints, which is typical of television broadcasts. What we gain, is the ability to compare
+different versions, measure progress and understand the rehearsal process by the virtue of having a single spatial reference.
+We also experimented with novel techniques for varying the framings and shot sizes interactively 
+by making use of a {\em virtual}  zoom lens \cite{Gandhi14}, which makes it possible for the audience to
+use the archive as {\em stock footage} which they can re-frame and re-edit according to their own interpretation (this is described in Section 5). 
+
+
+\paragraph*{Video and theatre}
+
+The analysis of performance requires a working knowledge of semiotics, reception studies and theories 
+of ideology, gender, corporeality, space and ethnicity in addition to experience of the art form in question \cite{Auslander97, Counsell01}.
+
+Audio and video recordings are useful resources for studying audio and visual interaction between actors \cite{Fitzpatrick90}
+and of course in the field of rehearsal studies \cite{McAuley98a,McAuley98b,McAuley06,McAuley08}.
+
+Yet, in practice, research have limited access to performances and must often refer to their own memories of the production or the rehearsals
+\cite{Selbourne82,Sher85,Stafford00,Stern00}. A notable exception is {\em In the company of actors}, a documentary featuring an ensemble Australian actors, as they prepare to perform the Sydney Theatre Company's production of Hedda Gabler, with Cate Blanchett in the title role, at the prestigious Brooklyn Academy of Music  in New York \cite{Darling07}. But even in that case, only an edited version (an interpretation)  of the rehearsals is made available to the public. 
+
+
+
+Other exceptions : Ariane Mnouchkine, John Gelgud.
+
+
+
+\paragraph*{Audio and video processing}
+A useful feature for a large video archive is the capability to retrieve video segments based on which actors 
+are performing, and which segment of the play-script they are performing. The topics of actor \cite{Hilton06} and speaker 
+\cite{Miro12} recognition are very active in the audio and video processing research communities, but very little academic 
+work has been dedicated to the special case of theatre. The theatre stage is a complex and cluttered environment 
+with complex lighting and vast dimensions, which make automatic audio and video processing quite challenging. 
+Swedbeerg describes a system for localizing actors on a stage using RFID sensors carried by the actors \cite{Swedberg}
+but their system is intrusive and costly, which severely limits its usefulness in practice.
+
+A common approach in computer vision for detecting and recognizing people uses generic people detectors \cite{Ronfard02,
+Dalal05,Felzenszwalb10,Andriluka12} followed by re-identification \cite{TapaswiBS12}. Gandhi and Ronfard have evaluated 
+that approach in the special cases of detecting and naming actors in films and on stage \cite{Gandhi13} and found that such 
+approaches miss the actors in 40 \% of the cases on average. As an alternative, they have proposed
+methods for separately learning appearance models of actors and detecting them in parallel, and showed that the number
+of missed actors (false negatives) drops to 20 \% on average. We used their method in Spectacle-En-Lignes for localizing
+actors in selected scenes of the archive.
+
+One approach to indexing of theatre rehearsals and performances is to automatically align
+them to the play-script. The {\em script-sync} feature in Avid Media Composer,
+an off-the-shelf tool to align video recordings with their scripts word-by-word. Such systems
+are based on hidden markov models (HMM) and work by computing  a forced alignment 
+between the play-script and the audio recording. Nevertheless they require a very high quality 
+sound recording and fail in the presence of music, reverberation and background noise. This makes them
+unsuitable to our case. Speaker change detection (also called speaker diarization) is an alternative method
+which provides line-by-line, rather than word-by word alignements and has been demonstrated 
+on television shows~\cite{Sankar09} and theatre recordings \cite{Caillet07,Caillet13}. In Section 5,
+we described a special-purpose  speaker diarization method  that we developed  for aligning multiple versions 
+of the same scene temporally using the common play-script as a pivot representation.
+
+
+\paragraph*{Hypervideo and interactive documentaries}
+
 
 %%%%%%%%%%%%%%%%
 \section{The rehearsal process}
@@ -518,6 +650,9 @@ Usual categories coming from the fields of theatre and opera were integrated to 
 
 \subsection{Text and partition reference}
 [...]
+
+
+
 %%%%%%%%%%%%%%%%
 \section{The rehearsal archive : complete workflow of construction and publication process}
  (2,5 pages)
@@ -548,22 +683,67 @@ The result of this synchronous annotation was to augment the video stream with s
 Problem and solution ? Manually done with internal tools
 
 \subsection{Audio and video processing} Remi
-Enrichissement - signal processing [option]
+As an optional step, we use models of  the actor's voices and appearances to detect and recognize them
+in the audio and video modalities. As explained later, this offers additional searching, browsing and editing capabilities
+to our system, at the expense of (widely) increased processing time.
 
-\subsubsection{Learning actor?s voices and appearances}
+\subsubsection{Learning actor  voices and appearances}
+We use the ALIZE system for learning statistical models of each actor's voice \cite{Bonastre05}  from one example per actor.
+Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel,
+we use the generative model of Gandhi and Ronfard \cite{Gandhi13} for learning statistical models of each actor's visual appearance, 
+using example images from at least 8 viewpoints . Examples are typically extracted from the first dress rehearsal,
+as our appearance model is dependent on costume.  Those models can then be used to automatically align
+each performance with the play-script and to localize actors on stage and on screen. 
+
 \subsubsection{Alignment between play-script and performances}
-\subsubsection{Actor tracking} 
-\subsubsection{Generation of annotated, cinematographic rushes}
+
+Based on an off-the-shelf speaker recognition toolkit, we built a play-script following algorithm where rehearsals 
+are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play-script is a state 
+in a semi-Markov model with a duration probably and a speaker voice probability. In our experiments, this methods
+outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
+
+%\begin{figure}[tp]
+%\centering
+% \includegraphics[width=\columnwidth]{diarizationT.png}
+%\caption{In the speaker diarization phase, we learn a model of each actor's voice.
+%They are used as observation probabilities in our Semi-Markov model of the rehearsals.}
+%\label{fig_diarization}
+%\end{figure}
+
+
+\subsubsection{Actor detection and recognition} 
+
+Based on their appearance model, we separately detect all actors present on stage. The qualitative results on this sequence 
+are presented in Fig.~\ref{fig_tracking_coahtr}. This example is particularly challenging  because of the fast displacements 
+of the actors and the frequent occlusions between actors. 
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\columnwidth]{tracking_coahtr}
+\caption{Tracking of  the six characters of sequence $\mathcal{S}_4$. Using actors specific detections gives 
+an additional advantage in resolving multiple actor tracking.}
+\label{fig_tracking_coahtr}
+\end{figure}
+
+Despite the challenging environment, our method provides very good results for the tracking of the six actors, where generic state-of -the-art tracking methods quickly drifted away from the target  and were unstable both in presence of occlusion and fast movements. 
+
+
+%\cite{Nummiaro2002,Ross2008}  \cite{Kwon2010,Babenko2009} also drifted away with heavy occlusions.  \cite{Wang2011} failed because of large appearence changes and occlusions. Only our algorithm maintains its performance in this challenging example.
+
+
 
 \subsection{Applicative plateforme for data exposure}
 Ligne de temps (nicolas , PA)
 
 \subsubsection{Ingest}
+
 \subsubsection{Search engine}
+
 \subsubsection{Metadata player}
 
 \subsection{Linked Open Data  publication}
 Important : au service d'un digital heritage, implication de l'open data pour le patrimoine. (PA)
+
 
 
 %%%%%%%%%%%%%%%%
@@ -571,14 +751,39 @@ Important : au service d'un digital heritage, implication de l'open data pour le
 
 \subsection{Visualization and browsing strategies}
 
+
 \subsection{Demonstrator for Brick and Maggie scene}
-Describe fine-grained browsing interfaces allowing to quickly review all rehearsals for a scene or a line
+For some selected scenes, we offer a fine-grained browsing interface allowing to zoom both temporally and spatially
+thought the archive, by making use of the audio and video processing described in Section 4.  
+
+\subsubsection{Temporal zoom}
+
+\subsubsection{Spatial zoom}
+The source video  is recorded from a distant viewpoint  to provide  a general  view of the stage.  None of what occurs in the stage is missing but the video is not pleasant to watch.  The theater performances are often edited like a movie to be more attractive.   It is easy to more precisely annotate the script of the play with some simple information as who speak to whom. With our method, we can temporally match the script to the video.  The positions of the characters in the frames are given by our tracking algorithm.  From there, by referring to usual editing rules, we can realize an automatic editing of the performance (Fig.~\ref{fig_speaker}) using methods described elsewhere \cite{Gandhi14}.  For example, during a monologue we realize an medium-shot of the speaker and during a dialogue we realize a two-shot that contains the speaker and his adresse. This greatly improves the visibility of the main actors, and makes it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
+
+\begin{figure*}[tp]
+\centering
+\includegraphics[width=\textwidth]{speakers2}
+\caption{Reframing of the videos at the speaker and the interlocutor levels. Audio-to-text alignment temporally localizes the cues and the actors tracking spatially localizes the characters on the frames. 
+This figure displays the automatic reframing process obtained for several frames on the sequence $\mathcal{S}_4$. The arrows go from the speaker to the interlocutor.}
+\label{fig_speaker}
+\end{figure*}
+
+
+Future work is needed to fully evaluate this feature. We were inspired by the zoom-lens model of consciousness \cite{Eriksen86}, 
+which proposes  that human perception  may in fact compose a movie from all available visual  stimuli  ; and by the theory 
+of spectatorship, which surveys the audience's visuo-motor behavior  during a performance \cite{Bennett97}.   
+
+
+
+
 
 \subsection{Mobile app} If space permits !
 
 Maquettes ?
 
 Not sure that this is relevant here !
+
 
 \subsection{Experimental validation}
 The recordings have been evaluated subjectively by the actors, the director and her assistants ?
@@ -606,6 +811,8 @@ More work is needed to extrapolate to other performances - concert, opera, balle
 Graphical annotations would be useful.
 
 Future work is needed for assigning the virtual cameras automatically.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}  (0.25 pages)
@@ -638,7 +845,7 @@ The authors would like to thank...
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
 % references section
-\nocite{*}
+%\nocite{*}
 
 
 % can use a bibliography generated by BibTeX as a .bbl file
