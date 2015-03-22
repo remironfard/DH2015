@@ -468,10 +468,10 @@ In 1966, Jean-Luc Godard remarked: {\em ``Why do theater people never film their
 
 The objective of the \emph{Spectacle en Ligne(s)} research project was to develop novel intuitive and interactive software tools to make it easier to 
 create and publish annotated video archives of theater performance and rehearsals. As a case study, the project is releasing an archive of 
-the complete rehearsals of a French translation and adaptation of \emph{Cat on a hot tin roof} by Tenessee Williams at the theater de Lyon Célestins
+the complete rehearsals of a French translation and adaptation of \emph{Cat on a hot tin roof} by Tennessee Williams at the theater de Lyon Célestins
 in 2012. 
 
-The French title of the project refers to the multiple timelines at work in this archive---the timeline of the production from the first readings to the opening night, and the storyline of the play. The title also refers to the important problems associated with putting such an archive ``on-line'' on the theater's Website.
+The French title of the project refers to the multiple timelines at work in this archive---the timeline of the production from the first readings to the opening night, and the storyline of the play. The title also refers to the important problems associated with putting such an archive ``online'' on the theater's website.
 
 \todo{Paragraph on legal aspects?} 
 
@@ -511,7 +511,7 @@ This is likely to change in the near future, as high-quality video recordings ar
 available to theaters.   Many organizations around the world now actively produce and
 archive video recordings of theater performances. The theater on Film and Tape Archive
 (TOFT) provides research access to video recordings of New York and regional theater productions
-since 1970 and the collection now amounts to 7469 titles with a total of 20,000 items. 
+since 1970 and the collection now amounts to 7,469 titles with a total of 20,000 items. 
 The National Video Archive of Performance (NVAP) at Victoria and Albert Museum London
 provides research access to video recordings of numerous renowned theater performances produced
 across England since 1992. 
@@ -533,7 +533,7 @@ allow even the small production companies or individuals to easily share the rec
 with the desired audience.
 
 In this paper, we describe our effort to create video recordings of the complete rehearsals,
-rather than a single performance, of a theater play and publishing it on-line. This raises original
+rather than a single performance, of a theater play and publishing it online. This raises original
 and interesting scientific, technological, and social questions.
 
 It is a difficult task to create recorded performances to match up to the live experience
@@ -560,7 +560,7 @@ video resolution and to augment them with detailed, high-level  annotations that
 and even re-edit the archive interactively. 
 
 
-SHOW IMAGE OF THE CAMERA AND ROOM ?
+\todo{Show image of the camera and room?}
 
 What we lose is the variety of viewpoints, which is typical for television broadcasts. What we gain is the ability to compare
 different versions, measure progress, and understand the rehearsal process by the virtue of having a single spatial reference.
@@ -661,7 +661,7 @@ The project aimed at compiling a video corpus and a fine and precise description
 
 \subsection{Play and opera (experimental fields)}
 
-Our field is based on the rehearsals of two performing shows: \emph{Chatte sur un toit brulant} \todo{reference} and \emph{Elena} \todo{reference}.
+Our field is based on the rehearsals of two performing shows: \emph{Chatte sur un toit brûlant} \todo{reference} and \emph{Elena} \todo{reference}.
 Each of these shows were rehearsed during the spring and the summer of 2013, in a period of six and seven weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{lecture à la table} where actors read the script together for the first time, to the \emph{general}, which is supposed to end the directing work and finish the rehearsals.
 However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a modern play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work.
 Those aspects motivated us to conceive a generic system that could be deployed for other contexts.
@@ -699,6 +699,7 @@ The unit for video recording and indexing is composed typically of a PC laptop, 
 The technical specifications of the original video files are the format \texttt{.mkv}, the codec H264, and the resolution of $1920 \times 1080$ pixels (full HD).
 
 \subsection{Annotation}
+
 Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process is encoded into an XML format according to the data model Cinélab \todo{add citation} described in more detail further on in the text, and which guarantees the synchronization of the annotations with the video stream. 
 Annotating the rehearsal relied on two main tasks: \emph{(i)} description and \emph{(ii)} interpretation. The description consisted of indexing the context of the moment (performing or discussing, text lines, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves, with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
@@ -711,6 +712,10 @@ The result of this synchronous annotation was to augment the video stream with s
 
 \subsubsection{Data models}
 \todo{BE reprise élément livrable modèle de connaissance pour les répétitions théâtrales (diag. UML+description), cf. livrable}
+Figure X \todo{add figure} describes the annotation model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation.\todo{BE footnote avec lien vers workshop ? (en francais...)}. This model focused on annotations that have to be created in realtime, \emph{i.e. }, during the rehearsal.
+A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation. A session annotation is made up of chapters that represent performance or discussion times. A chapter contain contextual data about this performance/discussion time (\emph{i.e.}, with or without costumes, lights, sets, and musical inserts) and references concerned part of the work.
+
+
 
 \subsection{Data conformation}
 
