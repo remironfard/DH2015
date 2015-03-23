@@ -366,30 +366,6 @@
 % can use linebreaks \\ within to get better formatting as desired
 \title{Video Recording and Indexing of Theater Rehearsals}
 
-
-% author names and affiliations
-% use a multiple column layout for up to three different
-% affiliations
-%\author{
-%\IEEEauthorblockN{Rémi Ronfard\\ Vineet Gandhi}
-%\IEEEauthorblockA{INRIA, LJK\\
-%University of Grenoble, France\\
-%Email: remi.ronfard@inria.fr}
-%\and
-%\IEEEauthorblockN{Benoit Encelle\\ Pierre-Antoine Champin\\ Thomas Steiner}
-%\IEEEauthorblockA{Université Claude Bernard Lyon~1, France\\
-%Email: benoit.encelle@univ-lyon1.fr\\
-%Email: \{pierre-antoine.champin, tsteiner\}@liris.cnrs.fr}
-%\and
-%\IEEEauthorblockN{Nicolas Sauret}
-%\IEEEauthorblockA{IRI, France\\
-%Email: nicolas.sauret@iri.centrepompidou.fr}
-%\and
-%\IEEEauthorblockN{Cyrille Migniot}
-%\IEEEauthorblockA{University of Burgundy, France\\
-%Email: xxx}
-%}
-
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
 % the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
@@ -409,16 +385,12 @@ Email: benoit.encelle@univ-lyon1.fr, \{pierre-antoine.champin, tsteiner\}@liris.
 \IEEEauthorblockA{\IEEEauthorrefmark{3} IRI, France.
 Email: nicolas.sauret@iri.centrepompidou.fr}
 \IEEEauthorblockA{\IEEEauthorrefmark{4} University of Burgundy, France.
-Email: xxx}
+Email: cyrille.migniot@u-bourgogne.fr}
 }
-
-
 
 
 % use for special paper notices
 %\IEEEspecialpapernotice{(Invited Paper)}
-
-
 
 
 % make the title area
@@ -690,8 +662,13 @@ Usual categories coming from the fields of theater and opera were integrated to 
 
 \todo{complete workflow of construction and publication process}
 
-Digital heritage projects often focus on digitalization of analogical materials and datas, when other would focus on the usage and the valorisation of digitalized ressources.
-The specificity of our project \todo{to be homogeneised: "our" ?} was the attempt to conceive a natively digital archive from scratch taking into account potential usages of the archive. We built therefore a full chain from the design and the making of the archive to its publication and usage scenarios.
+Digital heritage projects often focus on digitalization of analog materials and data,
+when others would focus on the usage and the valorization of digitalized resources.
+The specificity of our project \todo{to be homogenized: "our" ?}
+was the attempt to conceive a natively digital archive from scratch
+taking into account potential usages of the archive.
+We therefore built a full chain from the design and the making of the archive
+to its publication and usage scenarios.
 This part redraws the workflow that enabled the construction and the publication of the video archive.
 
 \subsection{Video recording}
@@ -797,26 +774,24 @@ we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006l
 They imply that every piece of information is both identify by and accessible at a given URI,
 and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
 The Cinélab data model maps nicely into RDF,
-thanks to additional standards such as Media Fragment URIs~\cite{troncy2012mediafragments}
+thanks to additional standards such as Media Fragments URI~\cite{troncy2012mediafragments}
 that are used to precisely anchor annotations to video temporal fragments.
-Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}
+Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql},
 so building new services on top of our corpus can be achieved with relative ease by reusing standard components.
-Finally, we use the approach proposed by Verborgh \textit{et al.}~\cite{verborgh2014querying}
+Finally, we use the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying}
 in order to make the data highly available while preserving scalability.
 
 But the benefit of Linked Data does not only lie in standardization.
-As it name implies,
+As its name implies,
 the key feature of this approach is to allow linking data across different sources on the Web,
 in order to combine it into otherwise inaccessible information.
 In the context of Digital Heritage,
 this notion is central, as data is often scattered in multiple institutions.
 While Linked Data is already widely used for museums or libraries\footnote{
-See \textit{i.e.} \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}},
-its use with video has emmerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
+See \emph{e.g.}, \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}},
+its use with video has emerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
 and as far as we know,
 has not yet been widely considered for live performance archives.
-
-
 
 
 %%%%%%%%%%%%%%%%
