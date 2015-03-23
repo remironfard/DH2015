@@ -790,7 +790,33 @@ Despite the challenging environment, our method provides very good results for t
 \todo{Write}
 
 \subsection{Linked Open Data  publication}
-\todo{Important : au service d'un digital heritage, implication de l'open data pour le patrimoine. (PA)}
+In order to foster and ease multiple uses of the corpus,
+it is important to make the collected information as accessible as possible.
+For this purpose,
+we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
+They imply that every piece of information is both identify by and accessible at a given URI,
+and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
+The Cinélab data model maps nicely into RDF,
+thanks to additional standards such as Media Fragment URIs~\cite{troncy2012mediafragments}
+that are used to precisely anchor annotations to video temporal fragments.
+Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}
+so building new services on top of our corpus can be achieved with relative ease by reusing standard components.
+Finally, we use the approach proposed by Verborgh \textit{et al.}~\cite{verborgh2014querying}
+in order to make the data highly available while preserving scalability.
+
+But the benefit of Linked Data does not only lie in standardization.
+As it name implies,
+the key feature of this approach is to allow linking data across different sources on the Web,
+in order to combine it into otherwise inaccessible information.
+In the context of Digital Heritage,
+this notion is central, as data is often scattered in multiple institutions.
+While Linked Data is already widely used for museums or libraries\footnote{
+See \textit{i.e.} \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}},
+its use with video has emmerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
+and as far as we know,
+has not yet been widely considered for live performance archives.
+
+
 
 
 %%%%%%%%%%%%%%%%
