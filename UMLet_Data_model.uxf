@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>530</x>
+      <y>300</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>/Work/
+--
+ID: URI
+...
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>410</x>
+      <y>230</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Session
+--
+begin: timestamp
+end: timestamp
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>210</x>
+      <y>220</y>
+      <w>170</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Chapter
+--
+begin: timestamp
+end: timestamp
+type: [performance|discussion]
+comment: text
+--
+costumes: boolean
+costumes_comment: text
+sets: boolean
+sets_comment: text
+lights: boolean
+lights_comment: text
+multimedia: [n/a|yes|no]
+multimedia_comment: text
+music: [n/a|without|piano|orchestra]
+music_comment: text
+--
+service_begin: work-ref?
+service_end: work-ref?  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>420</x>
+      <y>300</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Place
+--
+ID: URI
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>300</y>
+      <w>50</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Character
+--
+ID: URI
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>670</x>
+      <y>240</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Actor
+--
+ID: URI
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>460</x>
+      <y>230</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes>
+    <additional_attributes>30;30;80;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>540</x>
+      <y>230</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Creation
+--
+ID: URI
+...
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>610</x>
+      <y>230</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Casting
+--
+ID: URI
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>550</x>
+      <y>230</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>330</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m1=1
+m2=0..n
+</panel_attributes>
+    <additional_attributes>30;30;220;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>610</x>
+      <y>240</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1= 1</panel_attributes>
+    <additional_attributes>30;60;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>540</x>
+      <y>290</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=1..n
+r2=1..n</panel_attributes>
+    <additional_attributes>90;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>190</y>
+      <w>360</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=0..n
+
+</panel_attributes>
+    <additional_attributes>340;50;340;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>410</x>
+      <y>230</y>
+      <w>50</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2= 1
+
+</panel_attributes>
+    <additional_attributes>30;30;30;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>230</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>390</x>
+      <y>370</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Chapters of a given session
+can not be time-overlapped.
+A session is fully time-covered 
+by a set of time-consecutive chapters.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>360</y>
+      <w>60</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>30;50;40;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>570</x>
+      <y>350</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Moment of interest
+--
+moment: timestamp
+category: text 
+(extensible controlled vocabulary)
+comment: text</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>530</x>
+      <y>240</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1= 1</panel_attributes>
+    <additional_attributes>30;60;30;30</additional_attributes>
+  </element>
+</diagram>

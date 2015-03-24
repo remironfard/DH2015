@@ -679,22 +679,23 @@ The unit for video recording and indexing is composed typically of a PC laptop, 
 The technical specifications of the original video files are the format \texttt{.mkv}, the codec H264, and the resolution of $1920 \times 1080$ pixels (full HD).
 
 \subsection{Annotation}
-\todo{BE Révision subsection à faire pour harmoniser propos NS/BE}
-Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process is encoded into an XML format according to the data model Cinélab \todo{add citation} described in more detail further on in the text, and which guarantees the synchronization of the annotations with the video stream. 
-Annotating the rehearsal relied on two main tasks: \emph{(i)} description and \emph{(ii)} interpretation. The description consisted of indexing the context of the moment (performing or discussing, text lines, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves, with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
+Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the cinelab data model\footnote{Cinelab Data Model - \url{http://liris.cnrs.fr/advene/cinelab/}}.
+Annotating the rehearsal relied on two main tasks:  description and interpretation. The description consisted of indicating the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves - with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
-
 The result of this synchronous annotation was to augment the video stream with semantic metadata, also considered as intra-video index, making the video corpus easily searchable with a proper search engine.
 
-\subsubsection{live performed}
+\subsubsection{Data model} Figure \ref{fig_data_model} describes the main elements of the data model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors) - each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in real-time, i.e. during the rehearsal. \newline
+\textbf{Model description}~A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and a casting). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (i.e. with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (e.g. the act, scene, line numbers corresponding to the beginning/ending of the section of play - \textit{service begin/end}). Chapters also may contain moments of interest (so called categories).
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{UMLet_Data_model}
+\caption{Data model}
+\label{fig_data_model}
+\end{figure}
+\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals captation process for a given work, an operator first fills into the note taking tool some time-stable data : the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session - e.g. contextual data (costumes, sets, etc.) about a given chapter (inherited from a previous one if any).
+%BE on peut pour gagner de la place juste mettre les éléments Session, Chapter, Moment of interest..
 
-\todo{(nicolas)}
-
-\subsubsection{Data models}
-\todo{BE reprise élément livrable modèle de connaissance pour les répétitions théâtrales (diag. UML+description), cf. livrable}
-Figure X \todo{add figure} describes the annotation model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation.\todo{BE footnote avec lien vers workshop ? (en francais...)}. This model focused on annotations that have to be created in realtime, \emph{i.e. }, during the rehearsal.
-A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation. A session annotation is made up of chapters that represent performance or discussion times. A chapter contain contextual data about this performance/discussion time (\emph{i.e.}, with or without costumes, lights, sets, and musical inserts) and references concerned part of the work.
-
+ 
 \subsection{Data conformation}
 
 \todo{(nicolas)}
