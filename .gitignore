@@ -3,5 +3,7 @@
 *.blg
 *.bbl
 *.log
+*.out
 *.pdf
 .texpadtmp/
+*.gz
