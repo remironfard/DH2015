@@ -680,10 +680,8 @@ The technical specifications of the original video files are the format \texttt{
 
 \subsection{Annotation}
 Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}.
-Annotating the rehearsal relied on two main tasks:  description and interpretation. The description consisted of indicating the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves---with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
+Annotating the rehearsal relied on two main tasks: description and interpretation. The description consisted of indicating the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves---with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
-
-\todo{mise en forme tableau}
 
 \begin{table}
 \centering
@@ -719,9 +717,10 @@ The result of this synchronous annotation was to augment the video stream with s
 \subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals caption process for a given work, an operator first fills into the note taking tool some time-stable data: the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session---\emph{e.g.}, contextual data (costumes, sets, \emph{etc.}) about a given chapter (inherited from a previous one if any).
 %BE on peut pour gagner de la place juste mettre les éléments Session, Chapter, Moment of interest..
 
-\subsubsection{Emerged categories}
+\subsubsection{Inherited categories}
+\todo{Emerged categories : je voulais dire, les catégories qui ont émergées lors de l'annotation. Je tente "inherited", est ce que cela convient ? Pas tout à fait clair non plus.}
 
-Each annotation process has revealed a set of categories associated to the interpretation type of annotation, reflecting both the related performing art and the personal point of view of the operator. The tables \todo{to be linked to table figure} present the richness of the annotations and the potential of the archive for further researches in genetic analysis of creative works.
+Each annotation process has revealed a set of categories associated to the interpretation type of annotation, reflecting both the related performing art and the personal point of view of the operator. The tables \ref{table:categories1} and \ref{table:categories2} present the richness of the annotations and the potential of the archive for further researches in genetic analysis of creative works.
 
 \begin{table}
 \centering
@@ -768,7 +767,7 @@ space issue & 6 \\
 \hline 
 \end{tabular}
 \label{table:categories1}
-\caption{Annotation categories and number of occurrences \todo{Better caption}}
+\caption{Annotation categories and number of occurrences for \emph{Chatte sur un toit brulant}}
 \end{table} 
 
 \begin{table}
@@ -839,27 +838,25 @@ working on the text & 104 \\
 \hline 
 \end{tabular} 
 \label{table:categories2}
-\caption{Annotation categories and number of occurrences \todo{Better caption}}
+\caption{Annotation categories and number of occurrences for \emph{Elena}}
 \end{table}  
  
 \subsection{Data conformation}
 
 \todo{(nicolas)}
-\todo{Problem and solution? Manually done with internal tools}
+\todo{@Remi: conformation est un terme anglais. Je l'explicite dans la partie ci-dessous. Je pense que cela sera compréhensible}
 After the rehearsals, we centralized the data on a server for video encoding and annotation metadata confirmation. Due to the tied agenda of the project, the annotation software did not implement a strict certification on data input. Therefore, as a preliminary step before the ingestion of the corpus into the applicative platform, manual cleaning and conforming were executed on the metadata, such as merging similar categories, harmonizing the text reference format, correcting misspellings, \emph{etc.}
 
 \subsection{Audio and video processing}
 As an optional step, we use models of the actors' voices and appearances to detect and recognize them in the audio and video modalities. As explained later, this offers additional searching, browsing, and editing capabilities to our system, at the expense of (widely) increased processing time.
 
-\subsubsection{Learning actor  voices and appearances}
+\subsubsection{Learning actor voices and appearances}
 We use the ALIZE system for learning statistical models of each actor's voice~\cite{Bonastre05}  from one example per actor.
-Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel, we use the generative model of Gandhi and Ronfard~\cite{Gandhi13} for learning statistical models of each actor's visual appearance, using example images from at least eight viewpoints. Examples are typically extracted from the first dress rehearsal, as our appearance model is dependent on costumes.  Those models can then be used to automatically align
-each performance with the play script and to localize actors on stage and on screen. 
+Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel, we use the generative model of Gandhi and Ronfard~\cite{Gandhi13} for learning statistical models of each actor's visual appearance, using example images from at least eight viewpoints. Examples are typically extracted from the first dress rehearsal, as our appearance model is dependent on costumes.  Those models can then be used to automatically align each performance with the play script and to localize actors on stage and on screen. 
 
 \subsubsection{Alignment between play script and performances}
 
-Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state 
-in a semi-Markov model with a duration probably and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
+Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state in a semi-Markov model with a duration probably and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
 
 %\begin{figure}[tp]
 %\centering
@@ -886,11 +883,11 @@ Despite the challenging environment, our method provides very good results for t
 %\cite{Nummiaro2002,Ross2008}  \cite{Kwon2010,Babenko2009} also drifted away with heavy occlusions.  \cite{Wang2011} failed because of large appearance changes and occlusions. Only our algorithm maintains its performance in this challenging example.
 
 
-\subsection{Applicative plateforme for data exposure}
+\subsection{Applicative platform for data exposure}
 The project built on the applicative platform \emph{Ligne de temps}\footnote{Ligne de temps: \url{http://www.iri.centrepompidou.fr/outils/lignes-de-temps/}} to implement specific modules dedicated to fine-indexed video archive of performance rehearsals.
 
 \subsubsection{Ingest}
-The ingest operation was made possible thanks to the preceding data conformation. It consisted in automatic referencing the video files as media contents into the platform and in associating and synchronizing the annotation metadata to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the archive, therefore bring the rehearsal annotation data from static to dynamic. \linebreak
+The ingest operation was made possible thanks to the preceding data conformation. It involves automatic referencing of the video files as media contents into the platform and the synchronization of the annotation metadata to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the media contents and their metadata, therefore brings the rehearsal annotation data from static to dynamic. \linebreak
 However theater and opera archives were separated in two distinct points of access, due to usage scenarios and to differences in data format. Indeed, the search engine and further applications require a stable model of data to offer optimized user experience.
 
 \subsubsection{Search engine}
@@ -905,15 +902,22 @@ A faceted search engine was designed to perform complex request on the archive, 
 \end{figure}
 
 The figure~\ref{fig:searchengine} displays the search interface, divided vertically in two parts for two types of search:
-1) left part: searching chapters with rehearsal context data such as date of rehearsal, character(s) on stage, lines of the script, type of chapters, \emph{etc.}, providing a sortable list of chapters,
-2) right part: searching interpretation annotations with full text form and/or with finished list of categories, providing a sortable list of annotations.
+1) left side: searching chapters with rehearsal context data such as date of rehearsal, character(s) on stage, lines of the script, type of chapters, \emph{etc.}, providing a sortable list of chapters,
+2) right side: searching interpretation annotations with full text form and/or with finished list of categories, providing a sortable list of annotations.
 
-Thanks to the synchronization of metadata to the video stream, a search result list from either part can be used to send a new request. For instance, from the result list of annotation (right part), it is possible to extract all chapters with corresponding timecode (left part).
+Thanks to the synchronization of metadata to the video stream, a search result list from either side can be used as a request to the opposite side. For instance, from the result list of annotations (right side), it is possible to extract all chapters with corresponding timecode (left side).
 
 \subsubsection{Metadata player}
-\todo{Write}
+The emph{Metadata player} is a front-end Javascript module articulating a HTML5 video player with time-stamped metadata displayed on timeline representation. It communicates with \emph{Ligne de temps} to retrieve the synchronized metadata for each media content to be displayed. For the usage of the project, a dedicated player (figure~\ref{fig:mdplayer}) was designed to display the contextual chapters and the interpretation annotations on timelines and to provide the play script that synchronized along the video, according to the text reference metadata.
 
-\subsection{Linked Open Data  publication}
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=\columnwidth]{mdplayer}
+  \caption{the Metadata player : video player augmented with synchronized play script and annotation metadata}
+  \label{fig:mdplayer}
+\end{figure}
+
+\subsection{Linked Open Data publication}
 In order to foster and ease multiple uses of the corpus,
 it is important to make the collected information as accessible as possible.
 For this purpose, we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
