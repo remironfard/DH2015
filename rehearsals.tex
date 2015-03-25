@@ -633,7 +633,7 @@ The project aimed at compiling a video corpus and a fine and precise description
 
 \subsection{Play and opera (experimental fields)}
 
-Our field is based on the rehearsals of two performing shows: \emph{Chatte sur un toit brûlant}, written by Tenessee Williams and directed by Claudia Stavisky, and \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
+Our field is based on the rehearsals of two performing shows: \emph{Chatte sur un toit brûlant}, written by Tennessee Williams and directed by Claudia Stavisky, and \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
 Each of these shows were rehearsed during the spring and the summer of 2013, in a period of eight and six weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{lecture à la table} where actors read the script together for the first time, to the \emph{general}, which is supposed to end the directing work and finish the rehearsals.
 However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a modern play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work.
 Those aspects motivated us to conceive a generic system that could be deployed for other contexts.
@@ -679,24 +679,30 @@ The unit for video recording and indexing is composed typically of a PC laptop, 
 The technical specifications of the original video files are the format \texttt{.mkv}, the codec H264, and the resolution of $1920 \times 1080$ pixels (full HD).
 
 \subsection{Annotation}
-Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the cinelab data model\footnote{Cinelab Data Model - \url{http://liris.cnrs.fr/advene/cinelab/}}.
+Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model - \url{http://liris.cnrs.fr/advene/cinelab/}}.
 Annotating the rehearsal relied on two main tasks:  description and interpretation. The description consisted of indicating the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves - with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
+
 \todo{mise en forme tableau}
-\begin{tabular}{|l|c|c|c|}
+
+\begin{table}
+{\small
+\begin{tabular}{|l|r|r|r|}
 \hline 
-  & Chatte sur... & Elena & Total \\ 
+  & Chatte sur un toit\ldots & Elena & Total \\ 
 \hline 
-Number of video & 70 & 100 & 170 \\ 
+Number of videos & 70 & 100 & 170 \\ 
 \hline 
-Total duration (in hours) & 242 & 177 & 419 \\ 
+Total duration (h) & 242 & 177 & 419 \\ 
 \hline 
-Total volume (in To) & 2,47 & 1,60 & 4,07 \\ 
+Total volume (TB) & 2.47 & 1.60 & 4.07 \\ 
 \hline 
-Number of annotation & 3530 & 6968 & 10498 \\ 
+Number of annotations & 3,530 & 6,968 & 1,0498\\ 
 \hline
-\label{table_facts}
 \end{tabular} 
+}
+\label{table_facts}
+\end{table}
 
 The result of this synchronous annotation was to augment the video stream with semantic metadata, also considered as intra-video index, making the video corpus easily searchable with a proper search engine.
 
@@ -711,7 +717,9 @@ The result of this synchronous annotation was to augment the video stream with s
 \subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals captation process for a given work, an operator first fills into the note taking tool some time-stable data : the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session - e.g. contextual data (costumes, sets, etc.) about a given chapter (inherited from a previous one if any).
 %BE on peut pour gagner de la place juste mettre les éléments Session, Chapter, Moment of interest..
 
-\subsubsection{Emerged categories} Each annotation process has revealed a set of categories reflecting both the related performing art and the personnal point of view of the operator. The tables \todo{to be linked to table figure} present the richness of the annotation and the potential of the archive for researches in genetic analysis of creative works.
+\subsubsection{Emerged categories}
+Each annotation process has revealed a set of categories reflecting both the related performing art and the personal point of view of the operator. The tables \todo{to be linked to table figure} present the richness of the annotation and the potential of the archive for researches in genetic analysis of creative works.
+
 \begin{tabular}{|l|c|}
 \hline 
 Categories & Occurrence \\ 
@@ -737,7 +745,7 @@ opinion of an actor & 26 \\
 \hline 
 performance of an actor & 331 \\ 
 \hline 
-questionning & 4 \\ 
+questioning & 4 \\ 
 \hline 
 reference to real world & 3 \\ 
 \hline 
@@ -757,7 +765,7 @@ space issue & 6 \\
 
 \begin{tabular}{|l|c|}
 \hline 
-Categories & Occurence \\ 
+Categories & Occurrence \\ 
 \hline 
 accessories & 292 \\ 
 \hline 
@@ -1120,9 +1128,5 @@ More future work is needed for assigning the virtual cameras automatically.
 % argument is your BibTeX string definitions and bibliography database(s)
 \bibliography{rehearsals}
 
-
-
 % that's all folks
 \end{document}
-
-
