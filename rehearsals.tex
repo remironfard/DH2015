@@ -657,14 +657,14 @@ Usual categories coming from the fields of theater and opera were integrated to 
 
 
 %%%%%%%%%%%%%%%%
-\section{The rehearsal archive : complete workflow of construction and publication process}
+\section{The rehearsal archive: complete workflow of construction and publication process}
 \todo{(2,5 pages)}
 
 \todo{complete workflow of construction and publication process}
 
 Digital heritage projects often focus on digitalization of analog materials and data,
 when others would focus on the usage and the valorization of digitalized resources.
-The specificity of our project \todo{to be homogenized: "our" ?}
+The specificity of our project \todo{to be homogenized: ``our''?}
 was the attempt to conceive a natively digital archive from scratch
 taking into account potential usages of the archive.
 We therefore built a full chain from the design and the making of the archive
@@ -679,13 +679,14 @@ The unit for video recording and indexing is composed typically of a PC laptop, 
 The technical specifications of the original video files are the format \texttt{.mkv}, the codec H264, and the resolution of $1920 \times 1080$ pixels (full HD).
 
 \subsection{Annotation}
-Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model - \url{http://liris.cnrs.fr/advene/cinelab/}}.
-Annotating the rehearsal relied on two main tasks:  description and interpretation. The description consisted of indicating the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves - with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
+Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}.
+Annotating the rehearsal relied on two main tasks:  description and interpretation. The description consisted of indicating the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas the interpretations targeted the dramaturgy and the performing themselves---with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
 
 \todo{mise en forme tableau}
 
 \begin{table}
+\centering
 {\small
 \begin{tabular}{|l|r|r|r|}
 \hline 
@@ -701,28 +702,32 @@ Number of annotations & 3,530 & 6,968 & 1,0498\\
 \hline
 \end{tabular} 
 }
+\caption{Facts on the video corpus}
 \label{table_facts}
 \end{table}
 
 The result of this synchronous annotation was to augment the video stream with semantic metadata, also considered as intra-video index, making the video corpus easily searchable with a proper search engine.
 
-\subsubsection{Data model} Figure \ref{fig_data_model} describes the main elements of the data model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors) - each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in real-time, i.e. during the rehearsal. \newline
-\textbf{Model description}~A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (i.e. with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (e.g. the act, scene, line numbers corresponding to the beginning/ending of the section of play - \textit{service begin/end}). Chapters also may contain moments of interest (so called categories).
+\subsubsection{Data model} Figure \ref{fig_data_model} describes the main elements of the data model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime, \emph{i.e.}, during the rehearsal. \newline
+\textbf{Model description} A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (\emph{e.g.}, the act, scene, line numbers corresponding to the beginning/ending of the section of play---\textit{service begin/end}). Chapters also may contain moments of interest (so called categories).
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{UMLet_Data_model}
 \caption{Data model}
 \label{fig_data_model}
 \end{figure}
-\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals captation process for a given work, an operator first fills into the note taking tool some time-stable data : the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session - e.g. contextual data (costumes, sets, etc.) about a given chapter (inherited from a previous one if any).
+\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals caption process for a given work, an operator first fills into the note taking tool some time-stable data: the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session---\emph{e.g.}, contextual data (costumes, sets, \emph{etc.}) about a given chapter (inherited from a previous one if any).
 %BE on peut pour gagner de la place juste mettre les éléments Session, Chapter, Moment of interest..
 
 \subsubsection{Emerged categories}
-Each annotation process has revealed a set of categories reflecting both the related performing art and the personal point of view of the operator. The tables \todo{to be linked to table figure} present the richness of the annotation and the potential of the archive for researches in genetic analysis of creative works.
 
-\begin{tabular}{|l|c|}
+Each annotation process has revealed a set of categories associated to the interpretation type of annotation, reflecting both the related performing art and the personal point of view of the operator. The tables \todo{to be linked to table figure} present the richness of the annotations and the potential of the archive for further researches in genetic analysis of creative works.
+
+\begin{table}
+\centering
+\begin{tabular}{|p{4cm}|r|}
 \hline 
-Categories & Occurrence \\ 
+Categories & Occurrences \\ 
 \hline 
 alternative performance proposition & 70 \\ 
 \hline 
@@ -761,11 +766,16 @@ script adaptation & 6 \\
 \hline 
 space issue & 6 \\ 
 \hline 
-\end{tabular} 
+\end{tabular}
+\label{table:categories1}
+\caption{Annotation categories and number of occurrences \todo{Better caption}}
+\end{table} 
 
-\begin{tabular}{|l|c|}
+\begin{table}
+\centering
+\begin{tabular}{|p{4cm}|r|}
 \hline 
-Categories & Occurrence \\ 
+Categories & Occurrences \\ 
 \hline 
 accessories & 292 \\ 
 \hline 
@@ -823,37 +833,33 @@ seduction relation & 66 \\
 \hline 
 tempo & 406 \\ 
 \hline 
-voice "color" & 112 \\ 
+voice ``color'' & 112 \\ 
 \hline 
 working on the text & 104 \\ 
 \hline 
 \end{tabular} 
+\label{table:categories2}
+\caption{Annotation categories and number of occurrences \todo{Better caption}}
+\end{table}  
  
 \subsection{Data conformation}
 
 \todo{(nicolas)}
-
 \todo{Problem and solution? Manually done with internal tools}
+After the rehearsals, we centralized the data on a server for video encoding and annotation metadata confirmation. Due to the tied agenda of the project, the annotation software did not implement a strict certification on data input. Therefore, as a preliminary step before the ingestion of the corpus into the applicative platform, manual cleaning and conforming were executed on the metadata, such as merging similar categories, harmonizing the text reference format, correcting misspellings, \emph{etc.}
 
 \subsection{Audio and video processing}
-As an optional step, we use models of  the actors' voices and appearances to detect and recognize them
-in the audio and video modalities. As explained later, this offers additional searching, browsing, and editing capabilities
-to our system, at the expense of (widely) increased processing time.
+As an optional step, we use models of the actors' voices and appearances to detect and recognize them in the audio and video modalities. As explained later, this offers additional searching, browsing, and editing capabilities to our system, at the expense of (widely) increased processing time.
 
 \subsubsection{Learning actor  voices and appearances}
 We use the ALIZE system for learning statistical models of each actor's voice~\cite{Bonastre05}  from one example per actor.
-Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel,
-we use the generative model of Gandhi and Ronfard~\cite{Gandhi13} for learning statistical models of each actor's visual appearance, 
-using example images from at least eight viewpoints. Examples are typically extracted from the first dress rehearsal,
-as our appearance model is dependent on costumes.  Those models can then be used to automatically align
+Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel, we use the generative model of Gandhi and Ronfard~\cite{Gandhi13} for learning statistical models of each actor's visual appearance, using example images from at least eight viewpoints. Examples are typically extracted from the first dress rehearsal, as our appearance model is dependent on costumes.  Those models can then be used to automatically align
 each performance with the play script and to localize actors on stage and on screen. 
 
 \subsubsection{Alignment between play script and performances}
 
-Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals 
-are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state 
-in a semi-Markov model with a duration probably and a speaker voice probability. In our experiments, this methods
-outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
+Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state 
+in a semi-Markov model with a duration probably and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
 
 %\begin{figure}[tp]
 %\centering
@@ -866,34 +872,43 @@ outperformed state-of-the-art speaker diarization methods based on HMM, which do
 
 \subsubsection{Actor detection and recognition} 
 
-Based on their appearance model, we separately detect all actors present on stage. The qualitative results on this sequence 
-are presented in Figure~\ref{fig_tracking_coahtr}. This example is particularly challenging  because of the fast displacements 
-of the actors and the frequent occlusions between actors. 
+Based on their appearance model, we separately detect all actors present on stage. The qualitative results on this sequence are presented in Figure~\ref{fig_tracking_coahtr}. This example is particularly challenging  because of the fast displacements of the actors and the frequent occlusions between actors. 
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=\columnwidth]{tracking_coahtr}
-\caption{Tracking of  the six characters of sequence $\mathcal{S}_4$. Using actors-specific detections gives 
-an additional advantage in resolving multiple actor tracking.}
+\caption{Tracking of  the six characters of sequence $\mathcal{S}_4$. Using actors-specific detections gives an additional advantage in resolving multiple actor tracking.}
 \label{fig_tracking_coahtr}
 \end{figure}
 
 Despite the challenging environment, our method provides very good results for the tracking of the six actors, where generic state-of-the-art tracking methods quickly drifted away from the target  and were unstable both in presence of occlusion and fast movements. 
 
-
 %\cite{Nummiaro2002,Ross2008}  \cite{Kwon2010,Babenko2009} also drifted away with heavy occlusions.  \cite{Wang2011} failed because of large appearance changes and occlusions. Only our algorithm maintains its performance in this challenging example.
 
 
-
 \subsection{Applicative plateforme for data exposure}
-
-\todo{Ligne de temps (nicolas , PA)}
+The project built on the applicative platform \emph{Ligne de temps}\footnote{Ligne de temps: \url{http://www.iri.centrepompidou.fr/outils/lignes-de-temps/}} to implement specific modules dedicated to fine-indexed video archive of performance rehearsals.
 
 \subsubsection{Ingest}
-\todo{Write}
+The ingest operation was made possible thanks to the preceding data conformation. It consisted in automatic referencing the video files as media contents into the platform and in associating and synchronizing the annotation metadata to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the archive, therefore bring the rehearsal annotation data from static to dynamic. \linebreak
+However theater and opera archives were separated in two distinct points of access, due to usage scenarios and to differences in data format. Indeed, the search engine and further applications require a stable model of data to offer optimized user experience.
 
 \subsubsection{Search engine}
 \todo{Write}
+A faceted search engine was designed to perform complex request on the archive, making the most of available metadata.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=\columnwidth]{searchengine}
+  \caption{\todo{Commit the file screenshot, missing from the repo} Multi-faceted search engine for the theater archive}
+  \label{fig:searchengine}
+\end{figure}
+
+The figure~\ref{fig:searchengine} displays the search interface, divided vertically in two parts for two types of search:
+1) left part: searching chapters with rehearsal context data such as date of rehearsal, character(s) on stage, lines of the script, type of chapters, \emph{etc.}, providing a sortable list of chapters,
+2) right part: searching interpretation annotations with full text form and/or with finished list of categories, providing a sortable list of annotations.
+
+Thanks to the synchronization of metadata to the video stream, a search result list from either part can be used to send a new request. For instance, from the result list of annotation (right part), it is possible to extract all chapters with corresponding timecode (left part).
 
 \subsubsection{Metadata player}
 \todo{Write}
@@ -901,29 +916,17 @@ Despite the challenging environment, our method provides very good results for t
 \subsection{Linked Open Data  publication}
 In order to foster and ease multiple uses of the corpus,
 it is important to make the collected information as accessible as possible.
-For this purpose,
-we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
-They imply that every piece of information is both identify by and accessible at a given URI,
-and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
-The Cinélab data model maps nicely into RDF,
-thanks to additional standards such as Media Fragments URI~\cite{troncy2012mediafragments}
-that are used to precisely anchor annotations to video temporal fragments.
-Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql},
-so building new services on top of our corpus can be achieved with relative ease by reusing standard components.
-Finally, we use the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying}
-in order to make the data highly available while preserving scalability.
+For this purpose, we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
+They imply that every piece of information is both identify by and accessible at a given URI, and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
+The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URI~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we use the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying} in order to make the data highly available while preserving scalability.
 
 But the benefit of Linked Data does not only lie in standardization.
-As its name implies,
-the key feature of this approach is to allow linking data across different sources on the Web,
-in order to combine it into otherwise inaccessible information.
-In the context of Digital Heritage,
-this notion is central, as data is often scattered in multiple institutions.
+As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information.
+In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions.
 While Linked Data is already widely used for museums or libraries\footnote{
 See \emph{e.g.}, \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}},
 its use with video has emerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
-and as far as we know,
-has not yet been widely considered for live performance archives.
+and as far as we know, has not yet been widely considered for live performance archives.
 
 
 %%%%%%%%%%%%%%%%
@@ -1050,11 +1053,7 @@ This figure displays the automatic reframing process obtained for several frames
 
 Future work is needed to fully evaluate this feature. We were inspired by the zoom-lens model of consciousness~\cite{Eriksen86}, 
 which proposes  that human perception  may in fact compose a movie from all available visual  stimuli; and by the theory 
-of spectatorship, which surveys the audience's visuo-motor behavior  during a performance~\cite{Bennett97}.   
-
-
-
-
+of spectatorship, which surveys the audience's visuomotor behavior  during a performance~\cite{Bennett97}.   
 
 \subsection{Mobile app} 
 
