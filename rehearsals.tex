@@ -503,11 +503,9 @@ trailers of upcoming performances for publicity purposes. Importantly, Web based
 allow even the small production companies or individuals to easily share the recorded content
 with the desired audience.
 
-In this paper, we describe our effort to create video recordings of the complete rehearsals,
-rather than a single performance, of a theater play and publishing it online. This raises original
-and interesting scientific, technological, and social questions.
+In this paper, we describe our effort to create exhaustive video recordings of the complete rehearsals, rather than a single performance, of a theater play and publishing it online. This raises original and interesting scientific, technological, and social issues, and brought us to question the nature of the archive as a digital heritage through various prospective usages (see Section V \todo{verifier référence section}).
 
-It is a difficult task to create recorded performances to match up to the live experience
+\todo{not sure about the interest of those 2 paragraphs in this paper.} It is a difficult task to create recorded performances to match up to the live experience
 of watching a play. When you watch a stage play, you generally only get to observe the actions 
 of the performers from one static viewpoint---your seat. But if one was to watch a recorded 
 performance from a static viewpoint covering the entire action, it could become monotonous 
@@ -526,7 +524,7 @@ difficult to organize into an accessible and usable archive. Or more frequently,
 and only the edited version is kept as an archive. Which brings us back to Godard's citation. How can we create 
 an archive which is  more than an interpretation made by a television director and which is more than a video surveillance recording of the theater stage? 
 
-Our approach in this paper is to make video recordings from a single viewpoint (the director's seat) with the highest possible
+\todo{i believe this paper talks about something else than multiplying the points of view}Our approach in this paper is to make video recordings from a single viewpoint (the director's seat) with the highest possible
 video resolution and to augment them with detailed, high-level  annotations that make it possible to quickly  search, browse
 and even re-edit the archive interactively. 
 
@@ -628,7 +626,7 @@ the stage manager, technicians, etc.}
 
 \todo{Discussions}
 
-The project aimed at compiling a video corpus and a fine and precise description of the rehearsals. The corpus and the descriptions relies strongly on the chosen fields of study (\emph{terrain d'études}), \emph{i.e.}, in our case the play and the opera themselves, but more importantly the methodologies of the creative crew.
+The project aimed at compiling a video corpus and a fine and precise description of the rehearsals. The corpus and the descriptions rely strongly on the chosen fields of study (\todo{what's the proper translation for terrain d'études ?}), \emph{i.e.}, in our case the rehearsals of the play and the opera themselves, but more importantly the methodologies of the creative crew.
 
 \subsection{Play and opera (experimental fields)}
 
@@ -706,7 +704,7 @@ Number of annotations & 3,530 & 6,968 & 1,0498\\
 The result of this synchronous annotation was to augment the video stream with semantic metadata, also considered as intra-video index, making the video corpus easily searchable with a proper search engine.
 
 \subsubsection{Data model} Figure \ref{fig_data_model} describes the main elements of the data model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime, \emph{i.e.}, during the rehearsal. \newline
-\textbf{Model description} A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (\emph{e.g.}, the act, scene, line numbers corresponding to the beginning/ending of the section of play---\textit{service begin/end}). Chapters also may contain moments of interest (so called categories).
+\todo{mise en forme}\textbf{Model description} - A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (\emph{e.g.}, the act, scene, line numbers corresponding to the beginning/ending of the section of play---\textit{service begin/end}). Chapters also may contain moments of interest (so called categories).
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{UMLet_Data_model}
@@ -767,7 +765,8 @@ space issue & 6 \\
 \end{tabular}
 \label{table:categories1}
 \caption{Annotation categories and number of occurrences for \emph{Chatte sur un toit brulant}}
-\end{table} 
+\end{table}
+\todo{mise en forme des captions pour les tableaux > why capitals letter ?} 
 
 \begin{table}
 \centering
@@ -1073,6 +1072,7 @@ A more complete scenario was designed to illustrate potential usage of the archi
   \label{fig:mobileapp}
 \end{figure}
 
+This scenario reveals an interesting result in terms of digital heritage issue. In fact, it appears that digital archives meet the present needs of certain users whose objectives are not necessarily to augment the production of knowledge. Digital archive should therefore articulate freely with new communities of potential actors and users. One of the results of \emph{Spectacle en ligne(s)} is the demonstration that this empowerment of users with digital ressources must be accompanied by a set of technological conditions (an applicative platform for instance). Cultural and knowledge institutions have a responsability in the design and the implementation of thoses conditions for ressources appropriation \cite{Sauret15}.
 
 \subsection{Experimental validation}
 \todo{The recordings have been evaluated subjectively by the actors, the director and her assistants?}
