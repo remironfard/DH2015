@@ -355,6 +355,7 @@
 % todo macro
 \usepackage{color}
 \newcommand{\todo}[1]{\noindent\textcolor{red}{{\bf \{ToDo} #1{\bf \}}}}
+%\renewcommand{\todo}[1]{} %% uncomment to hide ToDo's
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor ALIZE}
@@ -444,7 +445,7 @@ In 1966, Jean-Luc Godard remarked: {\em ``Why do theater people never film their
 The objective of the \emph{Spectacle en Ligne(s)} research project was to develop novel intuitive and interactive software tools to make it easier to 
 create and publish annotated video archives of theater performance and rehearsals. As a case study, the project is releasing an exhaustive archive of the complete rehearsals of two performances played in 2013 : 1) a French translation and adaptation of \emph{Cat on a hot tin roof} written by Tennessee Williams and directed by Claudia Stavisky, 2) the baroque opera \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
 
-The French title of the project refers to the multiple timelines at work in this archive: all rehearsals timelines, from the first readings to the opening night, in addition to the storyline of the play. The title also refers to putting the video archive "online" (i.e. "en ligne") on the web.
+The French title of the project refers to the multiple timelines at work in this archive: all rehearsals timelines, from the first readings to the opening night, in addition to the storyline of the play. The title also refers to putting the video archive "online" ({\it i.e.} "en ligne") on the web.
 
 \todo{Paragraph on legal aspects? NS> why not in the limitations instead} 
 
@@ -487,17 +488,17 @@ archive video recordings of theater performances. The theater on Film and Tape A
 since 1970 and the collection now amounts to 7,469 titles with a total of 20,000 items. 
 The National Video Archive of Performance (NVAP) at Victoria and Albert Museum London
 provides research access to video recordings of numerous renowned theater performances produced
-across England since 1992. 
+across the UK since 1992. 
 
 Another relevant case study  is the successful ventures providing recorded
 theater performances on the Web. Recently launched companies like Digital Theater use their
 own equipment to record theater productions, then sell them for far less than the cost of an
-actual theater ticket to watch online, but from the best spot possible. The Website \todo{add footnote} of the French
+actual theater ticket to watch online, but from the best possible spot. The Website \todo{add footnote} of the French
 National Institute of Audiovisual (INA) also allows viewers to download recorded theater plays
 at considerably low prices. You can watch the trailers of theater performances just like movies
 on a variety of devices and then download the entire play if it is of your interest. The Web platforms
 have also allowed for free form experimentation with recorded sequences, which is not
-so convenient on actual TV or cinema. For example, France Televisions' Nouvelles Ecritures\footnote{Nouvelles Ecritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}} :  created in 2013 an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theatre-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} from Jean-Michel Ribes}, showing both how a theater play develops in different stages and how it can be presented to the audience in different styles. The Web platform has also allowed several theaters to share the extracts and trailers of upcoming performances for publicity purposes. Importantly, Web based platforms allow even the small production companies or individuals to easily share the recorded content with the desired audience.
+so convenient on actual TV or cinema. For example, France Televisions' Nouvelles Écritures\footnote{Nouvelles Écritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}} created in 2013 an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theatre-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} from Jean-Michel Ribes}, showing both how a theater play develops in different stages and how it can be presented to the audience in different styles. The Web platform has also allowed several theaters to share the extracts and trailers of upcoming performances for publicity purposes. Importantly, Web based platforms allow even small production companies or individuals to easily share the recorded content with the desired audience.
 
 \todo{NS pourquoi ce paragraph est dans "state of the art" ?}
 In this paper, we describe our effort to create exhaustive video recordings of the complete rehearsals, rather than a single performance, of a theater play and publishing it online. This raises original and interesting scientific, technological, and social issues, and brought us to question the nature of the archive as a digital heritage through various prospective usages (see Section V \todo{verifier référence section}). 
@@ -540,9 +541,9 @@ that approach in the special cases of detecting and naming actors in films and o
 approaches miss the actors in 40\% of the cases on average. As an alternative, they have proposed
 methods for separately learning appearance models of actors and detecting them in parallel, and showed that the number
 of missed actors (false negatives) drops to 20\% on average. We used their method in \emph{Spectacle en Ligne(s)} for localizing
-actors in selected scenes of the archive.
+actors in selected scenes of the archive.\todo{PA: @Rémi je trouve ça très artificiel de parler de nous (même si ce n'est qu'une partie d'entre nous) à la 3e personne}
 
-One approach to indexing of theater rehearsals and performances is to automatically align
+One approach to indexing theater rehearsals and performances is to automatically align
 them to the play script. The {\em script-sync} feature in Avid Media Composer,
 an off-the-shelf tool, allows for the alignment of video recordings with their scripts word-by-word. Such systems
 are based on Hidden Markov Models (HMM) and work by computing  a forced alignment 
@@ -571,6 +572,7 @@ To inform viewers that a~video is hyperlinked,
 editors can add highlights to moving images, use beeps as audible cues,
 or display still images from hyperlinked videos
 next to the clip that is currently playing''}~\cite{economist2006hypervideo}.
+\todo{PA: je trouve cette définition trop longue, trop détaillée, et franchement, dans un article scientifique, je pense qu'on serait aussi crédible avec une définition de nous qu'avec une définition de 'The Economist'. Je serai pour simplement reprendre l'idée de la phrase qui suit}
 In standard literature, hypervideo is considered a~logical consequence
 of the related concept of \emph{hypertext}~\cite{bernerslee1990hypertext}.
 In contrast to hypertext, hypervideo necessarily includes a~time component,
@@ -601,16 +603,16 @@ the creation of theater and opera productions with video and Web technologies.
 
 \todo{Discussions}
 
-The project aimed at compiling a video corpus and a fine and precise description of the rehearsals. The corpus and the descriptions rely strongly on the chosen fields of study (\todo{what's the proper translation for terrain d'études ?}), \emph{i.e.}, in our case the rehearsals of the play and the opera themselves, but more importantly the methodologies of the creative crew.
+The project aimed at compiling a video corpus and a fine and precise description of the rehearsals. The corpus and the descriptions rely strongly on the chosen fields of study (\todo{what's the proper translation for terrain d'études ? PA: field of study me parait bien: \url{http://www.linguee.fr/francais-anglais/traduction/terrain+d'étude.html}}), \emph{i.e.}, in our case the rehearsals of the play and the opera themselves, but more importantly the methodologies of the creative crew.
 
 \subsection{Play and opera (experimental fields)}
 
-Our field is based on the rehearsals of two performing shows: \emph{Chatte sur un toit brûlant}, written by Tennessee Williams and directed by Claudia Stavisky, and \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
+As stated in introduction, our field is based on the rehearsals of two performing shows: Tennessee Williams' \emph{Chatte sur un toit brûlant}, and Francesco Cavalli's \emph{Elena}.
 Each of these shows were rehearsed during the spring and the summer of 2013, in a period of eight and six weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{lecture à la table} where actors read the script together for the first time, to the \emph{general}, which is supposed to end the directing work and finish the rehearsals.
 However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a modern play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work.
 Those aspects motivated us to conceive a generic system that could be deployed for other contexts.
 
-\subsection{Immersed the creative work}
+\subsection{Immersed the creative work \todo{PA: je comprends pas ce que ça veut dire... Il ne manque pas ``in'' ?}}
 
 A performance rehearsal is a closed-door privileged moment where actors and director work in a protective intimacy that allows them a total commitment to their art. The idea of filming those moments of intimacy, moreover exhaustively, could have been wrongly welcomed at best, or even rejected at worst, from professionals considering as sacred the privacy of rehearsal.
 This aspect was taken into account in the design of the system, in order to appear the least intrusive possible towards the creative process.
@@ -657,10 +659,10 @@ This part redraws the workflow that enabled the construction and the publication
 \subsection{Video recording}
 %Non intrusive, push-button, integral, full HD, sound
 \todo{BE - remarque générale : je préfère le terme annotation au terme index}
-In the context described previously, the video recording required a non-intrusive and easy setup for a non-technical operator. Indeed, their profile must belong to dramaturgy and performing art, in order to dedicate their attention to performance and directing description. Therefore, the apparatus was designed to be fully ``plug\ \& play'' with a single record button to start a capture session.
+In the context described previously, the video recording required a non-intrusive and easy setup for non-technical operators. Indeed, their profile must belong to dramaturgy and performing art, in order to dedicate their attention to performance and directing description. Therefore, the apparatus was designed to be fully ``plug\ \& play'' with a single record button to start a capture session.
 The collected corpus embraces the integrality of the rehearsals, from the ``text walk-through'' at the table to the final dress rehearsal, with about five to seven working hours a day, which in consequence result in likewise five to seven hours of recorded and annotated video every day.
 
-The unit for video recording and annotating is composed typically of a PC laptop, connected to a video camera mounted on a tripod and remotely controlled from the PC, of an omnidirectional microphone as input of a small sound mixing table, itself linked to the laptop. This system can be easily set up and wrapped up, is movable, and can be fit in a studio room without burdens. Running on a dedicated Linux distribution, the unit runs and displays only one software: an interface through which the operator can \emph{(i)} remotely control the camera and \emph{(ii)} take notes synchronously. 
+The unit for video recording and annotating is composed typically of a PC laptop, connected to a video camera mounted on a tripod and remotely controlled from the PC, of an omnidirectional microphone as input of a small sound mixing table, itself linked to the laptop. This system can be easily set up and wrapped up, is movable, and can fit in a studio room without burdens. Running on a dedicated Linux distribution, the unit runs and displays only one software: an interface through which the operator can \emph{(i)} remotely control the camera and \emph{(ii)} take notes synchronously. 
 The technical specifications of the original video files are the format \texttt{.mkv}, the codec H264, and the resolution of $1920 \times 1080$ pixels (full HD).
 
 \begin{figure}[htb!]
@@ -673,7 +675,7 @@ The technical specifications of the original video files are the format \texttt{
 \subsection{Annotation}
 \todo{attention à l'homogénéité du vocabulaire : annotations ; metadata ; data}
 Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}.
-Annotating the rehearsal relied on two main tasks: description and interpretation.  Description annotations indicated the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas interpretation annotations targeted the dramaturgy and the performing themselves---with free observations and comments on the creative work. The interpretations were necessarily categorized with one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
+Annotating the rehearsal relied on two main tasks: description and interpretation.  Description annotations indicated the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas interpretation annotations targeted the dramaturgy and the performing themselves---with free observations and comments on the creative work. The interpretations were necessarily categorized within one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
 
 \begin{table}
@@ -700,7 +702,7 @@ Number of annotations & 3,530 & 6,968 & 1,0498\\
 The result of this synchronous annotation was to augment the video stream with semantic metadata, also considered as intra-video index, making the video corpus easily searchable with a proper search engine.
 
 \subsubsection{Data model} Figure~\ref{fig_data_model} describes the main elements of the data model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime (\emph{i.e.} during the rehearsal). \newline
-\todo{mise en forme}\textbf{Model description} - A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (text references - \emph{e.g.} the act, scene, line numbers corresponding to the beginning/ending of the section of play---\textit{service begin/end}). Chapters also may contain moments of interest (so called categories).
+\todo{mise en forme}\textbf{Model description} - A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and may reference concerned part of the work (text references - \emph{e.g.} the act, scene, line numbers corresponding to the beginning/ending of the section of play---\textit{service begin/end}). Chapters also may contain categorized moments of interest. \todo{PA: j'ai remplacé la parenthèse ``so-called categories'' et rajouté l'adjectif ``categorized'', car la parenthèse me semblait un contre-sens : les moments d'intérêt ne \emph{sont pas} des catégories}
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{UMLet_Data_model}
@@ -714,7 +716,7 @@ The result of this synchronous annotation was to augment the video stream with s
 \todo{BE Proposition titre subsubsection : Emerged categories review}
 \todo{Emerged categories : je voulais dire, les catégories qui ont émergées lors de l'annotation. Je tente "inherited", est ce que cela convient ? Pas tout à fait clair non plus.}
 
-Each annotation process has revealed a set of categories associated to interpretation annotations, reflecting both the related performing art and the personal point of view of the operator. The tables \ref{table:categories1} and \ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
+Each annotation process has revealed a set of categories associated to interpretation annotations, reflecting both the related performing art and the personal point of view of the operator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
 
 \begin{table}
 \centering
@@ -851,7 +853,7 @@ Each example is typically a ten-second extended speech line recorded during the 
 
 \subsubsection{Alignment between play script and performances}
 
-Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state in a semi-Markov model with a duration probably and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
+Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state in a semi-Markov model with a duration probability and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model.
 \todo{BE: Rémi, vous avez pas une réf. à vous à mettre là-dessus du coup ?}
 
 %\begin{figure}[tp]
@@ -884,8 +886,8 @@ Despite the challenging environment, our method provides very good results for t
 The project built on the applicative platform \emph{Ligne de temps}\footnote{Ligne de temps: \url{http://www.iri.centrepompidou.fr/outils/lignes-de-temps/}} to implement specific modules dedicated to fine-indexed/annotated video archive of performance rehearsals. \emph{Ligne de temps} is originally a software designed for video annotation and indexation, inspired by the timelines usually used in video editing softwares, and was conceived for advanced film critique or pedagogy. It evolved into a web platform with web player and front-end annotations modules. For the purpose of the project, \emph{Ligne de temps} was adapted to embed and display annotated video of performance rehearsals, taking into consideration the particular metadata and their potential usages.
 
 \subsubsection{Ingest}
-The ingest operation was made possible thanks to the preceding data conformation. It involves automatic referencing of the video files as media contents into the platform and the synchronization of the metadata (annotations) to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the media contents and their metadata, therefore brings the rehearsal annotation data from static to dynamic. \linebreak
-However theater and opera archives were separated in two distinct points of access, due to usage scenarios and to differences in data format.
+The ingest operation was made possible thanks to the preceding data conformation. It involves automatic referencing of the video files as media contents into the platform and the synchronization of the metadata (annotations) to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the media contents and their metadata, therefore bringing the rehearsal annotation data from static to dynamic. \linebreak
+However theater and opera archives were separated in two distinct access points, due to usage scenarios and to differences in data format.
 % BE : Difference in data format. Le format reste pour moi le même (XML ici), le modèle aussi à peu de chose près (i.e. référence à un texte pour le théâtre, référence à une partition pour l'opéra, ce qui change un peu le modèle). Par contre, le contenu des données change (i.e. les catégories, par ex.). Du coup je ne sais pas si ça vaut le coup de mettre "differences in data format", je pense que "usage scenarios" suffit...
  Indeed, the search engine and further applications require a stable model of data to offer optimized user experience.
 \todo{BE remarque : supprimer cette phrase (stable model of data), cf. commentaires dans le source.}
@@ -898,18 +900,19 @@ A faceted search engine was designed to perform complex request on the archive, 
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=\columnwidth]{searchengine}
-  \caption{Multi-faceted search engine for the theater archive}
+  \caption{Multi-faceted search engine for the theater archive
+    \todo{PA: j'ai viré les marges de l'image pour la rendre plus lisible, mais c'est encore très petit...}}
   \label{fig:searchengine}
 \end{figure}
 
-The figure~\ref{fig:searchengine} displays the search interface for the theater, divided vertically in two parts for two types of search:
-1) left side: searching chapters with rehearsal context data such as date of rehearsal, character(s) on stage, lines of the script, type of chapters, \emph{etc.}, providing a sortable list of chapters,
-2) right side: searching interpretation annotations with full text form and/or with finished list of categories, providing a sortable list of annotations.
+Figure~\ref{fig:searchengine} displays the search interface for theater, divided vertically in two parts for two types of search:
+1) left side: searching chapters by rehearsal context data such as date of rehearsal, character(s) on stage, lines of the script, type of chapters, \emph{etc.}, providing a sortable list of chapters,
+2) right side: searching interpretation annotations by full text and/or by a closed list of categories, providing a sortable list of annotations.
 
 Thanks to the synchronization of metadata to the video stream, a search result list from either side can be used as a request to the opposite side. For instance, from the result list of annotations (right side), it is possible to extract all chapters with corresponding timecode (left side).
 
 \subsubsection{Metadata player}
-The \emph{Metadata player} is a front-end Javascript module articulating a HTML5 video player with time-stamped metadata displayed on timeline representation. It communicates with \emph{Ligne de temps} to retrieve the synchronized metadata for each media content to be displayed. For the usage of the project, a dedicated player (figure~\ref{fig:mdplayer}) was designed to display the contextual chapters and the interpretation annotations on timelines and to provide the play script that synchronized along the video, according to the text reference metadata.
+The \emph{Metadata player} is a front-end Javascript module articulating a HTML5 video player with time-stamped metadata displayed on a timeline representation. It communicates with \emph{Ligne de temps} to retrieve the synchronized metadata for each media content to be displayed. For the usage of the project, a dedicated player (figure~\ref{fig:mdplayer}) was designed to display the contextual chapters and the interpretation annotations on timelines and to provide the play script synchronized along the video, according to the text reference metadata.
 
 \begin{figure}[htb!]
   \centering
@@ -922,8 +925,8 @@ The \emph{Metadata player} is a front-end Javascript module articulating a HTML5
 In order to foster and ease multiple uses of the corpus,
 it is important to make the collected information as accessible as possible.
 For this purpose, we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
-They imply that every piece of information is both identify by and accessible at a given URI, and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
-The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URI~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we use the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying} in order to make the data highly available while preserving scalability.
+They imply that every piece of information is both identified by and accessible at a given URI, and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
+The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URIs~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we use the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying} in order to make the data highly available while preserving scalability.
 
 But the benefit of Linked Data does not only lie in standardization.
 As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information.
@@ -937,11 +940,11 @@ and as far as we know, has not yet been widely considered for live performance a
 %%%%%%%%%%%%%%%%
 \section{Scenarios for the valorisation of the archive}
 \todo{(1,5 pages)}
-In parallel to the design and the implementation of the previously described workflow, the project anticipated several usage scenari of the archive, taking into consideration the potential needs of future users. A particular effort was made to address specific public with pedagogical scenari, culture mediation scenari, but also research and amateur scenari. Some of those scenari were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenari according to their interest.
-This prospective work was indeed central in the design of the continuous workflow, in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularity of this project regarding researches in the digital heritage, i.e. to have considered the archive as a living cultural object, even though the archive did not exist yet.
+In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenari of the archive, taking into consideration the potential needs of future users. A particular effort was made to address specific public with pedagogical scenari, culture mediation scenari, but also research and amateur scenari. Some of those scenari were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenari according to their interest.
+This prospective work was indeed central in the design of the continuous workflow, in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularity of this project regarding researches in the digital heritage, {\it i.e.} to have considered the archive as a living cultural object, even though the archive did not exist yet.
 
 \subsection{Representing the archive}
-The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, i.e. video as temporal object\cite{stiegler90}\todo{ajouter référence Stiegler}, and its total duration, 419 hours for 170 video files, as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, i.e. \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the abscissa was the script of the play and the ordinate was the multiple rehearsals in chronological order. The result is the distribution of the rehearsals according to the script/score over time.
+The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\cite{stiegler90}\todo{ajouter référence Stiegler}, and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the abscissa was the script of the play and the ordinate was the multiple rehearsals in chronological order. The result is the distribution of the rehearsals according to the script/score over time.
 
 \todo{Remarque BE : illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
 NS : malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.}
@@ -952,10 +955,10 @@ NS : malheureusement, cette matrice est beaucoup plus détaillée et pertinente.
   \label{fig:elenamatrix}
 \end{figure}
 
-Such matrix can be inferred from the synchronized annotations, which contains more or less precise references of the script or the score. 
-If one envisages the paradigm with fine-grained annotations indexing precisely the script cues or the bars of the scores, the matrix could display theoretically in abscissa 1 unit for 1 cue and in ordinate 1 unit for 1 performance, i.e. a segment of rehearsal where actors are actually performing. The figure models this idealistic representation.
+Such a matrix can be inferred from the synchronized annotations, which contains accurate enough references of the script or the score. 
+If one envisages the paradigm with fine-grained annotations precisely indexing the script cues or the bars of the scores, the matrix could display theoretically in abscissa 1 unit for 1 cue and in ordinate 1 unit for 1 performance, {\it i.e.} a segment of rehearsal where actors are actually performing. The figure models this idealistic representation.
 
-\todo{Remarque BE : je trouve que la figure du modèle de la matrice n'est pas super importante, à supprimer je pense si besoin de place.}
+\todo{Remarque BE : je trouve que la figure du modèle de la matrice n'est pas super importante, à supprimer je pense si besoin de place. PA: je suis d'accord}
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=0.75\columnwidth]{fullmatrix}
@@ -963,14 +966,14 @@ If one envisages the paradigm with fine-grained annotations indexing precisely t
   \label{fig:fullmatrix}
 \end{figure}
 
-Such representation achieves the initial objective of providing a comprehensive visualization suitable for a mental model. In addition, it becomes a powerful visualization for browsing the archive and accessing to fine-grained annotations and video segments.
+Such a representation achieves the initial objective of providing a comprehensive visualization suitable for a mental model. In addition, it becomes a powerful visualization for browsing the archive and accessing to fine-grained annotations and video segments.
 
 \todo{BE : pour info. j'ai unifié les deux parties d'avant : "Visualization and browsing strategies" et "Demonstrator for Brick and Maggie scene"}
 
 \subsection{Archive access, visualization and browsing strategies}
 According to usage scenarios analysis, several requirements were identified concerning the archive access, archive visualization and browsing capabilities.
 In order to make the rehearsal archive accessible to the broadest possible audience, we embraced the Web platform and generated online accessible demonstrators, enabled through native HTML5 video support in all major Web browsers.\newline
-Concerning archive visualization and browsing capabilities, the multiplicity of usage scenarios highlighted the fact that end users must interact with different kinds of media/content (video captations, script/score, annotations) using different manners. As a result, components for displaying/interacting with these different kinds of content were firstly implemented and can be combined to each others to form adequate hypervideos that maximize the end-user's experience. Moreover, this hypervideo design approach - based on components combinations - foster archive novel usages, as new components can be added and combined to older ones in order to fulfill new needs.\newline
+Concerning archive visualization and browsing capabilities, the multiplicity of usage scenarios highlighted the fact that end users must interact with different kinds of media/content (video captations, script/score, annotations) in different ways. As a result, components for displaying/interacting with these different kinds of content were firstly implemented and can be combined to each others to form adequate hypervideos that maximize the end-user's experience. Moreover, this hypervideo design approach - based on components combinations - foster novel usages of the archive, as new components can be added and combined to older ones in order to fulfill new needs.\newline
 Secondly, according to identified recurrent needs due to the nature of the archive, which can be seen as a set of different versions of the same object (the play or the opera), fine-grained visualisation and browsing capacities were set up to perform what we call hereafter archive temporal and spatial zooms.
 
 \paragraph{Web Components-based approach}
@@ -1013,7 +1016,7 @@ listed in the following.
 \end{itemize}
 %BE Fin partie
 
-\noindent At time of writing, partial native support for Web Components
+\noindent At the time of writing, partial native support for Web Components
 has landed in a~number of Web browsers,
 however, for the majority of browsers,
 a~so-called \emph{polyfill} solution is still required.
@@ -1061,7 +1064,7 @@ that distinguishes them from native HTML elements.
 \noindent We have made an online demonstrator application available at
 \url{http://spectacleenlignes.fr/hypervideo/} that showcases these Web Components
 and recall that we share their implementation as open source.
-A~screenshot of the application can be seen in \ref{fig:screenshot}.
+A~screenshot of the application can be seen in figure~\ref{fig:screenshot}.
 
 \begin{figure}[htb!]
   \centering
