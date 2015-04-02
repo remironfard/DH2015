@@ -429,6 +429,7 @@ Email: cyrille.migniot@u-bourgogne.fr}
 
 %%%%%%%%%%%%%%%%
 \section{Introduction}
+\label{sec:intro}
 
 \todo{0.5 pages (Rémi)}
 \todo{BE : Remarque générale :-attention à l’aspect Opéra : pas présent pour l’instant au moins dans le titre, l’introduction et la partie état de l’art… S’il faut gagner de la place, il faudra peut-être faire sans (simplement en mentionnant dans le papier le fait que le processus a également été appliqué sur de l’opéra mais que pour des raisons de place…) }
@@ -453,15 +454,16 @@ The French title of the project refers to the multiple timelines at work in this
 
 \todo{Paragraph on technical achievements of the project?}
 
-The paper is organized as follows. Section~1 reviews previous work in using video as an archive for theater. Section~2 describes
-the context of theater rehearsals and introduces the key concepts that govern the archive. Section~3 describes the workflow that was
-created to produce, annotate, and publish the archive. Section~4 describes usage scenarios and applications that were developed
-to support access to the archive by different audiences. Section~5 reviews limitations and future work.
+The paper is organized as follows. Section~\ref{sec:stateoftheart} reviews previous work in using video as an archive for theater. Section~\ref{sec:context} describes
+the context of theater rehearsals and introduces the key concepts that govern the archive. Section~\ref{sec:workflow} describes the workflow that was
+created to produce, annotate, and publish the archive. Section~\ref{sec:scenarios} describes usage scenarios and applications that were developed
+to support access to the archive by different audiences. Section~\ref{sec:limitations} reviews limitations and future work.
 \todo{Make sure the paper structure is correctly described}
 
 
 %%%%%%%%%%%%%%%%
 \section{State of the art}
+\label{sec:stateoftheart}
 \todo{State of the art in theater, computers and video (1 page - Rémi)}
 
 \todo{Why record rehearsals?}
@@ -501,7 +503,7 @@ have also allowed for free form experimentation with recorded sequences, which i
 so convenient on actual TV or cinema. For example, France Televisions' Nouvelles Écritures\footnote{Nouvelles Écritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}} created in 2013 an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theatre-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} from Jean-Michel Ribes}, showing both how a theater play develops in different stages and how it can be presented to the audience in different styles. The Web platform has also allowed several theaters to share the extracts and trailers of upcoming performances for publicity purposes. Importantly, Web based platforms allow even small production companies or individuals to easily share the recorded content with the desired audience.
 
 \todo{NS pourquoi ce paragraph est dans "state of the art" ?}
-In this paper, we describe our effort to create exhaustive video recordings of the complete rehearsals, rather than a single performance, of a theater play and publishing it online. This raises original and interesting scientific, technological, and social issues, and brought us to question the nature of the archive as a digital heritage through various prospective usages (see Section V \todo{verifier référence section}). 
+In this paper, we describe our effort to create exhaustive video recordings of the complete rehearsals, rather than a single performance, of a theater play and publishing it online. This raises original and interesting scientific, technological, and social issues, and brought us to question the nature of the archive as a digital heritage through various prospective usages (see Section~\ref{sec:scenarios}). 
 
 \todo{i believe this paper talks about something else than multiplying the points of view @Remi: need to be reformulated : "our approach in this paper..."}
 \paragraph*{Video recording strategy}
@@ -512,7 +514,7 @@ Our approach in this paper is to make video recordings from a single viewpoint (
 What we lose is the variety of viewpoints, which is typical for television broadcasts. What we gain is the ability to compare different versions, measure progress, and understand the rehearsal process by the virtue of having a single spatial reference.
 We also experimented with novel techniques for varying the framings and shot sizes interactively 
 by making use of a {\em virtual}  zoom lens~\cite{Gandhi14}, which makes it possible for the audience to
-use the archive as {\em stock footage} which they can re-frame and re-edit according to their own interpretation (this is described in Section 5) \todo{Make sure this is correct}. 
+use the archive as {\em stock footage} which they can re-frame and re-edit according to their own interpretation (this is described in Section~\ref{sec:scenarios}). 
 
 
 \paragraph*{Video and theater}
@@ -551,7 +553,7 @@ between the play script and the audio recording. Nevertheless they require a ver
 sound recording and fail in the presence of music, reverberation and background noise. This makes them
 unsuitable for our case. Speaker change detection (also called speaker diarization) is an alternative method
 which provides line-by-line, rather than word-by-word alignments and has been demonstrated 
-on television shows~\cite{Sankar09} and theater recordings~\cite{Caillet07,Caillet13}. In Section~5 \todo{Make sure this is correct},
+on television shows~\cite{Sankar09} and theater recordings~\cite{Caillet07,Caillet13}. In Section~\ref{sec:workflow},
 we describe a special-purpose speaker diarization method that we have developed for aligning multiple versions 
 of the same scene temporally using the common play script as a pivot representation.
 
@@ -588,6 +590,7 @@ the creation of theater and opera productions with video and Web technologies.
 
 %%%%%%%%%%%%%%%%
 \section{The rehearsal process context}
+\label{sec:context}
 
 \todo{Contexte de l'archive (1 page - Nicolas)}
 
@@ -643,6 +646,7 @@ Usual information (\emph{i.e.} metadata) coming from the fields of theater and o
 
 %%%%%%%%%%%%%%%%
 \section{The rehearsal archive: complete workflow of construction and publication process}
+\label{sec:workflow}
 \todo{(2,5 pages)}
 
 \todo{complete workflow of construction and publication process}
@@ -912,7 +916,7 @@ Figure~\ref{fig:searchengine} displays the search interface for theater, divided
 Thanks to the synchronization of metadata to the video stream, a search result list from either side can be used as a request to the opposite side. For instance, from the result list of annotations (right side), it is possible to extract all chapters with corresponding timecode (left side).
 
 \subsubsection{Metadata player}
-The \emph{Metadata player} is a front-end Javascript module articulating a HTML5 video player with time-stamped metadata displayed on a timeline representation. It communicates with \emph{Ligne de temps} to retrieve the synchronized metadata for each media content to be displayed. For the usage of the project, a dedicated player (figure~\ref{fig:mdplayer}) was designed to display the contextual chapters and the interpretation annotations on timelines and to provide the play script synchronized along the video, according to the text reference metadata.
+The \emph{Metadata player} is a front-end Javascript module articulating a HTML5 video player with time-stamped metadata displayed on a timeline representation. It communicates with \emph{Ligne de temps} to retrieve the synchronized metadata for each media content to be displayed. For the usage of the project, a dedicated player (Figure~\ref{fig:mdplayer}) was designed to display the contextual chapters and the interpretation annotations on timelines and to provide the play script synchronized along the video, according to the text reference metadata.
 
 \begin{figure}[htb!]
   \centering
@@ -939,12 +943,13 @@ and as far as we know, has not yet been widely considered for live performance a
 
 %%%%%%%%%%%%%%%%
 \section{Scenarios for the valorisation of the archive}
+\label{sec:scenarios}
 \todo{(1,5 pages)}
 In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenari of the archive, taking into consideration the potential needs of future users. A particular effort was made to address specific public with pedagogical scenari, culture mediation scenari, but also research and amateur scenari. Some of those scenari were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenari according to their interest.
 This prospective work was indeed central in the design of the continuous workflow, in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularity of this project regarding researches in the digital heritage, {\it i.e.} to have considered the archive as a living cultural object, even though the archive did not exist yet.
 
 \subsection{Representing the archive}
-The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\cite{stiegler90}\todo{ajouter référence Stiegler}, and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the abscissa was the script of the play and the ordinate was the multiple rehearsals in chronological order. The result is the distribution of the rehearsals according to the script/score over time.
+The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\todo{cite{stiegler90} ajouter référence Stiegler}, and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the abscissa was the script of the play and the ordinate was the multiple rehearsals in chronological order. The result is the distribution of the rehearsals according to the script/score over time.
 
 \todo{Remarque BE : illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
 NS : malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.}
@@ -1064,7 +1069,7 @@ that distinguishes them from native HTML elements.
 \noindent We have made an online demonstrator application available at
 \url{http://spectacleenlignes.fr/hypervideo/} that showcases these Web Components
 and recall that we share their implementation as open source.
-A~screenshot of the application can be seen in figure~\ref{fig:screenshot}.
+A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
 
 \begin{figure}[htb!]
   \centering
@@ -1076,7 +1081,7 @@ A~screenshot of the application can be seen in figure~\ref{fig:screenshot}.
 
 \paragraph{Fine-grained visualization and browsing capacities}
 For some selected scenes, we offer a fine-grained visualization and browsing interface allowing to zoom both temporally and spatially
-through the archive by making use of the audio and video processing described in Section~4 \todo{Make sure this is correct}.  
+through the archive by making use of the audio and video processing described in Section~\ref{sec:workflow}.  
 
 \subsubsection{Temporal zoom} \todo{Write}
 
@@ -1100,7 +1105,7 @@ of spectatorship, which surveys the audience's visuomotor behavior  during a per
 \todo{Remarque BE : section à supprimer si besoin de place, mettre un petit quelque chose dans les futur work dessus
 NS : c'est la discussion qu'on a eu au dernier call, mais cette section est essentielle pour cette section Scenario et usage de l'archive, surtout dans le contexte d'une conférence Digital Heritage, où l'on montre les potentialités d'usage réelles, et non pas simplement des démonstrateurs hors-sol. C'est tout le travail de scénario qui a été fait dans ce projet et qui ne doit pas mis de côté, en particulier pour cette conférence. Je te renvoie à l'introduction de cette section qui réintroduit la démarche du projet, à savoir d'avoir imaginé une archive tout en réfléchissant à des scénarios d'usage.}
 
-A more complete scenario was designed to illustrate potential usage of the archive. In the context of the creative process itself, this scenario involves a mobile app that members of the crew could use to review, annotate and discuss the rehearsals along the direction process. Such an app would benefit from the complete workflow from video capture to video online publication and would provide the creative crew a excellent assistant to mark, search and archive the memory of the creative process. During the project, we developed the full user experience and interface into mock-ups (figure~\ref{fig:mobileapp}).
+A more complete scenario was designed to illustrate potential usage of the archive. In the context of the creative process itself, this scenario involves a mobile app that members of the crew could use to review, annotate and discuss the rehearsals along the direction process. Such an app would benefit from the complete workflow from video capture to video online publication and would provide the creative crew a excellent assistant to mark, search and archive the memory of the creative process. During the project, we developed the full user experience and interface into mock-ups (Figure~\ref{fig:mobileapp}).
 
 \begin{figure}[htb!]
   \centering
@@ -1109,7 +1114,7 @@ A more complete scenario was designed to illustrate potential usage of the archi
   \label{fig:mobileapp}
 \end{figure}
 
-This scenario reveals an interesting result in terms of digital heritage issue. In fact, it appears that digital archives meet the present needs of certain users whose objectives are not necessarily to augment the production of knowledge. Digital archive should therefore articulate freely with new communities of potential actors and users. One of the results of \emph{Spectacle en ligne(s)} is the demonstration that this empowerment of users with digital ressources must be accompanied by a set of technological conditions (an applicative platform for instance). Cultural and knowledge institutions have a responsability in the design and the implementation of thoses conditions for ressources appropriation \cite{Sauret15}.
+This scenario reveals an interesting result in terms of digital heritage issue. In fact, it appears that digital archives meet the present needs of certain users whose objectives are not necessarily to augment the production of knowledge. Digital archive should therefore articulate freely with new communities of potential actors and users. One of the results of \emph{Spectacle en ligne(s)} is the demonstration that this empowerment of users with digital ressources must be accompanied by a set of technological conditions (an applicative platform for instance). Cultural and knowledge institutions have a responsability in the design and the implementation of thoses conditions for ressources appropriation \cite{sauret2015}.
 
 \subsection{Experimental validation}
 \todo{The recordings have been evaluated subjectively by the actors, the director and her assistants?}
@@ -1121,6 +1126,7 @@ This scenario reveals an interesting result in terms of digital heritage issue. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Limitations and Future  Work}
+\label{sec:limitations}
 
 In this section, we describe some limitations of our approach and areas for future work.
 The reframing and play text alignment is still experimental
@@ -1138,6 +1144,7 @@ More future work is needed for assigning the virtual cameras automatically.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
+\label{sec:conclusion}
 \todo{(0.25 pages)}
 
 \todo{Our technology is non intrusive and well accepted by the production team}
