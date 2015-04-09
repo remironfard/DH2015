@@ -448,7 +448,7 @@ Digital archiving, hypervideo, video processing, audio processing, Linked Data, 
 \includegraphics[height=3.3cm]{table_rehearsals}
 \includegraphics[height=3.3cm]{studio_rehearsals}
 \includegraphics[height=3.3cm]{stage_rehearsals}
-\caption{Three successive steps in the theater rehearsal process for Cat on a~hot tin roof: (a) Table readings; (b) Early rehearsals in studio; (c) Late rehearsals on stage (including dress rehearsals and tech rehearsals).}
+\caption{Three successive steps in the theater rehearsal process for \emph{Cat on a~hot tin roof}: (a)~Table readings; (b)~Early rehearsals in a~studio; (c)~Late rehearsals on stage (including dress rehearsals and technology rehearsals).}
 \label{fig_rehearsals}
 \end{figure*}
 
@@ -506,25 +506,25 @@ The paper is organized as follows. Section~\ref{sec:stateoftheart} reviews previ
 \section{State of the art}
 \label{sec:stateoftheart}
 
-Audio and video recordings are useful resources in the field of performance studies \cite{mcauley1994video,Bravo07} and rehearsal studies~\cite{McAuley06,McAuley08}. Yet, in practice, researchers have limited access to performances and must often refer to their own memories of the production or the rehearsals. Previous work on constituting video archives of rehearsals include the work of Pascal Bouchez with Daniel Mesguich\cite{Bouchez07} and some clever use of multiple cameras and multiple takes edited together into high quality movies. Another notable exception is {\em In the company of actors}, a documentary movie about a production of \emph{Hedda Gabler}, with Cate Blanchett in the title role~\cite{Darling07}. Even in those two cases, only an edited version (an interpretation)  of the rehearsals is made available to the public.
+Audio and video recordings are useful resources in the field of performance studies~\cite{mcauley1994video,Bravo07} and rehearsal studies~\cite{McAuley06,McAuley08}. Yet, in practice, researchers have limited access to performances and must often refer to their own memories of the production or the rehearsals. Previous work on constituting video archives of rehearsals includes the work of Pascal Bouchez with Daniel Mesguich\cite{Bouchez07} and some clever use of multiple cameras and multiple takes edited together into high quality movies. Another notable exception is {\em In the company of actors}, a~documentary movie about a~production of \emph{Hedda Gabler} with Cate Blanchett in the title role~\cite{Darling07}. Even in those two cases, only an edited version (an interpretation)  of the rehearsals is made available to the public.
 
 
 %RR removed those references . ~\cite{Selbourne82,Sher85,Stafford00,Stern00}.  
 
 \paragraph*{Audio and video processing}
-A useful feature for a large video archive is the capability to retrieve video segments based on which actors 
-are performing and which segment of the play script they are performing. In order to relieve annotators from the burden of precisely annotating which actors are present in which frames, and speaking (or singing) which lines of the play script (or score)  we experimented with automatic audio and video processing methods. The topics of actor~\cite{Hilton06} and speaker~\cite{Miro12} recognition are very active in the audio and video processing research communities, but very little work has been dedicated to the special case of live performances. The stage is a complex and cluttered environment  with complex lighting and vast dimensions, which makes automatic audio and video processing quite challenging. 
+A useful feature for a~large video archive is the capability to retrieve video segments based on which actors 
+are performing and which segment of the play script these actors are performing. In order to relieve annotators from the burden of precisely annotating which actors are present in which frames and speaking (or singing) which lines of the play script (or score),  we experimented with automatic audio and video processing methods. The topics of actor~\cite{Hilton06} and speaker~\cite{Miro12} recognition are very active in the audio and video processing research communities, but very little work has been dedicated to the special case of live performances. The stage is a~complex and cluttered environment  with complex lighting and vast dimensions, which makes automatic audio and video processing quite challenging. 
 
 One approach to indexing multiple theater rehearsals and performances is to automatically align
 all of them to the same play script. The {\em script-sync} feature in the Avid Media Composer editing suite
-is a well-known example of an off-the shelf solution for the alignment of video recordings with their scripts word-by-word. Such tools are based on Hidden Markov Models (HMM) and work by computing  a forced alignment 
-between the play script and the audio recording. Nevertheless they require a very high quality 
+is a~well-known example of an off-the shelf solution for the alignment of video recordings with their scripts word-by-word. Such tools are based on Hidden Markov Models (HMM) and work by computing  a~forced alignment 
+between the play script and the audio recording. Nevertheless they require very high quality 
 sound recording and fail in the presence of music, reverberation and background noise. This makes them
 unsuitable for our case. Speaker change detection (also called speaker diarization) is an alternative method
-which provides line-by-line, rather than word-by-word alignments and has been demonstrated 
-on television shows~\cite{Sankar09} and theater recordings~\cite{Caillet13}. In Section~\ref{sec:scenarios}),
-we describe a special-purpose speaker diarization method that we developed for aligning multiple versions 
-of the same scene temporally using the common play script as a pivot representation. In the case of music,
+which provides line-by-line rather than word-by-word alignments and has been demonstrated 
+on television shows~\cite{Sankar09} and theater recordings~\cite{Caillet13}. In Section~\ref{sec:scenarios},
+we describe a~special-purpose speaker diarization method that we developed for aligning multiple versions 
+of the same scene temporally using the common play script as a~pivot representation. In the case of music,
 script-following methods could similarly be used to provide bar-by-bar alignments.
 
 %Swedbeerg describes a system for localizing actors on a stage using RFID sensors carried by the actors~\cite{Swedberg}
@@ -533,7 +533,7 @@ script-following methods could similarly be used to provide bar-by-bar alignment
 \paragraph*{Hypervideo and interactive documentaries}
 
 The term \emph{hypervideo} is commonly used to refer to
-\textit{``a~displayed video stream that contains embedded user-clickable anchors''}%
+\textit{``a~displayed video stream that contains embedded user-clickable anchors''}
 and annotations~\cite{sawhney1996hypercafe}, %smith2002extensible 
 allowing for navigation between the video and other hypermedia elements.
 %In a~2006 article in \emph{The Economist}, the authors write 
