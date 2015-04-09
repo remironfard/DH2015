@@ -924,10 +924,15 @@ and as far as we can tell, has not yet been widely considered for live performan
 \section{Usage scenarios}
 \label{sec:scenarios}
 %\todo{(1,5 pages)}
-In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenarios of the archive, taking into consideration the potential needs of future users. A~particular effort was made to address specific audiences with pedagogical scenarios, culture mediation scenarios, but also research and amateur scenarios. Some of those scenarios were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenarios according to their interest. This prospective work was indeed central in the design of the continuous workflow, in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularity of this project regarding researches in the digital heritage, {\it i.e.} to have considered the archive as a living cultural object, even though the archive did not exist yet.
+In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenarios of the archive, taking into consideration the potential needs of future users. A~particular effort was made to address specific audiences with pedagogical scenarios, culture mediation scenarios, but also research and amateur scenarios. Some of these scenarios were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenarios according to their interests. This prospective work was indeed central in the design of the continuous workflow in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularities of this project regarding researches in the digital heritage, \emph{i.e.}, to have considered the archive as a~living cultural object, even though the archive did not exist yet.
 
 \subsection{Quantitative and qualitative analysis}
-The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script/score over time.
+The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, \emph{i.e.}, video as a~temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a~comprehensive and cognitively acceptable representation. Taking the project's title literally:
+%\emph{Spectacle en ligne(s)},
+\todo{anonymized (native language)}, \emph{i.e.},
+%\emph{Performance in line(s)},
+\todo{anonymized (translated)},
+the archive can be viewed as multiple lines of rehearsals. We imagined a~matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script or score over time.
 
 %\todo{Remarque BE: illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
 %NS: malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.  RR: Can we show the matrices for both opera and theater ? The comparison is in itself interesting ! (and we can skip the ideal matrix)}
@@ -958,19 +963,19 @@ The massive aspect of the archive makes is difficult to apprehend. Both the natu
 %\todo{BE: pour info. j'ai unifié les deux parties d'avant: "Visualization and browsing strategies" et "Demonstrator for Brick and Maggie scene"}
 
 \subsection{Web components}
-According to usage scenarios analysis, several requirements were identified concerning the archive access, archive visualization and browsing capabilities. In order to make the rehearsal archive accessible to the broadest possible audience, we embraced the Web platform and generated online accessible demonstrators, enabled through native HTML5 video support in all major Web browsers.
+According to our usage scenarios analysis, several requirements were identified concerning the archive access, archive visualization, and browsing capabilities. In order to make the rehearsal archive accessible to the broadest possible audience, we embraced the Web platform and generated online accessible demonstrators, enabled through native HTML5 video support in all major Web browsers.
 
-Concerning archive visualization and browsing capabilities, the multiplicity of usage scenarios highlighted the fact that end users must interact with different kinds of media/content (video captations, script/score, annotations) in different ways. As a result, components for displaying/interacting with these different kinds of content were firstly implemented and can be combined to each others to form adequate hypervideos that maximize the end-user's experience. Moreover, this hypervideo design approach - based on components combinations - foster novel usages of the archive, as new components can be added and combined to older ones in order to fulfill new needs.
+Concerning archive visualization and browsing capabilities, the multiplicity of usage scenarios highlighted the fact that end users must interact with different kinds of media or content (video captions, scripts or scores, and annotations) in different ways. As a~result, components for displaying and/or interacting with these different kinds of content were firstly implemented and can be combined with each other to form adequate hypervideos that maximize the end-user's experience. Moreover, this hypervideo design approach---based on components combinations---fosters novel usages of the archive, as new components can be added and combined to older ones in order to fulfill new needs.
 
 \subsection{Fine-grained visualization and browsing}
 %According to identified recurrent needs due to the nature of the archive, which can be seen as a set of different versions of the same object (the play or the opera), fine-grained visualisation and browsing capacities were set up to perform what we call hereafter archive temporal and spatial zooms.
 
-For some selected scenes, we offer a fine-grained visualization and browsing interface allowing to zoom both temporally and spatially through the archive by making use of the audio and video processing described in Section~\ref{sec:workflow}.  Using audio-to-script alignments, we offer options to navigate a scene one line at a time and one rehearsal at a time. More precisely, hyperlinks are offered to move to the previous and next lines in in any given rehearsal; or to move to the previous and next rehearsals in any given line; thus providing a "temporal zoom lens" to the archive.
+For some selected scenes, we offer a~fine-grained visualization and browsing interface allowing to zoom both temporally and spatially through the archive by making use of the audio and video processing described in Section~\ref{sec:workflow}.  Using audio-to-script alignments, we offer options to navigate a~scene one line at a~time and one rehearsal at a~time. More precisely, hyperlinks are offered to move to the previous and next lines in any given rehearsal; or to move to the previous and next rehearsals in any given line; thus providing a~``temporal zoom lens'' to the archive.
 
-Because the source material was recorded from a distance and with a fixed lens, the archive presents a general view of the stage as a default framing. This has the advantage of never hiding anything from the audience. But one shortcoming is that the archive is not very pleasant to watch, especially on a small screen. 
+Because the source material was recorded from a~distance and with a~fixed lens, the archive presents a~general view of the stage as a~default framing. This has the advantage of never hiding anything from the audience. But one shortcoming is that the archive is not very pleasant to watch, especially on a~small screen. 
 
-To remedy this problem, we implemented a "spatial zoom lens" to make it possible to focus on the main actors in any given scene. Based on audio and video analysis, we generated alternative framings using methods described elsewhere~\cite{Gandhi14,Gandhi15}.  For example, during a monologue we automatically
-compute a  medium-shot of the speaker and during a dialogue we compute a two-shot that contains the speaker and his addressee (see details in Figure~\ref{fig_speaker}). This greatly improves the visibility of the main actors, and makes it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
+To remedy this problem, we implemented a~``spatial zoom lens'' to make it possible to focus on the main actors in any given scene. Based on audio and video analysis, we generated alternative framings using methods described elsewhere~\cite{Gandhi14,Gandhi15}.  For example, during a~monologue, we automatically
+compute a~medium-shot of the speaker, and during a~dialogue, we compute a~two-shot that contains the speaker and his addressee (see details in Figure~\ref{fig_speaker}). This greatly improves the visibility of the main actors and renders it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
 
 
 \begin{figure*}[tp]
@@ -981,7 +986,10 @@ compute a  medium-shot of the speaker and during a dialogue we compute a two-sho
 \end{figure*}
 
 Both the spatial and the temporal zoom lenses were assembled into 
-an online  application using Web Components. The application is available at \url{http://spectacleenlignes.fr/hypervideo/}  and the implementation is  shared as open source. A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
+an online  application using Web Components. The application is available at
+%\url{http://spectacleenlignes.fr/hypervideo/}
+\todo{anonymized URL}
+and the implementation is  shared as open source. A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
 
 \begin{figure}[htb!]
   \centering
@@ -1025,7 +1033,7 @@ an online  application using Web Components. The application is available at \ur
 \subsection{Mobile app for the creative crew} 
 
 
-During the production of the archive, the creative crew reacted quite positively to the experiment, and expressed an interest in getting immediate feedback. While this had not been planned, we started designing mobile applications that they could tentatively use for (1) viewing the live feed being recorded on their smartphones and (2) adding their own (signed) annotations and comments collaboratively.  While not fully implemented, this feature was presented to the directors and their collaborators as mock-ups (Figure~\ref{fig:mobileapp}). They were generally well received and are likely candidates  as an addition to the existing system for future experiments. 
+During the production of the archive, the creative crew reacted quite positively to the experiment and expressed  interest in getting immediate feedback. While this had not been planned, we started designing mobile applications that they could tentatively use for \emph{(i)}~viewing the live feed being recorded on their smartphones and \emph{(ii)}~adding their own (signed) annotations and comments collaboratively.  While not fully implemented, this feature was presented to the directors and their collaborators as mock-ups (Figure~\ref{fig:mobileapp}). These mock-ups were generally well received and are likely candidates  as an addition to the existing system for future experiments. 
 
 \begin{figure}[htb!]
   \centering
@@ -1047,7 +1055,7 @@ in close collaboration with the directors of the two documented productions, and
 surprisingly  well received by the performers and technical crew. Filming the rehearsals
 from the director's point-of-view was a key element for this positive response. In future work,
 we would like to increase the video resolution of the recordings to 4K in order to better exploit
-the capabilities of our virtual zoom lens ; and to experiment with stereoscopic 3D and 360 panoramic video
+the capabilities of our virtual zoom lens; and to experiment with stereoscopic 3D and 360 panoramic video
 which would allow to include reverse shots of the directors and their assistants, which are currently not recorded.
 
 It is our hope that this archive illustrates the cultural heritage of the performing arts from a novel and 
