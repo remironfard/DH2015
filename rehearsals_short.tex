@@ -618,9 +618,9 @@ The rehearsals unfold according to a~relatively classic \emph{modus operandi}: t
 
 Digital heritage projects often focus on digitalization of analog materials and data,
 when others would focus on the usage and the valorization of digitalized resources.
-In our case, a~specific feature of the project was the design decision to create a natively 
+In our case, a~specific feature of the project was the design decision to create a~natively 
 digital archive from scratch,  taking into account its potential usages by different audiences.
-We therefore built a complete pipeline from the design and the making of the archive
+We therefore built a~complete pipeline from the design and the making of the archive
 to its publication and usage scenarios. This section describes the details of the workflow 
 and describes all the hardware and software components that enabled  the construction 
 and the publication  of the archive.
@@ -628,10 +628,10 @@ and the publication  of the archive.
 \subsection{Video recording}
 %Non intrusive, push-button, integral, full HD, sound
 %\todo{BE - remarque générale: je préfère le terme annotation au terme index}
-In the context described previously, the video recording required a non-intrusive and easy setup for non-technical operators. Indeed, their profile must belong to dramaturgy and performing art, in order to dedicate their attention to performance and directing description. Therefore, the apparatus was designed to be fully ``plug\ \& play'' with a single record button to start a capture session.
-The collected corpus embraces the integrality of the rehearsals, from the ``text walk-through'' at the table to the final dress rehearsal, with about five to seven working hours a day, which in consequence result in likewise five to seven hours of recorded and annotated video every day.
+In the context described previously, the video recording required a~non-intrusive and easy setup for non-technical operators. Actually, their profile must belong to dramaturgy and performing art in order to dedicate their attention to performance and directing description. Therefore, the apparatus was designed to be fully \emph{plug\ \& play} with a~single record button to start a~capture session.
+The collected corpus embraces the integrality of the rehearsals, from the ``text walk-through'' at the table to the final dress rehearsal, with about five to seven working hours a~day, which in consequence result in likewise five to seven hours of recorded and annotated video every day.
 
-The unit for video recording and annotating is composed typically of a PC laptop, connected to a video camera mounted on a tripod and remotely controlled from the PC, of an omnidirectional microphone as input of a small sound mixing table, itself linked to the laptop. This system can be easily set up and wrapped up, is movable, and can fit in a studio room without burdens. Running on a dedicated Linux distribution, the unit runs and displays only one software: an interface through which the operator can \emph{(i)} remotely control the camera and \emph{(ii)} take notes synchronously. 
+The unit for video recording and annotating is typically composed of a~PC laptop that is connected to a video camera mounted on a tripod and remotely controlled from the PC, of an omnidirectional microphone as input of a small sound mixing desk, in turn linked to the laptop. This system can be easily set up and wrapped up, is movable, and can fit in a studio room without burdens. Running on a dedicated Linux distribution, the unit executes and displays only one software: an interface through which the operator can \emph{(i)}~remotely control the camera and \emph{(ii)}~take notes synchronously. 
 The technical specifications of the original video files are the format \texttt{.mkv}, the codec H264, and the resolution of $1920 \times 1080$ pixels (full HD).
 
 %\begin{figure}[htb!]
@@ -643,10 +643,10 @@ The technical specifications of the original video files are the format \texttt{
 
 \subsection{Annotation}
 %\todo{attention à l'homogénéité du vocabulaire: annotations; metadata; data}
-Simultaneously to the live video capture, the operator was asked to describe the rehearsals in his own words using  the note-taking tool. The data produced during this annotation process were synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}.
+Simultaneously to the live video capture, the operator was asked to describe the rehearsals in his own words using  the note-taking tool. The data produced during this annotation process were synchronized with the video stream and encoded into an XML format based on the Cinélab data model.\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}
 
-Annotations of the  rehearsals were further classified  into two main categories: descriptions and interpretations.  Description annotations contain contextual and objective information about the rehearsals  (performeances and  discussions, with or without costumes, time, location, \emph{etc.}), whereas interpretation annotations targeted the dramaturgy and aesthetics of the performances themselves---with free observations and comments on the creative work. The interpretations were further classified into  sub-categories. Those sub-categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
-In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
+Annotations of the  rehearsals were further classified  into two main categories: descriptions and interpretations.  Description annotations contain contextual and objective information about the rehearsals  (performances and  discussions, with or without costumes, time, location, \emph{etc.}), whereas interpretation annotations targeted the dramaturgy and aesthetics of the performances themselves---with free observations and comments on the creative work. The interpretations were further classified into  sub-categories. Those sub-categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
+In contrast, different categories emerged for theater and opera, reflecting both the different nature of these performing arts, and the personal point of view of each annotator.
 
 \begin{table}
 \small
@@ -667,11 +667,11 @@ Annotations & 3,530 & 6,968 & 10,498\\
 \label{table_facts}
 \end{table}
 
-The result of this synchronous annotation was an augmented  video stream with semantic metadata, also considered as intra-video indexes, making the video corpus easily searchable with a proper search engine.
+The result of this synchronous annotation was an augmented  video stream with semantic metadata, also considered as intra-video indices, making the video corpus easily searchable with a proper search engine.
 
 \subsubsection{Data model} Figure~\ref{fig_data_model} describes the main elements of the data model used by the note-taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime (\emph{i.e.} during the rehearsal). \newline
 
-A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual metadata (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and includes a direct reference to the section of the work being performed or discussed (for theater, we used page and line numbers in the play-script ; for opera, we used page and bar numbers in the musical score). 
+A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half or full day). A~session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual metadata (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and includes a direct reference to the section of the work being performed or discussed (for theater, we used page and line numbers in the play-script; for opera, we used page and bar numbers in the musical score). 
 
 %Chapters also may contain categorized moments of interest. 
 
@@ -687,7 +687,7 @@ A session annotation is linked with a video file and represents a rehearsal sess
 \end{figure*}
 
 
-\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals caption process for a given work, an operator first fills into the note-taking tool some time-stable data: the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session---\emph{e.g.}, contextual data (costumes, sets, \emph{etc.}) about a given chapter (inherited from a previous one if any).
+\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals caption process for a given work, an operator first enters some time-stable data in the note-taking tool: the creation, work, actors, characters, rehearsals place. Additional data can next be entered or updated during a rehearsal session---\emph{e.g.}, contextual data (costumes, sets, \emph{etc.}) about a given chapter (inherited from a previous one, if any).
 %BE on peut pour gagner de la place juste mettre les éléments Session, Chapter, Moment of interest..
 
 \subsubsection{Annotation categories}
@@ -695,7 +695,7 @@ A session annotation is linked with a video file and represents a rehearsal sess
 %\todo{Emerged categories: je voulais dire, les catégories qui ont émergées lors de l'annotation. Je tente "inherited", est ce que cela convient ? Pas tout à fait clair non plus.}
 
 The annotation process revealed a rich set of categories associated to interpretation annotations, reflecting 
-the  specific domains of theater and opera and the personal point of view of the annotator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
+the  specific domains of theater and opera and the personal viewpoint of the annotator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further research on genetic analysis of creative works.
 
 \begin{table}
 \centering
