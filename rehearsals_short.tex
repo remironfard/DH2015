@@ -366,9 +366,9 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-%\title{Spectacle-en-ligne(s) : Sharing the Digital  Heritage of Theatre and Opera Rehearsals}
-%\title{Capturing, Documenting and Sharing Theatre and Opera Rehearsals as Digital  Heritage}
-%\title{Capturing and Indexing Theatre Rehearsals: \\The Design and Usage of a Digital Cultural Archive}
+%\title{Spectacle-en-ligne(s) : Sharing the Digital  Heritage of theater and Opera Rehearsals}
+%\title{Capturing, Documenting and Sharing theater and Opera Rehearsals as Digital  Heritage}
+%\title{Capturing and Indexing theater Rehearsals: \\The Design and Usage of a Digital Cultural Archive}
 \title{Capturing and Indexing Rehearsals: The Design and Usage of a Digital Archive of Performing Arts}
 
 % conference papers do not typically use \thanks and this command
@@ -448,7 +448,7 @@ Digital archiving, hypervideo, video processing, audio processing, Linked Data, 
 \includegraphics[height=3.3cm]{table_rehearsals}
 \includegraphics[height=3.3cm]{studio_rehearsals}
 \includegraphics[height=3.3cm]{stage_rehearsals}
-\caption{Three successive steps in the theatre rehearsal process for Cat on a hot tin roof: (a) Table readings; (b) Early rehearsals in studio; (c) Late rehearsals on stage (including dress rehearsals and tech rehearsals).}
+\caption{Three successive steps in the theater rehearsal process for Cat on a~hot tin roof: (a) Table readings; (b) Early rehearsals in studio; (c) Late rehearsals on stage (including dress rehearsals and tech rehearsals).}
 \label{fig_rehearsals}
 \end{figure*}
 
@@ -462,7 +462,9 @@ Digital archiving, hypervideo, video processing, audio processing, Linked Data, 
 
 %\todo{0.5 pages (Remi)}
 
-This paper presents the result of a two-year project dedicated to the creation of a digital archive  holding the complete  rehearsals of  two recent productions of a theater play and and an opera. To our knowledge, this is the first time that video recordings of theatre and opera rehearsals  are made available to researchers in the digital humanities at such a large scale. Quoting from a recent DVD release of theatre rehearsals, we must acknowledge that  "{\em within the world of theater the rehearsal room is a sacred space---the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a place into which the public is often, if ever, invited}". In our case, the directors of the theatre and opera productions were a leading force to open this sacred space - digitally.  This achievement was made possible by introducing a  specifically designed, non-intrusive workflow for a natively digital archive from capture to editorialization, including collaborative annotation, audio and video processing, data modeling  and hyper-linking, which are described in the paper.
+This paper presents the results of a~two-year research project dedicated to the creation of a~digital archive holding the complete  rehearsals of  two recent productions of a~theater play and  an opera. To the best of our knowledge, this is the first time that video recordings of theater and opera rehearsals  are made available to researchers in the digital humanities at such a~large scale. Quoting from a~2007 DVD release%
+\footnote{DVD \emph{In the Company of Actors}: \url{http://www.imdb.com/title/tt1059798/}}
+of theater rehearsals, we acknowledge that  {\em ``within the world of theatre the rehearsal room is a~sacred space---the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a~place into which the public is often, if ever, invited.''} In our case, the directors of the theater and opera productions were a~leading force to open this sacred space---digitally.  This achievement was made possible by introducing a~specifically designed, non-intrusive workflow for a~natively digital archive from capture to editorialization, including collaborative annotation, audio and video processing, data modeling,  and hyperlinking, which we describe in the present paper.
 
 
 %The French title of the project refers to the multiple timelines at work in this archive: all rehearsals timelines, from the first readings to the opening night, in addition to the storyline of the play. The title also refers to putting the video archive "online" ({\it i.e.} "en ligne") on the web. 
@@ -476,7 +478,7 @@ This paper presents the result of a two-year project dedicated to the creation o
 Archiving video recordings of live performances is important for preserving the cultural heritage the performing arts but t is not yet a common or systematic practice, and theater remains known as {\em the ephemeral art} \cite{Reason06,Bouchez07}. This is likely to change in the near future, as high-quality video recording equipements are becoming more widely available to theaters.   Many organizations around the world now actively produce and archive video recordings of theater performances. The theater on Film and Tape Archive (TOFT) provides research access to more than 20,000 video recordings of New York and regional theater productions since 1970.  The National Video Archive of Performance (NVAP) at Victoria and Albert Museum London provides research access to video recordings of numerous renowned theater performances produced across the UK since 1992. 
 
 Recently, such efforts have been extended to the World Wide Web. Start-up company  Digital Theater 
-make video recordings of  theater productions  and make them available  online for a fraction of the cost of a theatre seat. The French National Institute of Audiovisual (INA)\footnote{ina.fr} allows viewers to download a large number of   television broadcasts of historical theater performances. France Televisions' Nouvelles Ecritures\footnote{Nouvelles Ecritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}}  has been experimenting with an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theatre-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} by Jean-Michel Ribes}, at different stages of the production (including rehearsals) and presented in different styles. Theatres and operas also use the World Wide Web to share extracts and trailers of upcoming performances for publicity purposes. 
+make video recordings of  theater productions  and make them available  online for a fraction of the cost of a theater seat. The French National Institute of Audiovisual (INA)\footnote{ina.fr} allows viewers to download a large number of   television broadcasts of historical theater performances. France Televisions' Nouvelles Ecritures\footnote{Nouvelles Ecritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}}  has been experimenting with an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theater-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} by Jean-Michel Ribes}, at different stages of the production (including rehearsals) and presented in different styles. theaters and operas also use the World Wide Web to share extracts and trailers of upcoming performances for publicity purposes. 
 
 In most instances, performances are recorded with a multi-camera, multi-take approach derived from broadcast television common practices. Having multiple viewpoints is especially beneficial for studying actor performances.  One extreme example is John Gielgud's  \emph{Hamlet} starring Richard Burton in 1964,  which used 19 cameras.  One problem with the ``multiple camera, multiple takes'' technique used by television broadcasters  is that it is costly and time-consuming to produce; and it generates huge volumes of data, which are  difficult to organize into an accessible and usable archive. Or more frequently, the rushes  are just ignored and only the edited version is kept as an archive. 
 
@@ -570,13 +572,13 @@ the creation of theater and opera productions with video and Web technologies.
 %\todo{Performances}
 %\todo{Discussions}
 
-Live performance rehearsals involve many actors and participants, not limited to theatre actors,  including the director and  directing assistants, singers and musicians, lighting directors, sound directors, stage managers, technicians, etc. The archive and its metadata were designed to take all of them not account, based on a careful analysis of the experimental fields of  theatre and opera.
+Live performance rehearsals involve many actors and participants, not limited to theater actors,  including the director and  directing assistants, singers and musicians, lighting directors, sound directors, stage managers, technicians, etc. The archive and its metadata were designed to take all of them not account, based on a careful analysis of the experimental fields of  theater and opera.
 
 %The the descriptions rely strongly on the chosen fields of study (\todo{what's the proper translation for terrain d'études ? PA: field of study me parait bien: \url{http://www.linguee.fr/francais-anglais/traduction/terrain+d'étude.html}}), \emph{i.e.}, in our case the rehearsals of the play and the opera themselves, but more importantly the methodologies of the creative crew.
 
-%\subsection{Theatre and opera as experimental fields}
+%\subsection{theater and opera as experimental fields}
 
-Theatre and opera turned out to be distinct experimental fields, with important differences in the rehearsal process.  The two experiments in our case were original productions of  Tennessee Williams' \emph{Chatte sur un toit brûlant}, and Francesco Cavalli's \emph{Elena}. Both of them  were rehearsed during the spring and the summer of 2013, in a period of eight and six weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{table readings} where actors read the script together for the first time , all the way to the \emph{opening night} (see Fig.\ref{fig_rehearsals}). However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a contemporary play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work. Those aspects motivated us to design  
+theater and opera turned out to be distinct experimental fields, with important differences in the rehearsal process.  The two experiments in our case were original productions of  Tennessee Williams' \emph{Chatte sur un toit brûlant}, and Francesco Cavalli's \emph{Elena}. Both of them  were rehearsed during the spring and the summer of 2013, in a period of eight and six weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{table readings} where actors read the script together for the first time , all the way to the \emph{opening night} (see Fig.\ref{fig_rehearsals}). However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a contemporary play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work. Those aspects motivated us to design  
 a generic system that could be deployed in such different contexts.
 
 \subsection{The rehearsal process}
@@ -669,7 +671,7 @@ The result of this synchronous annotation was an augmented  video stream with se
 
 \subsubsection{Data model} Figure~\ref{fig_data_model} describes the main elements of the data model used by the note-taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime (\emph{i.e.} during the rehearsal). \newline
 
-A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual metadata (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and includes a direct reference to the section of the work being performed or discussed (for theatre, we used page and line numbers in the play-script ; for opera, we used page and bar numbers in the musical score). 
+A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual metadata (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and includes a direct reference to the section of the work being performed or discussed (for theater, we used page and line numbers in the play-script ; for opera, we used page and bar numbers in the musical score). 
 
 %Chapters also may contain categorized moments of interest. 
 
@@ -693,7 +695,7 @@ A session annotation is linked with a video file and represents a rehearsal sess
 %\todo{Emerged categories: je voulais dire, les catégories qui ont émergées lors de l'annotation. Je tente "inherited", est ce que cela convient ? Pas tout à fait clair non plus.}
 
 The annotation process revealed a rich set of categories associated to interpretation annotations, reflecting 
-the  specific domains of theatre and opera and the personal point of view of the annotator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
+the  specific domains of theater and opera and the personal point of view of the annotator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
 
 \begin{table}
 \centering
@@ -927,7 +929,7 @@ In parallel to the design and implementation of the previously described workflo
 The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script/score over time.
 
 %\todo{Remarque BE: illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
-%NS: malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.  RR: Can we show the matrices for both opera and theatre ? The comparison is in itself interesting ! (and we can skip the ideal matrix)}
+%NS: malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.  RR: Can we show the matrices for both opera and theater ? The comparison is in itself interesting ! (and we can skip the ideal matrix)}
 
 \begin{figure}[htb!]
   \centering
@@ -1059,7 +1061,7 @@ better measure its impact and usefulness in the digital humanities.
 %Future work is needed to fully evaluate the zooming feature in the light of  the theory  of spectatorship, 
 %which surveys the audience's visuomotor behavior  during a performance~\cite{Bennett97}. 
 
-%M\todo{Expand more on promising directions for future research, including the notation of theatre,
+%M\todo{Expand more on promising directions for future research, including the notation of theater,
 % copyright protection for stage directions, the possibility of a depot legal, etc.}
 
 % conference papers do not normally have an appendix
