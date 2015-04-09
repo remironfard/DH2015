@@ -1,0 +1,87 @@
+\newpage
+
+\section*{Appendix: Web Components}
+This appendix present technical details of our hypervideo implementation as web components.
+We highlight that we not only optimized for reach on the consuming side---%
+\emph{i.e.}, people watching the rehearsal hypervideos in their browsers---%
+but also for the producing side---%
+\emph{i.e.}, Web developers who collaborate with theaters and operas
+to create such hypervideos in the first place and to put them online.
+Web developers are used to mark up Webpages using HTML tags
+like \texttt{<h1>}, \texttt{<p>}, \texttt{<strong>} \emph{etc.}
+and to ``glue'' these tags functionally together using the JavaScript programming language
+to finally control the look and feel of their Webpages with Cascading Stylesheets (CSS).
+We were motivated to allow for the same tag-based mark-up mechanics
+to also work for the creation of rich hypervideo applications.
+Therefore, we have leveraged an emerging technology
+that is currently being standardized by the World Wide Web Consortium (W3C)
+called \emph{Web Components}.
+Web Components is a~set of specifications, which let Web developers leverage
+their HTML, CSS, and JavaScript knowledge to build widgets
+that can be reused easily and reliably.\footnote{Web Components:
+\url{http://www.chromium.org/blink/Web-components}}
+
+%\todo{BE: si besoin de place, la partie qui suit peut être supprimée}
+%%BE début partie pouvant être supprimée
+%According to a~(recently discontinued) W3C Working Draft introductory document,%
+%\footnote{Discontinued W3C Working Draft document:
+%\url{http://www.w3.org/TR/2013/WD-components-intro-20130606/}~\cite{cooney2013Webcomponents}}
+%the component model for the Web (``Web Components'') consists of five different pieces
+%listed in the following.
+%
+%\begin{itemize}
+%  \item \textbf{Imports} which defines how templates, decorators and custom elements are packaged and loaded as a~resource%
+%  ~\cite{glazkov2014htmlimports}.
+%  \item \textbf{Shadow DOM} which encapsulates a~DOM subtree for more reliable composition of user interface elements%
+%  ~\cite{glazkov2014shadowdom}.    
+%  \item \textbf{Custom Elements} which let authors define their own elements, with new tag names and new script interfaces%
+%  ~\cite{glazkov2013customelements}.  
+%  \item \textbf{Decorators} which apply templates based on CSS selectors to affect rich visual and behavioral changes to documents.
+%  \item \textbf{Templates} which define chunks of inert markup that can be activated for use.  
+%\end{itemize}
+%%BE Fin partie
+
+\noindent At the time of writing, partial native support for Web Components
+has landed in a~number of Web browsers,
+however, for the majority of browsers,
+a~so-called \emph{polyfill} solution is still required.
+A~polyfill  is a~piece of code that provides the technology
+that developers expect the browser to provide natively in the near future.
+We rely on the Polymer project\footnote{Polymer project:
+\url{http://www.polymer-project.org/}}
+that provides Web Components support for many browsers.
+Polymer allows us to create reusable widgets that introduce a~number of new
+custom HTML elements for our task of hypervideo creation.
+
+We developed a~number of Web Components for the creation of hypervideos~\cite{steiner2014hypervideo}.
+Web Components are behaviorally grouped together by a~common naming convention.
+In Polymer, all element names have to start with the prefix \texttt{polymer-}
+in order to create an own Web Components namespace
+that distinguishes them from native HTML elements.
+
+\paragraph*{\texttt{<polymer-hypervideo>}} is the parent element of all other elements.
+    It accepts the attributes \texttt{src} for specifying a~set of
+    space-separated video sources (to support different encodings),
+    and---analog to the native HTML5 video attributes---%
+    \texttt{width} and \texttt{height} for specifying the video's dimensions,
+    then \texttt{poster} for specifying the video's poster frame, and finally \texttt{muted} to specify if the video should be initially muted.
+
+\paragraph*{\texttt{<polymer-data-*>}} is a~set of data annotation elements
+    that includes the two shorthand annotation types
+    \texttt{<polymer-data-actor>} for annotating video actors and
+    \texttt{<polymer-data-overlay>} for annotating visual overlays,
+    and the generic \texttt{<polymer-data-annotation>} for other annotations.
+
+\paragraph*{\texttt{<polymer-track-*>}} are the two textual elements
+    \texttt{<polymer-track-chapters>} and \texttt{<polymer-track-subtitles>},
+    which rely on WebVTT~\cite{pfeiffer2013webvtt} text tracks
+    of type ``chapters'' and ``subtitles'' that they enrich~\cite{steiner2014webvtt} with
+    automatically generated chapter thumbnails and a~full text view.
+    
+\paragraph*{\texttt{<polymer-visualization-*>}} currently provides the
+    following two visualization elements
+    \texttt{<polymer-visualization-timeline>} on the one hand and 
+    \texttt{<polymer-visualization-toc>} on the other
+    that create a~timeline view and a~table of contents
+    that put all encountered \texttt{<polymer-track-*>}
+    and \texttt{<polymer-data-*>} elements in a~temporal context.

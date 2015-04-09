@@ -379,19 +379,21 @@
 % for over three affiliations, or if they all won't fit within the width
 % of the page, use this alternative format:
 % 
-\author{\IEEEauthorblockN{Rémi Ronfard,\IEEEauthorrefmark{1} Vineet Gandhi,\IEEEauthorrefmark{1}
-Benoit Encelle,\IEEEauthorrefmark{2} P.-A. Champin,\IEEEauthorrefmark{2} Thomas Steiner\IEEEauthorrefmark{2},
-Nicolas Sauret,\IEEEauthorrefmark{3} 
-Cyrille Migniot\IEEEauthorrefmark{4}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1} INRIA, LJK, University of Grenoble, France.
-Email: remi.ronfard@inria.fr}
-\IEEEauthorblockA{\IEEEauthorrefmark{2} CNRS, Université de Lyon. LIRIS, UMR5205. Université Lyon~1, France.\\
-Email: \{bencelle, pierre-antoine.champin, tsteiner\}@liris.cnrs.fr}
-\IEEEauthorblockA{\IEEEauthorrefmark{3} IRI, France.
-Email: nicolas.sauret@iri.centrepompidou.fr}
-\IEEEauthorblockA{\IEEEauthorrefmark{4} University of Burgundy, France.
-Email: cyrille.migniot@u-bourgogne.fr}
-}
+\author{Anonymous Submission}
+
+%\author{\IEEEauthorblockN{Rémi Ronfard,\IEEEauthorrefmark{1} Vineet Gandhi,\IEEEauthorrefmark{1}
+%Benoit Encelle,\IEEEauthorrefmark{2} P.-A. Champin,\IEEEauthorrefmark{2} Thomas Steiner\IEEEauthorrefmark{2},
+%Nicolas Sauret,\IEEEauthorrefmark{3} 
+%Cyrille Migniot\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1} INRIA, LJK, University of Grenoble, France.
+%Email: remi.ronfard@inria.fr}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2} CNRS, Université de Lyon. LIRIS, UMR5205. Université Lyon~1, France.\\
+%Email: \{bencelle, pierre-antoine.champin, tsteiner\}@liris.cnrs.fr}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3} IRI, France.
+%Email: nicolas.sauret@iri.centrepompidou.fr}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4} University of Burgundy, France.
+%Email: cyrille.migniot@u-bourgogne.fr}
+%}
 
 
 % use for special paper notices
@@ -404,7 +406,17 @@ Email: cyrille.migniot@u-bourgogne.fr}
 
 \begin{abstract}
 %\boldmath
-\todo{Write abstract}
+Preserving the cultural heritage of the performing arts raises difficult and sensitive issues
+because each performance is unique by nature and the meeting between
+the performers and the audience cannot be easily recorded. In this paper,
+we report on an experimental project to preserve another aspect of the 
+performing arts - the history of their rehearsals. We specifically  designed  
+non-intrusive video recording and on-site documentation techniques to make 
+this process transparent to the creative crew, and developed a complete workflow
+to publish the recorded video and their metadata online as Open Data using state-of-the-art
+audio and video processing to maximize non-linear navigation and hypervideo linking.  
+The resulting open archive is made available to researchers and amateurs and offers
+a unique account of the inner workings of theatre and opera. 
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -449,7 +461,7 @@ Email: cyrille.migniot@u-bourgogne.fr}
 
 %\todo{0.5 pages (Remi)}
 
-This paper presents the result of a two-year project dedicated to the creation of a digital archive  holding the complete  rehearsals of  two recent productions of a theater play and and an opera. To our knowledge, this is the first time that integral video recordings of live performances are made available to research in the digital humanities. Indeed, a recent DVD release of theatre rehearsals \cite{Darling07} notes that "{\em within the world of theater the rehearsal room is a sacred space---the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a place into which the public is often, if ever, invited}". In our case, the directors of the theatre and opera productions were a leading force to open this sacred space - digitally.  This achievement was made possible by introducing a  complete workflow for a natively digital archive from capture to editorialization, including collaborative annotation, audio and video processing, data modeling  and hyper-linking, which are described in the paper.
+This paper presents the result of a two-year project dedicated to the creation of a digital archive  holding the complete  rehearsals of  two recent productions of a theater play and and an opera. To our knowledge, this is the first time that video recordings of theatre and opera rehearsals  are made available to researchers in the digital humanities at such a large scale. Quoting from a recent DVD release of theatre rehearsals, we must acknowledge that  "{\em within the world of theater the rehearsal room is a sacred space---the private domain where boundaries are pushed, risks are taken, mistakes made, vulnerabilities exposed and, at its very best, magic created. It is not a place into which the public is often, if ever, invited}". In our case, the directors of the theatre and opera productions were a leading force to open this sacred space - digitally.  This achievement was made possible by introducing a  specifically designed, non-intrusive workflow for a natively digital archive from capture to editorialization, including collaborative annotation, audio and video processing, data modeling  and hyper-linking, which are described in the paper.
 
 
 %The French title of the project refers to the multiple timelines at work in this archive: all rehearsals timelines, from the first readings to the opening night, in addition to the storyline of the play. The title also refers to putting the video archive "online" ({\it i.e.} "en ligne") on the web. 
@@ -460,20 +472,14 @@ This paper presents the result of a two-year project dedicated to the creation o
 
 %The objective of the \emph{Spectacle en Ligne(s)} research project was to develop novel intuitive and interactive software tools to make it easier to  create and publish annotated video archives of theater performance and rehearsals. 
 
-Archiving video recordings of live performances is important for preserving the cultural heritage the performing arts. 
-It is not yet a common or systematic practice, and theater remains known as {\em the ephemeral art} \cite{Reason06,Bouchez07}. This is likely to change in the near future, as high-quality video recording equipements are becoming more widely available to theaters.   Many organizations around the world now actively produce and archive video recordings of theater performances. The theater on Film and Tape Archive (TOFT) provides research access to video recordings of New York and regional theater productions since 1970 and the collection now amounts to 7,469 titles with a total of 20,000 items. 
-The National Video Archive of Performance (NVAP) at Victoria and Albert Museum London
-provides research access to video recordings of numerous renowned theater performances produced
-across the UK since 1992. 
+Archiving video recordings of live performances is important for preserving the cultural heritage the performing arts but t is not yet a common or systematic practice, and theater remains known as {\em the ephemeral art} \cite{Reason06,Bouchez07}. This is likely to change in the near future, as high-quality video recording equipements are becoming more widely available to theaters.   Many organizations around the world now actively produce and archive video recordings of theater performances. The theater on Film and Tape Archive (TOFT) provides research access to more than 20,000 video recordings of New York and regional theater productions since 1970.  The National Video Archive of Performance (NVAP) at Victoria and Albert Museum London provides research access to video recordings of numerous renowned theater performances produced across the UK since 1992. 
 
-Recently, such efforts have been extended to the world win web. Start-up company  Digital Theater 
-make video recordings of  theater productions  and make them available  online for a fraction of the cost of a theatre seat.
-The French National Institute of Audiovisual (INA) web site \footnote{ina.fr} allows viewers to download a large number of  
-television broadcasts of historical theater performances. France Televisions' Nouvelles Ecritures\footnote{Nouvelles Ecritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}}  created in 2013 an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theatre-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} from Jean-Michel Ribes}, showing both how a theater play develops in different stages and how it can be presented to the audience in different styles. The Web platform has also allowed several theaters to share the extracts and trailers of upcoming performances for publicity purposes. Importantly, Web based platforms allow even the small production companies or individuals to easily share the recorded content with the desired audience.
+Recently, such efforts have been extended to the World Wide Web. Start-up company  Digital Theater 
+make video recordings of  theater productions  and make them available  online for a fraction of the cost of a theatre seat. The French National Institute of Audiovisual (INA)\footnote{ina.fr} allows viewers to download a large number of   television broadcasts of historical theater performances. France Televisions' Nouvelles Ecritures\footnote{Nouvelles Ecritures is the new media departement at France Televisions producing and experimenting new format : webdoc, transmedia, virtual reality, \emph{etc.}: \url{http://nouvelles-ecritures.francetv.fr/}}  has been experimenting with an augmented theater experience for the web\footnote{Théâtre sans animaux : \url{http://nouvelles-ecritures.francetv.fr/theatre-sans-animaux/}} showing five different versions of the same play \emph{Théâtre sans animaux}\footnote{\emph{Théatre sans animaux} by Jean-Michel Ribes}, at different stages of the production (including rehearsals) and presented in different styles. Theatres and operas also use the World Wide Web to share extracts and trailers of upcoming performances for publicity purposes. 
 
-Most previous work has taken a multi-camera, multi-take approach derived from television and cinema productions. Having multiple viewpoints is especially beneficial for studying actor performances.  One extreme example is John Gielgud's  \emph{Hamlet} starring Richard Burton in 1964,  which used  the now defunct Electronovision system of 19 cameras.  One problem with the ``multiple camera, multiple takes'' technique used by television broadcasters  is that it is costly and time-consuming to produce; and it generates huge volumes of data, which are  difficult to organize into an accessible and usable archive. Or more frequently, they are just ignored and only the edited version is kept as an archive. 
+In most instances, performances are recorded with a multi-camera, multi-take approach derived from broadcast television common practices. Having multiple viewpoints is especially beneficial for studying actor performances.  One extreme example is John Gielgud's  \emph{Hamlet} starring Richard Burton in 1964,  which used 19 cameras.  One problem with the ``multiple camera, multiple takes'' technique used by television broadcasters  is that it is costly and time-consuming to produce; and it generates huge volumes of data, which are  difficult to organize into an accessible and usable archive. Or more frequently, the rushes  are just ignored and only the edited version is kept as an archive. 
 
-In this work, we take a different approach where we record the entire rehearsals from the same viewpoint.  As early as 1966, Jean-Luc Godard remarked: {\em ``Why do theater people never film their performances to keep  them as an archive? This would be very simple: put the camera in the middle of the orchestra seats with a medium lens---not a zoom lens, because it would already be making choices and propose an interpretation''}~\cite{Godard66}. Accordingly, our approach in this project has been the record the rehearsals from the director's viewpoint  with the highest possible video resolution and to augment them with detailed, high-level  annotations that make it possible to quickly  search, browse and even re-edit the archive interactively. 
+In this work, we take a radically different approach where we record the entire rehearsals from the same viewpoint.  As early as 1966, Jean-Luc Godard remarked: {\em ``Why do theater people never film their performances to keep  them as an archive? This would be very simple: put the camera in the middle of the orchestra seats with a medium lens---not a zoom lens, because it would already be making choices and propose an interpretation''}~\cite{Godard66}. Accordingly, our approach in this project has been to record the rehearsals from the director's viewpoint  with the highest possible video resolution and to augment them with detailed, high-level  annotations that make it possible to quickly  search, browse and even re-edit the archive interactively. 
 
 %Which brings us back to Godard's citation. How can we create  an archive which is  more than an interpretation made by a television director and which is more than a video surveillance recording of the theater stage? 
 
@@ -481,13 +487,9 @@ In this work, we take a different approach where we record the entire rehearsals
 
 %\todo{SHOW IMAGE OF THE CAMERA AND ROOM ?}
 
-What we lose is the variety of viewpoints, which is typical for television broadcasts. What we gain is the ability to compare different versions, measure progress, and understand the rehearsal process by the virtue of having a single spatial reference.
-We also experimented with novel techniques for varying the framings and shot sizes interactively 
-by making use of a {\em virtual}  zoom lens~\cite{Gandhi14,Gandhi15}, which makes it possible for the audience to use the archive as {\em stock footage} which they can re-frame and re-edit according to their own interpretation (this is described in Section~\ref{sec:scenarios}). 
+What we lose is the variety of viewpoints, which is typical for television broadcasts. What we gain is the ability to compare different versions, measure progress, and understand the rehearsal process by the virtue of having a single spatial reference. We also experimented with state-of-the-art computer vision techniques for varying the framings and shot sizes interactively  by making use of a {\em virtual}  zoom lens~\cite{Gandhi14,Gandhi15}, which makes it possible for researchers and amateurs to use the archive as {\em stock footage} which they can re-frame and re-edit according to their own interpretation (this is described in Section~\ref{sec:scenarios}). 
 
-
-
-As a case study, the project is releasing an exhaustive archive of the complete rehearsals of two performances played in 2013: 1) a French translation and adaptation of \emph{Cat on a hot tin roof} written by Tennessee Williams and directed by Claudia Stavisky, 2) the baroque opera \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
+As a case study, the project is releasing an Open Data archive of the complete rehearsals of two performances played in 2013: 1) a French translation and adaptation of \emph{Cat on a hot tin roof} written by Tennessee Williams and directed by Claudia Stavisky, 2) the baroque opera \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
 
 
 %In this paper, we describe our effort to create exhaustive video recordings of the complete rehearsals, rather than a single performance, of a theater play and publishing it online. This raises original and interesting scientific, technological, and social issues, and brought us to question the nature of the archive as a digital heritage through various prospective usages (see  Section~\ref{sec:scenarios}). 
@@ -501,43 +503,26 @@ The paper is organized as follows. Section~\ref{sec:stateoftheart} reviews previ
 \section{State of the art}
 \label{sec:stateoftheart}
 
-Audio and video recordings are useful resources in the field of rehearsal studies~\cite{mcauley1994video,McAuley98b,McAuley06,McAuley08}. Yet, in practice, researchers have limited access to performances and must often refer to their own memories of the production or the rehearsals. 
+Audio and video recordings are useful resources in the field of performance studies \cite{mcauley1994video,Bravo07} and rehearsal studies~\cite{McAuley06,McAuley08}. Yet, in practice, researchers have limited access to performances and must often refer to their own memories of the production or the rehearsals. Previous work on constituting video archives of rehearsals include the work of Pascal Bouchez with Daniel Mesguich\cite{Bouchez07} and some clever use of multiple cameras and multiple takes edited together into high quality movies. Another notable exception is {\em In the company of actors}, a documentary movie about a production of \emph{Hedda Gabler}, with Cate Blanchett in the title role~\cite{Darling07}. Even in those two cases, only an edited version (an interpretation)  of the rehearsals is made available to the public.
 
 
-
-%\todo{not sure about the interest of those 2 paragraphs in this paper. BE: +1 ; je propose de supprimer ces deux paragraphes} It is a difficult task to create recorded performances to match up to the live experience
-%of watching a play. When you watch a stage play, you generally only get to observe the actions 
-%of the performers from one static viewpoint---your seat. But if one was to watch a recorded 
-%performance from a static viewpoint covering the entire action, it could become monotonous 
-%to hold the interest of the viewer. Recordings from a single static viewpoint may also fail to 
-%highlight important details in the scene. Even with these limitations and inability to create a nice 
-%viewing experience, this approach is still commonly practiced in small scale productions due to 
-%its convenience, requiring just a single static camera covering the entire stage. 
-
-Previous work on constituting video archives of rehearsals include the work of Pascal Bouchez with Daniel Mesguich\cite{Bouchez07} and the doctoral thesis of Bravo \cite{Bravo07}. \todo{Explain what they did and how we differ from them }
-In their work, the performances are recorded with multiple cameras and multiple takes then edited together, similar to 
-common practice in television broadcasting of theater. Another notable exception is {\em In the company of actors}, a documentary movie about a production of \emph{Hedda Gabler}, with Cate Blanchett in the title role~\cite{Darling07}. But even in that case, only an edited version (an interpretation)  of the rehearsals is made available to the public.
-
-
-%RR removed those references ~\cite{Selbourne82,Sher85,Stafford00,Stern00}. 
+%RR removed those references . ~\cite{Selbourne82,Sher85,Stafford00,Stern00}.  
 
 \paragraph*{Audio and video processing}
 A useful feature for a large video archive is the capability to retrieve video segments based on which actors 
-are performing and which segment of the play script they are performing. The topics of actor~\cite{Hilton06} and speaker~\cite{Miro12} recognition are very active in the audio and video processing research communities, but very little academic 
-work has been dedicated to the special case of live performances. The stage is a complex and cluttered environment 
-with complex lighting and vast dimensions, which makes automatic audio and video processing quite challenging. 
+are performing and which segment of the play script they are performing. In order to relieve annotators from the burden of precisely annotating which actors are present in which frames, and speaking (or singing) which lines of the play script (or score)  we experimented with automatic audio and video processing methods. The topics of actor~\cite{Hilton06} and speaker~\cite{Miro12} recognition are very active in the audio and video processing research communities, but very little work has been dedicated to the special case of live performances. The stage is a complex and cluttered environment  with complex lighting and vast dimensions, which makes automatic audio and video processing quite challenging. 
 
 One approach to indexing multiple theater rehearsals and performances is to automatically align
-all of them to the same play script. The {\em script-sync} feature in Avid Media Composer,
-an off-the-shelf tool, allows for the alignment of video recordings with their scripts word-by-word. Such systems
-are based on Hidden Markov Models (HMM) and work by computing  a forced alignment 
+all of them to the same play script. The {\em script-sync} feature in the Avid Media Composer editing suite
+is a well-known example of an off-the shelf solution for the alignment of video recordings with their scripts word-by-word. Such tools are based on Hidden Markov Models (HMM) and work by computing  a forced alignment 
 between the play script and the audio recording. Nevertheless they require a very high quality 
 sound recording and fail in the presence of music, reverberation and background noise. This makes them
 unsuitable for our case. Speaker change detection (also called speaker diarization) is an alternative method
 which provides line-by-line, rather than word-by-word alignments and has been demonstrated 
 on television shows~\cite{Sankar09} and theater recordings~\cite{Caillet13}. In Section~\ref{sec:scenarios}),
-we describe a special-purpose speaker diarization method that we have developed for aligning multiple versions 
-of the same scene temporally using the common play script as a pivot representation.
+we describe a special-purpose speaker diarization method that we developed for aligning multiple versions 
+of the same scene temporally using the common play script as a pivot representation. In the case of music,
+script-following methods could similarly be used to provide bar-by-bar alignments.
 
 %Swedbeerg describes a system for localizing actors on a stage using RFID sensors carried by the actors~\cite{Swedberg}
 %but their system is intrusive and costly, which severely limits its usefulness in practice.  Recent work in computer vision \cite{Dalal05,TapaswiBS12,Gandhi13} make it possible to detect and name actors in video automatically with minimal user input (example images) and we report on experiments in Section~\ref{sec:scenarios}). 
@@ -573,7 +558,7 @@ the creation of theater and opera productions with video and Web technologies.
 
 
 %%%%%%%%%%%%%%%%
-\section{The rehearsal process context}
+\section{The rehearsal process}
 \label{sec:context}
 %
 %\todo{Contexte de l'archive (1 page - Nicolas)}
@@ -584,19 +569,20 @@ the creation of theater and opera productions with video and Web technologies.
 %\todo{Performances}
 %\todo{Discussions}
 
-Live performance rehearsals involve many actors and participants, not limited to theatre actors,  including the director and  directing assistants, singers and musicians, lighting directors, sound directors, stage managers, technicians, etc. The archive and its metadata were designed to take all of them not account, based on a careful analysis of the experimental fields of 
-theatre and opera.
+Live performance rehearsals involve many actors and participants, not limited to theatre actors,  including the director and  directing assistants, singers and musicians, lighting directors, sound directors, stage managers, technicians, etc. The archive and its metadata were designed to take all of them not account, based on a careful analysis of the experimental fields of  theatre and opera.
 
 %The the descriptions rely strongly on the chosen fields of study (\todo{what's the proper translation for terrain d'études ? PA: field of study me parait bien: \url{http://www.linguee.fr/francais-anglais/traduction/terrain+d'étude.html}}), \emph{i.e.}, in our case the rehearsals of the play and the opera themselves, but more importantly the methodologies of the creative crew.
 
 %\subsection{Theatre and opera as experimental fields}
 
-Theatre and opera turned out to be distinct experimental fields, with important differences in the rehearsal process.  The two experiments in our case were original productions of  Tennessee Williams' \emph{Chatte sur un toit brûlant}, and Francesco Cavalli's \emph{Elena}. Both of them  were rehearsed during the spring and the summer of 2013, in a period of eight and six weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{lecture à la table} where actors read the script together for the first time, to the \emph{general}, which is supposed to end the directing work and finish the rehearsals. However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a modern play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work. Those aspects motivated us to conceive a generic system that could be deployed for other contexts.
+Theatre and opera turned out to be distinct experimental fields, with important differences in the rehearsal process.  The two experiments in our case were original productions of  Tennessee Williams' \emph{Chatte sur un toit brûlant}, and Francesco Cavalli's \emph{Elena}. Both of them  were rehearsed during the spring and the summer of 2013, in a period of eight and six weeks respectively. The project was about documenting the entire rehearsal process, from the first \emph{table readings} where actors read the script together for the first time , all the way to the \emph{opening night} (see Fig.\ref{fig_rehearsals}). However, the nature of the creative work diverges considerably from the \emph{mise en scene} of a contemporary play to an ancient and obscure baroque opera, musically updated with a consequent adaptation work. Those aspects motivated us to design  
+a generic system that could be deployed in such different contexts.
 
 \subsection{The rehearsal process}
 
-A performance rehearsal is a closed-door privileged moment where actors and director work in a protective intimacy that allows them a total commitment to their art. The idea of filming those moments of intimacy, moreover exhaustively, could have been wrongly welcomed at best, or even rejected at worst, from professionals considering as sacred the privacy of rehearsal.
-This aspect was taken into account in the design of the system, in order to appear the least intrusive possible towards the creative process.
+A performance rehearsal is a closed-door privileged moment where actors and director work in a protective intimacy that allows them a total commitment to their art. The idea of filming those moments of intimacy, moreover exhaustively, could cause discomfort at best, or even rejection at worst, from professionals considering as sacred the privacy of rehearsal. This aspect was taken into account in the design of the system, 
+which was engineered to be minimally intrusive and maximally respectful of  the creative process at work
+during the rehearsals.
 
 \begin{figure}[htb!]
   \centering
@@ -606,11 +592,9 @@ This aspect was taken into account in the design of the system, in order to appe
 \end{figure}
 
 
-\subsection{Nature of rehearsals}
+\subsection{Performances and discussions}
 
-The rehearsals unfold according to a relatively classic \emph{modus operandi}: the acting and directing crew gathered daily in a studio room or on stage to work through certain parts of the script or of the partition. By the observation of a precedent rehearsal from the same director \emph{Mort d'un commis voyageur} \todo{reference}), we were able to identify a recurring pattern in her directing methodology: an alternation of performance, during which actors play the text/partition, and of discussion, during which the director interrupts the performance and argues with the actors. This alternation of performance and discussion proved to be central since the pattern was coded into the data model used to annotate the captured videos.
-In order to precisely describe the rehearsal process, it appeared necessary to identify and label these alternations.
-It is admitted that a director working according to a different methodology would have generated a very different corpus and annotation set.
+The rehearsals unfold according to a relatively classic \emph{modus operandi}: the acting and directing crew gathered daily in a studio room or on stage to work through certain parts of the script or of the partition. Based on observations of previous rehearsals by the same director, we were able to identify a recurring pattern in the rehearsal process: an alternation of performances, during which actors play their roles, and discussions, during which the actors and the director interrupt the performance and make comments and suggestions. This alternation of performance and discussion became a central element of the data model used to annotate the archive. It is admitted that a director working according to a different methodology would have generated a very different corpus and annotation set.
 
 %%BE ce qui suit n'est pas nécessaire je pense (déjà présent section Annotation)
 %\todo{BE: déjà dit un peu plus loin (section Annotation)}
@@ -623,7 +607,7 @@ It is admitted that a director working according to a different methodology woul
 %
 
 %%%%%%%%%%%%%%%%
-\section{The rehearsal archive: complete workflow of construction and publication process}
+\section{Archive construction and publication workflow}
 \label{sec:workflow}
 
 %\todo{(2,5 pages)}
@@ -631,12 +615,12 @@ It is admitted that a director working according to a different methodology woul
 
 Digital heritage projects often focus on digitalization of analog materials and data,
 when others would focus on the usage and the valorization of digitalized resources.
-The specificity of our project \todo{to be homogenized: ``our''?}
-was the attempt to conceive a natively digital archive from scratch
-taking into account potential usages of the archive.
-We therefore built a full chain from the design and the making of the archive
-to its publication and usage scenarios.
-This part redraws the workflow that enabled the construction and the publication of the rehearsal archive.
+In our case, a specific feature of the project was the design decision to create a natively 
+digital archive from scratch,  taking into account its potential usages by different audiences.
+We therefore built a complete pipeline from the design and the making of the archive
+to its publication and usage scenarios. This section describes the details of the workflow 
+and describes all the hardware and software components that enabled  the construction 
+and the publication  of the archive.
 
 \subsection{Video recording}
 %Non intrusive, push-button, integral, full HD, sound
@@ -655,9 +639,10 @@ The technical specifications of the original video files are the format \texttt{
 %\end{figure}
 
 \subsection{Annotation}
-\todo{attention à l'homogénéité du vocabulaire: annotations; metadata; data}
-Simultaneously to the video capture, the operator proceeded to the exhaustive description of the rehearsals thanks to the note taking tool. The data produced during this annotation process are synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}.
-Annotating the rehearsal relied on two main tasks: description and interpretation.  Description annotations indicated the context of the moment (performing or discussing, with or without costumes, \emph{etc.}), whereas interpretation annotations targeted the dramaturgy and the performing themselves---with free observations and comments on the creative work. The interpretations were necessarily categorized within one or several categories. Those categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
+%\todo{attention à l'homogénéité du vocabulaire: annotations; metadata; data}
+Simultaneously to the live video capture, the operator was asked to describe the rehearsals in his own words using  the note-taking tool. The data produced during this annotation process were synchronized with the video stream and encoded into an XML format based on the Cinélab data model\footnote{Cinélab Data Model: \url{http://liris.cnrs.fr/advene/cinelab/}}.
+
+Annotations of the  rehearsals were further classified  into two main categories: descriptions and interpretations.  Description annotations contain contextual and objective information about the rehearsals  (performeances and  discussions, with or without costumes, time, location, \emph{etc.}), whereas interpretation annotations targeted the dramaturgy and aesthetics of the performances themselves---with free observations and comments on the creative work. The interpretations were further classified into  sub-categories. Those sub-categories emerged progressively along the rehearsal process according to the point of view and the focus of the operator. 
 In contrast, different categories emerged for theater and opera, reflecting both the different nature of those performing arts, and the personal point of view of each annotator.
 
 \begin{table}
@@ -679,11 +664,13 @@ Annotations & 3,530 & 6,968 & 10,498\\
 \label{table_facts}
 \end{table}
 
-The result of this synchronous annotation was to augment the video stream with semantic metadata, also considered as intra-video index, making the video corpus easily searchable with a proper search engine.
+The result of this synchronous annotation was an augmented  video stream with semantic metadata, also considered as intra-video indexes, making the video corpus easily searchable with a proper search engine.
 
-\subsubsection{Data model} Figure~\ref{fig_data_model} describes the main elements of the data model used by the note taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime (\emph{i.e.} during the rehearsal). \newline
+\subsubsection{Data model} Figure~\ref{fig_data_model} describes the main elements of the data model used by the note-taking tool. This model results from a workshop analysis, gathering several kinds of attendees (researchers, producers, dramatists, film editors)---each kind having different requirements concerning rehearsals annotation capabilities. It focuses on annotations that have to be created in realtime (\emph{i.e.} during the rehearsal). \newline
 
-A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual data (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and includes a direct reference to the section of the work being performed or discussed (for theatre, we use page and line numbers in the play-script ; for opera, we use page and bar numbers in the musical score). Chapters also may contain categorized moments of interest. 
+A session annotation is linked with a video file and represents a rehearsal session (typically lasting a half-day or a day). A session annotation is connected to a place (where the rehearsal takes place) and to a creation (linked to a work and castings). A session annotation is made up of chapters that represent performance or discussion times. A chapter contains contextual metadata (\emph{i.e.}, with or without costumes, lights, sets and musical inserts) and includes a direct reference to the section of the work being performed or discussed (for theatre, we used page and line numbers in the play-script ; for opera, we used page and bar numbers in the musical score). 
+
+%Chapters also may contain categorized moments of interest. 
 
 %\todo{PA: j'ai remplacé la parenthèse ``so-called categories'' et rajouté l'adjectif ``categorized'', car la parenthèse me semblait un contre-sens: les moments d'intérêt ne \emph{sont pas} des catégories}
 
@@ -697,14 +684,15 @@ A session annotation is linked with a video file and represents a rehearsal sess
 \end{figure*}
 
 
-\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals caption process for a given work, an operator first fills into the note taking tool some time-stable data: the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session---\emph{e.g.}, contextual data (costumes, sets, \emph{etc.}) about a given chapter (inherited from a previous one if any).
+\subsubsection{Practical usage of the model} Generally speaking, at the beginning of a rehearsals caption process for a given work, an operator first fills into the note-taking tool some time-stable data: the creation, work, actors, characters, rehearsals place. Some others data can next be filled or updated during a rehearsal session---\emph{e.g.}, contextual data (costumes, sets, \emph{etc.}) about a given chapter (inherited from a previous one if any).
 %BE on peut pour gagner de la place juste mettre les éléments Session, Chapter, Moment of interest..
 
 \subsubsection{Annotation categories}
 %\todo{BE Proposition titre subsubsection: Emerged categories review}
 %\todo{Emerged categories: je voulais dire, les catégories qui ont émergées lors de l'annotation. Je tente "inherited", est ce que cela convient ? Pas tout à fait clair non plus.}
 
-The annotation process has revealed a set of categories associated to interpretation annotations, reflecting both the related performing art and the personal point of view of the annotator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
+The annotation process revealed a rich set of categories associated to interpretation annotations, reflecting 
+the  specific domains of theatre and opera and the personal point of view of the annotator. Tables~\ref{table:categories1} and~\ref{table:categories2} present the richness of these categories and the potential of the archive for further researches in genetic analysis of creative works.
 
 \begin{table}
 \centering
@@ -751,8 +739,8 @@ script adaptation & 6 \\
 space issue & 6 \\ 
 \hline 
 \end{tabular}
-\label{table:categories1}
 \caption{Annotation categories and number of occurrences for \emph{Chatte sur un toit brulant}}
+\label{table:categories1}
 \end{table}
 %\todo{mise en forme des captions pour les tableaux > why capitals letter ?} 
 
@@ -824,8 +812,8 @@ voice ``color'' & 112 \\
 working on the text & 104 \\ 
 \hline 
 \end{tabular} 
-\label{table:categories2}
 \caption{Annotation categories and number of occurrences for \emph{Elena}}
+\label{table:categories2}
 \end{table}  
  
 \subsection{Data cleansing and conforming}
@@ -834,17 +822,15 @@ working on the text & 104 \\
 After the rehearsals, we centralized the data on a server for video encoding and annotation metadata confirmation. Due to the tied agenda of the project, the annotation software did not implement a strict certification on data input. Therefore, as a preliminary step before the ingestion of the corpus into the applicative platform, manual cleansing and conforming were executed on both the data (checking audio and video quality) and the metadata (merging similar categories, harmonizing the text reference format, correcting misspellings).
 
 \subsection{Audio and video processing}
-As an optional step, we use models of the actors' voices and appearances to detect and recognize them in the audio and video modalities. As explained later, this offers additional searching, browsing, and editing capabilities to our system, at the expense of (widely) increased processing time.
+As an optional step, we trained statistical models of the actors' voices and appearances to detect and recognize them in the audio and video modalities. As explained later, this offers additional searching, browsing, and editing capabilities to our system, at the expense of (widely) increased processing time.
 
 \subsubsection{Learning actor voices and appearances}
-We use the ALIZE system for learning statistical models of each actor's voice~\cite{Bonastre05}  from one example per actor.
-Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel, we use the generative model of Gandhi and Ronfard~\cite{Gandhi13} for learning statistical models of each actor's visual appearance, using example images from at least eight viewpoints. Examples are typically extracted from the first dress rehearsal, as our appearance model is dependent on costumes.  Those models can then be used to automatically align each performance with the play script and to localize actors on stage and on screen. 
+We used the ALIZE speech recognition system ~\cite{Bonastre05} for learning statistical models of each actor's voice from one example per actor. Each example is typically a ten-second extended speech line recorded during the first reading of the play. In parallel, we trained statistical models of each actor's visual appearance, using example images from at least eight views~\cite{Gandhi13}. Examples are typically extracted from the first dress rehearsal, as the appearance models are dependent on costumes.  Those models can then be used to automatically align each performance with the play script and to localize actors on stage and on screen in all subsequent dress and tech rehearsals. 
 
 \subsubsection{Alignment between play script and performances}
 
-Based on an off-the-shelf speaker recognition toolkit, we built a play script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  Thus, each  line in the play script is a state in a semi-Markov model with a duration probability and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have a duration model \cite{Migniot15}. 
-%\todo{RR: This paper is under review. Not sure that e should mention it?}. 
-
+Using the ALIZE speech recognition toolkit, we built a play-script following algorithm where rehearsals are assumed to be generated by a probabilistic generative model.  More specifically, each  line in the play script is a state in a semi-Markov model with a duration probability and a speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have duration models. % ADD THIS REFERENCE IF ACCEPTED FOR PUBLICATION \cite{Migniot15}. 
+ 
 
 %\begin{figure}[tp]
 %\centering
@@ -857,7 +843,9 @@ Based on an off-the-shelf speaker recognition toolkit, we built a play script fo
 
 \subsubsection{Actor detection and recognition} 
 
-Based on their appearance model, we separately detect all actors present on stage. Despite the challenging environment, our method provides very good results for tracking all actors in parallelel, where generic state-of-the-art tracking methods quickly drifted away from the target and were unstable both in presence of occlusion and fast movements \cite{Gandhi13,Migniot15}.
+In some selected scenes, we  detected all actors present on stage in parallel based on their appearances
+using a method described elsewhere \cite{Gandhi13}. Despite the challenging environment, that method provided very good results for  all actors in all the tested sequences, where generic state-of-the-art tracking methods quickly drifted away from the target and were unstable both in presence of occlusion and fast movements. One drawback with that method is its computational cost, which made it impossible to perform
+actor detection and recognition on the entire archive. Selected scenes were chose for evaluation and validation purposes.
 
 %%Based on their appearance model, we separately detect all actors present on stage. The qualitative results on this sequence are presented in Figure~\ref{fig_tracking_coahtr}. This example is particularly challenging  because of the fast displacements of the actors and the frequent occlusions between actors. Despite the challenging environment, our method provides very good results for the tracking of the six actors, where generic state-of-the-art tracking methods quickly drifted away from the target and were unstable both in presence of occlusion and fast movements \cite{Gandhi13,Migniot15}.
 %%
@@ -874,12 +862,12 @@ Based on their appearance model, we separately detect all actors present on stag
 %\cite{Nummiaro2002,Ross2008}  \cite{Kwon2010,Babenko2009} also drifted away with heavy occlusions.  \cite{Wang2011} failed because of large appearance changes and occlusions. Only our algorithm maintains its performance in this challenging example.
 
 
-\subsection{Applicative platform for data exposure}
+\subsection{Data publishing}
 The project built on the applicative platform \emph{Ligne de temps}\footnote{Ligne de temps: \url{http://www.iri.centrepompidou.fr/outils/lignes-de-temps/}} to implement specific modules dedicated to fine-indexed/annotated video archive of performance rehearsals. \emph{Ligne de temps} is originally a software designed for video annotation and indexation, inspired by the timelines usually used in video editing softwares, and was conceived for advanced film critique or pedagogy. It evolved into a web platform with web player and front-end annotations modules. For the purpose of the project, \emph{Ligne de temps} was adapted to embed and display annotated video of performance rehearsals, taking into consideration the particular metadata and their potential usages.
 
 \subsubsection{Ingest}
-The ingest operation was made possible thanks to the preceding data conformation. It involves automatic referencing of the video files as media contents into the platform and the synchronization of the metadata (annotations) to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the media contents and their metadata, therefore bringing the rehearsal annotation data from static to dynamic. \linebreak
-However theater and opera archives were separated in two distinct access points, due to usage scenarios and to differences in data format.
+The ingest operation was made possible due to the previous step of data cleansing and conforming. It involved automatic referencing of the video files as media contents into the platform and the synchronization of the metadata (annotations) to the media contents. \emph{Ligne de temps} provides an applicative environment to search, consult, edit and publish the media contents and their metadata, therefore bringing the rehearsal annotation data from static to dynamic. However theater and opera archives were separated in two distinct access points, due to usage scenarios and to differences in data format.
+
 % BE: Difference in data format. Le format reste pour moi le même (XML ici), le modèle aussi à peu de chose près (i.e. référence à un texte pour le théâtre, référence à une partition pour l'opéra, ce qui change un peu le modèle). Par contre, le contenu des données change (i.e. les catégories, par ex.). Du coup je ne sais pas si ça vaut le coup de mettre "differences in data format", je pense que "usage scenarios" suffit...
 % Indeed, the search engine and further applications require a stable model of data to offer optimized user experience.
 %\todo{BE remarque: supprimer cette phrase (stable model of data), cf. commentaires dans le source.}
@@ -912,17 +900,17 @@ Figure~\ref{fig:searchengine} displays the search interface for theater, divided
 %  \label{fig:mdplayer}
 %\end{figure}
 
-\subsection{Linked Open Data publication}
+\subsection{Linked Open Data compatibility}
 In order to foster and ease multiple uses of the corpus,
-it is important to make the collected information as accessible as possible.
+it was important to make the collected information as accessible as possible.
 For this purpose, we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
-They imply that every piece of information is both identified by and accessible at a given URI, and that it is published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
-The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URIs~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we use the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying} in order to make the data highly available while preserving scalability.
+This implied that every piece of information was both identified by and accessible at a given URI, and that it 
+was published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
 
-But the benefit of Linked Data does not only lie in standardization.
-As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information.
-In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions.
-While Linked Data is already widely used for museums or libraries\footnote{
+The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URIs~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has a common query language~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we used the approach proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying} to make the data widely
+available while preserving scalability.
+
+But the benefit of Linked Data does not only lie in standardization. As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information. In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions. While Linked Data is already widely used for museums or libraries\footnote{
 See \emph{e.g.}, \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}},
 its use with video has emerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
 and as far as we know, has not yet been widely considered for live performance archives.
@@ -932,10 +920,10 @@ and as far as we know, has not yet been widely considered for live performance a
 \section{Usage scenarios}
 \label{sec:scenarios}
 %\todo{(1,5 pages)}
-In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenarios of the archive, taking into consideration the potential needs of future users. A particular effort was made to address specific public with pedagogical scenarios, culture mediation scenarios, but also research and amateur scenarios. Some of those scenari were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenari according to their interest. This prospective work was indeed central in the design of the continuous workflow, in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularity of this project regarding researches in the digital heritage, {\it i.e.} to have considered the archive as a living cultural object, even though the archive did not exist yet.
+In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenarios of the archive, taking into consideration the potential needs of future users. A particular effort was made to address specific audiences with pedagogical scenarios, culture mediation scenarios, but also research and amateur scenarios. Some of those scenarios were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenarios according to their interest. This prospective work was indeed central in the design of the continuous workflow, in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularity of this project regarding researches in the digital heritage, {\it i.e.} to have considered the archive as a living cultural object, even though the archive did not exist yet.
 
 \subsection{Quantitative and qualitative analysis}
-The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the columns are lines of the play-script  (or bars in the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script/score over time.
+The massive aspect of the archive makes is difficult to apprehend. Both the nature of the archive, {\it i.e.} video as a temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a comprehensive and cognitively acceptable representation. Taking the project's title literally: \emph{Spectacle en ligne(s)}, {\it i.e.} \emph{Performance in line(s)}, the archive can be viewed as multiple lines of rehearsals. We imagined a matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script/score over time.
 
 %\todo{Remarque BE: illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
 %NS: malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.  RR: Can we show the matrices for both opera and theatre ? The comparison is in itself interesting ! (and we can skip the ideal matrix)}
@@ -943,11 +931,12 @@ The massive aspect of the archive makes is difficult to apprehend. Both the natu
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=\columnwidth]{elenamatrix}
-  \caption{Matrix of distribution of the rehearsals according to the score of \emph{Elena} over time. \todo{Explain what the colors mean}}
+  \caption{Matrix of distribution of the rehearsals according to the score of \emph{Elena} over time.} 
+  %\todo{Explain what the colors mean}
   \label{fig:elenamatrix}
 \end{figure}
 
-Such a matrix can be inferred from the synchronized annotations, which contains accurate enough references of the script or the score.  If one envisages the paradigm with fine-grained annotations precisely indexing the script cues or the bars of the scores, the matrix could display theoretically in abscissa 1 unit for 1 cue and in ordinate 1 unit for 1 performance, {\it i.e.} a segment of rehearsal where actors are actually performing. 
+%When audio processing was available, we were able to increase the granularity of the analysis to individual lines of the play-script. Similar capabilities could be added for opera rehearsals by using script-following technologies in future work.
 
 %The figure models this idealistic representation.
 %
@@ -960,7 +949,7 @@ Such a matrix can be inferred from the synchronized annotations, which contains 
 %  \label{fig:fullmatrix}
 %\end{figure}
 
-Such a representation achieves the initial objective of providing a comprehensive visualization suitable for a mental model. In addition, it becomes a powerful visualization for browsing the archive and accessing to fine-grained annotations and video segments.
+%Such a representation achieves the initial objective of providing a comprehensive visualization suitable for a mental model. In addition, it becomes a powerful visualization for browsing the archive and accessing to fine-grained annotations and video segments.
 
 %\todo{BE: pour info. j'ai unifié les deux parties d'avant: "Visualization and browsing strategies" et "Demonstrator for Brick and Maggie scene"}
 
@@ -972,22 +961,23 @@ Concerning archive visualization and browsing capabilities, the multiplicity of 
 \subsection{Fine-grained visualization and browsing}
 %According to identified recurrent needs due to the nature of the archive, which can be seen as a set of different versions of the same object (the play or the opera), fine-grained visualisation and browsing capacities were set up to perform what we call hereafter archive temporal and spatial zooms.
 
-For some selected scenes, we offer a fine-grained visualization and browsing interface allowing to zoom both temporally and spatially through the archive by making use of the audio and video processing described in Section~\ref{sec:workflow}.  
+For some selected scenes, we offer a fine-grained visualization and browsing interface allowing to zoom both temporally and spatially through the archive by making use of the audio and video processing described in Section~\ref{sec:workflow}.  Using audio-to-script alignments, we offer options to navigate a scene one line at a time and one rehearsal at a time. More precisely, hyperlinks are offered to move to the previous and next lines in in any given rehearsal; or to move to the previous and next rehearsals in any given line; thus providing a "temporal zoom lens" to the archive.
 
-The source video  is recorded from a distant viewpoint  to provide  a general  view of the stage.  None of what occurs in the stage is missing, but the video is not pleasant to watch.  The theater performances are often edited like a movie to be more attractive.   It is easy to more precisely annotate the script of the play with some simple information as who speaks to whom. With our method, we can temporally match the script to the video.  The positions of the characters in the frames are given by our tracking algorithm.  From there, by referring to usual editing rules, we can realize an automatic editing of the performance (Figure~\ref{fig_speaker}) using methods described elsewhere~\cite{Gandhi14,Gandhi15}.  For example, during a monologue we realize a medium-shot of the speaker and during a dialogue we realize a two-shot that contains the speaker and his addressee. This greatly improves the visibility of the main actors, and makes it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
+Because the source material was recorded from a distance and with a fixed lens, the archive presents a general view of the stage as a default framing. This has the advantage of never hiding anything from the audience. But one shortcoming is that the archive is not very pleasant to watch, especially on a small screen. 
+
+To remedy this problem, we implemented a "spatial zoom lens" to make it possible to focus on the main actors in any given scene. Based on audio and video analysis, we generated alternative framings using methods described elsewhere~\cite{Gandhi14,Gandhi15}.  For example, during a monologue we automatically
+compute a  medium-shot of the speaker and during a dialogue we compute a two-shot that contains the speaker and his addressee (see details in Figure~\ref{fig_speaker}). This greatly improves the visibility of the main actors, and makes it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
+
 
 \begin{figure*}[tp]
 \centering
 \includegraphics[width=\textwidth]{speakers2}
-\caption{Reframing of the videos at the speaker and the interlocutor levels. Audio-to-text alignment temporally localizes the cues, and the actors tracking spatially localizes the characters on the frames. 
-This figure displays the automatic reframing process obtained for several frames on the sequence $\mathcal{S}_4$. The arrows go from the speaker to the interlocutor.}
+\caption{Reframing of the videos during dialogues.  Audio-to-text alignment temporally localizes the actors speaking and being spoken to. Video tracking  spatially localizes them on screen.  This figure displays the automatic reframing process obtained for several frames on the sequence $\mathcal{S}_4$. The arrows go from the speaker to the addressee.}
 \label{fig_speaker}
 \end{figure*}
 
-\noindent We have made an online demonstrator application available at
-\url{http://spectacleenlignes.fr/hypervideo/} that showcases these Web Components
-and recall that we share their implementation as open source.
-A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
+Both the spatial and the temporal zoom lenses were assembled into 
+an online  application using Web Components. The application is available at \url{http://spectacleenlignes.fr/hypervideo/}  and the implementation is  shared as open source. A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
 
 \begin{figure}[htb!]
   \centering
@@ -1028,37 +1018,48 @@ A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
 %This scenario reveals an interesting result in terms of digital heritage issue. In fact, it appears that digital archives meet the present needs of certain users whose objectives are not necessarily to augment the production of knowledge. Digital archive should therefore articulate freely with new communities of potential actors and users. One of the results of \emph{Spectacle en ligne(s)} is the demonstration that this empowerment of users with digital ressources must be accompanied by a set of technological conditions (an applicative platform for instance) and involvement of cultural institutions. \todo{RR: Nicolas, is this what you originally meant ?}
 
 
+\subsection{Mobile app for the creative crew} 
+
+
+During the production of the archive, the creative crew reacted quite positively to the experiment, and expressed an interest in getting immediate feedback. While this had not been planned, we started designing mobile applications that they could tentatively use for (1) viewing the live feed being recorded on their smartphones and (2) adding their own (signed) annotations and comments collaboratively.  While not fully implemented, this feature was presented to the directors and their collaborators as mock-ups (Figure~\ref{fig:mobileapp}). They were generally well received and are likely candidates  as an addition to the existing system for future experiments. 
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=\columnwidth]{mobileapp}
+  \caption{Mobile app: extracts of the design mock-ups}
+  \label{fig:mobileapp}
+\end{figure}
+
+
+ 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 \label{sec:conclusion}
-\todo{(0.25 pages)}
 
-\todo{Our technology is non intrusive and well accepted by the production team}
+The research described in this paper was accomplished over a period of two years 
+in close collaboration with the directors of the two documented productions, and was 
+surprisingly  well received by the performers and technical crew. Filming the rehearsals
+from the director's point-of-view was a key element for this positive response. In future work,
+we would like to increase the video resolution of the recordings to 4K in order to better exploit
+the capabilities of our virtual zoom lens ; and to experiment with stereoscopic 3D and 360 panoramic video
+which would allow to include reverse shots of the directors and their assistants, which are currently not recorded.
 
-\todo{It is made available to researchers in genetic analysis.}
-
-\todo{Our work has some l-limitaitons. 
-The reframing and play text alignment is still experimental
-and needs to be further validated and automated.
-Therefore, better image resolution may be useful (4K, 8K)
-or even stereoscopic 3D~images that can be explored in future work.
-For upcoming recordings, reverse shots of the director and her assistants would be valuable.
-We will take this into account for the next recording setups.
-Sound quality is a problem we encountered occasionally that can be addressed with better microphones.
-More work is needed to extrapolate to other performances---concerts, opera, ballet, \emph{etc.}
-For the annotation tool, graphical annotations would be useful
-in order to create more adequate metadata.
-Future work is needed for assigning the virtual cameras automatically.
-}
+It is our hope that this archive illustrates the cultural heritage of the performing arts from a novel and 
+interesting perspective. Audio, video and web technologies were used to augment
+the raw video with fully integrated metadata and spatio-temporal zooming capabilities,
+which proved invaluable to make the archive attractive to researchers and amateurs.
+Nevertheless, the resulting archive is overwhelming and future works is needed to 
+better measure its impact and usefulness in the digital humanities. 
 
 
 %\todo{Paragraph on legal aspects? NS> why not in the limitations instead} 
 %Future work is needed to fully evaluate the zooming feature in the light of  the theory  of spectatorship, 
 %which surveys the audience's visuomotor behavior  during a performance~\cite{Bennett97}. 
 
-\todo{Expand more on promising directions for future research, including the notation of theatre,
-copyright protection for stage directions, the possibility of a depot legal, etc.}
-
+%M\todo{Expand more on promising directions for future research, including the notation of theatre,
+% copyright protection for stage directions, the possibility of a depot legal, etc.}
 
 % conference papers do not normally have an appendix
 
@@ -1092,114 +1093,7 @@ copyright protection for stage directions, the possibility of a depot legal, etc
 \bibliography{rehearsals}
 
 
-\newpage
 
-\section*{Appendix 1: Web Components}
-This appendix present technical details of our hypervideo implementation as web components.
-We highlight that we not only optimized for reach on the consuming side---%
-\emph{i.e.}, people watching the rehearsal hypervideos in their browsers---%
-but also for the producing side---%
-\emph{i.e.}, Web developers who collaborate with theaters and operas
-to create such hypervideos in the first place and to put them online.
-Web developers are used to mark up Webpages using HTML tags
-like \texttt{<h1>}, \texttt{<p>}, \texttt{<strong>} \emph{etc.}
-and to ``glue'' these tags functionally together using the JavaScript programming language
-to finally control the look and feel of their Webpages with Cascading Stylesheets (CSS).
-We were motivated to allow for the same tag-based mark-up mechanics
-to also work for the creation of rich hypervideo applications.
-Therefore, we have leveraged an emerging technology
-that is currently being standardized by the World Wide Web Consortium (W3C)
-called \emph{Web Components}.
-Web Components is a~set of specifications, which let Web developers leverage
-their HTML, CSS, and JavaScript knowledge to build widgets
-that can be reused easily and reliably.\footnote{Web Components:
-\url{http://www.chromium.org/blink/Web-components}}
-
-%\todo{BE: si besoin de place, la partie qui suit peut être supprimée}
-%%BE début partie pouvant être supprimée
-%According to a~(recently discontinued) W3C Working Draft introductory document,%
-%\footnote{Discontinued W3C Working Draft document:
-%\url{http://www.w3.org/TR/2013/WD-components-intro-20130606/}~\cite{cooney2013Webcomponents}}
-%the component model for the Web (``Web Components'') consists of five different pieces
-%listed in the following.
-%
-%\begin{itemize}
-%  \item \textbf{Imports} which defines how templates, decorators and custom elements are packaged and loaded as a~resource%
-%  ~\cite{glazkov2014htmlimports}.
-%  \item \textbf{Shadow DOM} which encapsulates a~DOM subtree for more reliable composition of user interface elements%
-%  ~\cite{glazkov2014shadowdom}.    
-%  \item \textbf{Custom Elements} which let authors define their own elements, with new tag names and new script interfaces%
-%  ~\cite{glazkov2013customelements}.  
-%  \item \textbf{Decorators} which apply templates based on CSS selectors to affect rich visual and behavioral changes to documents.
-%  \item \textbf{Templates} which define chunks of inert markup that can be activated for use.  
-%\end{itemize}
-%%BE Fin partie
-
-\noindent At the time of writing, partial native support for Web Components
-has landed in a~number of Web browsers,
-however, for the majority of browsers,
-a~so-called \emph{polyfill} solution is still required.
-A~polyfill  is a~piece of code that provides the technology
-that developers expect the browser to provide natively in the near future.
-We rely on the Polymer project\footnote{Polymer project:
-\url{http://www.polymer-project.org/}}
-that provides Web Components support for many browsers.
-Polymer allows us to create reusable widgets that introduce a~number of new
-custom HTML elements for our task of hypervideo creation.
-
-We have developed a~number of Web Components for the creation of hypervideos~\cite{steiner2014hypervideo}.
-These Web Components are behaviorally grouped together
-by a~common naming convention.
-In Polymer, all element names have to start with the prefix \texttt{polymer-}
-in order to create an own Web Components namespace
-that distinguishes them from native HTML elements.
-
-\paragraph*{\texttt{<polymer-hypervideo>}} is the parent element of all other elements.
-    It accepts the attributes \texttt{src} for specifying a~set of
-    space-separated video sources (to support different encodings),
-    and---analog to the native HTML5 video attributes---%
-    \texttt{width} and \texttt{height} for specifying the video's dimensions,
-    then \texttt{poster} for specifying the video's poster frame, and finally \texttt{muted} to specify if the video should be initially muted.
-
-\paragraph*{\texttt{<polymer-data-*>}} is a~set of data annotation elements
-    that includes the two shorthand annotation types
-    \texttt{<polymer-data-actor>} for annotating video actors and
-    \texttt{<polymer-data-overlay>} for annotating visual overlays,
-    and the generic \texttt{<polymer-data-annotation>} for other annotations.
-
-\paragraph*{\texttt{<polymer-track-*>}} are the two textual elements
-    \texttt{<polymer-track-chapters>} and \texttt{<polymer-track-subtitles>},
-    which rely on WebVTT~\cite{pfeiffer2013webvtt} text tracks
-    of type ``chapters'' and ``subtitles'' that they enrich~\cite{steiner2014webvtt} with
-    automatically generated chapter thumbnails and a~full text view.
-    
-\paragraph*{\texttt{<polymer-visualization-*>}} currently provides the
-    following two visualization elements
-    \texttt{<polymer-visualization-timeline>} on the one hand and 
-    \texttt{<polymer-visualization-toc>} on the other
-    that create a~timeline view and a~table of contents
-    that put all encountered \texttt{<polymer-track-*>}
-    and \texttt{<polymer-data-*>} elements in a~temporal context.
-
-
-\section*{Appendix 2: Mobile app for the creative crew} 
-%\todo{Remarque BE: section à supprimer si besoin de place, mettre un petit quelque chose dans les futur work dessus
-%NS: c'est la discussion qu'on a eu au dernier call, mais cette section est essentielle pour cette section Scenario et usage de l'archive, surtout dans le contexte d'une conférence Digital Heritage, où l'on montre les potentialités d'usage réelles, et non pas simplement des démonstrateurs hors-sol. C'est tout le travail de scénario qui a été fait dans ce projet et qui ne doit pas mis de côté, en particulier pour cette conférence. Je te renvoie à l'introduction de cette section qui réintroduit la démarche du projet, à savoir d'avoir imaginé une archive tout en réfléchissant à des scénarios d'usage.}
-
-This appendix describes an additional scenario designed to illustrate potential future usage of the archive. In the context of the creative process itself, this scenario involves a mobile app that members of the crew could use to review, annotate and discuss the rehearsals along the direction process. Such an app would benefit from the complete workflow from video capture to video online publication and would provide the creative crew a excellent assistant to mark, search and archive the memory of the creative process. During the project, we developed the full user experience and interface into mock-ups (Figure~\ref{fig:mobileapp})
-which were presented to the creative crews of both productions. They were generally well received and are likely candidates 
-as an addition to the existing system for future experiments. 
-
-\begin{figure}[htb!]
-  \centering
-  \includegraphics[width=\columnwidth]{mobileapp}
-  \caption{Mobile app: extracts of the design mock-ups}
-  \label{fig:mobileapp}
-\end{figure}
-
-
-This scenario reveals an interesting result in terms of digital heritage issue. In fact, it appears that digital archives meet the present needs of certain users whose objectives are not necessarily to augment the production of knowledge. Digital archive should therefore articulate freely with new communities of potential actors and users. One of the results of \emph{Spectacle en ligne(s)} is the demonstration that this empowerment of users with digital ressources must be accompanied by a set of technological conditions (an applicative platform for instance) and involvement of cultural institutions. 
-%\todo{RR: Nicolas, is this what you originally meant ?}
 
 % that's all folks
 \end{document}
