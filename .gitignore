@@ -4,6 +4,6 @@
 *.bbl
 *.log
 *.out
+*.pdf
 .texpadtmp/
 *.gz
-rehearsals.pdf
