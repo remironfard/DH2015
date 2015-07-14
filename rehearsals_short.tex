@@ -381,9 +381,8 @@
 % 
 %\author{Anonymous Submission}
 
-\author{\IEEEauthorblockN{R\'emi Ronfard,\IEEEauthorrefmark{1} Benoit Encelle,\IEEEauthorrefmark{2} Nicolas Sauret,\IEEEauthorrefmark{3} 
-P.-A. Champin,\IEEEauthorrefmark{2} \\
-Thomas Steiner,\IEEEauthorrefmark{2} Vineet Gandhi,\IEEEauthorrefmark{1} Cyrille Migniot\IEEEauthorrefmark{4}
+\author{\IEEEauthorblockN{R\'emi Ronfard,\IEEEauthorrefmark{1} Benoit Encelle,\IEEEauthorrefmark{2} Nicolas Sauret,\IEEEauthorrefmark{3}  P.-A. Champin,\IEEEauthorrefmark{2} \\
+Thomas Steiner,\IEEEauthorrefmark{2} Vineet Gandhi,\IEEEauthorrefmark{1} Cyrille Migniot,\IEEEauthorrefmark{4}
 Florent Thierry\IEEEauthorrefmark{5}}
 \IEEEauthorblockA{\IEEEauthorrefmark{1} INRIA, LJK, University of Grenoble, France.} 
 \IEEEauthorblockA{\IEEEauthorrefmark{2} CNRS, Université de Lyon. LIRIS, UMR5205. Université Lyon~1, France.} \IEEEauthorblockA{\IEEEauthorrefmark{3} IRI, France.}
@@ -480,15 +479,7 @@ Archiving video recordings of live performances is important for preserving the 
 
 In most instances, performances are recorded with a~multi-camera, multi-take approach derived from broadcast television common practices. Having multiple viewpoints is especially beneficial for studying actor performances.  One extreme example is John Gielgud's  \emph{Hamlet} starring Richard Burton in 1964,  which used 19~cameras.  One problem with the ``multiple camera, multiple takes'' technique used by television broadcasters  is that it is costly and time-consuming to produce; and it generates huge volumes of data, which are  difficult to organize into an accessible and usable archive. Or more frequently, the rushes  are just ignored and only the edited version is kept as an archive. 
 
-In this work, we take a~radically different approach, where we record the entire rehearsals from the same viewpoint.  As early as 1966, Jean-Luc Godard remarked: {\em ``Why do theater people never film their performances to keep  them as an archive? This would be very simple: put the camera in the middle of the orchestra seats with a~medium lens---not a~zoom lens---because it would already be making choices and propose an interpretation''}~\cite{Godard66}. Accordingly, our approach in this project has been to record the rehearsals from the director's viewpoint  with the highest possible video resolution, and to augment them with detailed, high-level  annotations that make it possible to quickly  search, browse, and even re-edit the archive interactively. 
-
-%Which brings us back to Godard's citation. How can we create  an archive which is  more than an interpretation made by a television director and which is more than a video surveillance recording of the theater stage? 
-
-%\todo{i believe this paper talks about something else than multiplying the points of view @Remi: need to be reformulated: "our approach in this paper..."}
-
-%\todo{SHOW IMAGE OF THE CAMERA AND ROOM ?}
-
-What we lose is the variety of viewpoints, which is typical for television broadcasts. What we gain is the ability to compare different versions, measure progress, and understand the rehearsal process by the virtue of having a~single spatial reference. We also experimented with state-of-the-art computer vision techniques for varying the framings and shot sizes interactively  by making use of a~{\em virtual}  zoom lens~\cite{Gandhi14,Gandhi15}, which makes it possible for researchers and amateurs alike to use the archive as {\em stock footage}, which they can re-frame and re-edit according to their own interpretation (this is described in Section~\ref{sec:scenarios}). 
+In this work, we take a~radically different approach, where we record the entire rehearsals from the same viewpoint.  As early as 1966, Jean-Luc Godard remarked: {\em ``Why do theater people never film their performances to keep  them as an archive? This would be very simple: put the camera in the middle of the orchestra seats with a~medium lens---not a~zoom lens---because it would already be making choices and propose an interpretation''}~\cite{Godard66}. Accordingly, our approach in this project has been to record the rehearsals from the director's viewpoint  with the highest possible video resolution, and to augment them with detailed, high-level  annotations that make it possible to quickly  search, browse, and even re-edit the archive interactively. What we lose is the variety of viewpoints, which is typical for television broadcasts. What we gain is the ability to compare different versions, measure progress, and understand the rehearsal process by the virtue of having a~single spatial reference. We also experimented with state-of-the-art computer vision techniques for varying the framings and shot sizes interactively  by making use of a~{\em virtual}  zoom lens~\cite{Gandhi14}, which makes it possible for researchers and amateurs alike to use the archive as {\em stock footage}, which they can re-frame and re-edit according to their own interpretation (this is described in Section~\ref{sec:scenarios}). 
 
 As a~case study, we are releasing an Open Data archive of the complete rehearsals of two performances played in 2013: \emph{(i)}~a~French translation and adaptation of \emph{Cat on a~hot tin roof} written by Tennessee Williams and directed by Claudia Stavisky, \emph{(ii)}~the baroque opera \emph{Elena}, composed by Francesco Cavalli, directed by Jean-Yves Ruf and conducted by Leonardo García Alarcón.
 
@@ -827,11 +818,11 @@ After the rehearsals, we centralized the data on a~server for video encoding and
 As an optional step, we trained statistical models of the actors' voices and appearances to detect and recognize them in the audio and video modalities. As explained later, this offers additional searching, browsing, and editing capabilities to our system, at the expense of (widely) increased processing time.
 
 \subsubsection{Learning actor voices and appearances}
-We used the ALIZE speech recognition system ~\cite{Bonastre05} for learning statistical models of each actor's voice from one example per actor. Each example is typically a~ten-second extended speech line recorded during the first reading of the play. In parallel, we trained statistical models of each actor's visual appearance, using example images from at least eight views~\cite{Gandhi13}. Examples are typically extracted from the first dress rehearsal, as the appearance models are dependent on costumes.  Those models can then be used to automatically align each performance with the play script and to localize actors on stage and on screen in all subsequent dress and tech rehearsals. 
+We used the ALIZE speech recognition system ~\cite{Bonastre05} for learning statistical models of each actor's voice from one example per actor. Each example is typically a~ten-second extended speech line recorded during the first reading of the play. In parallel, we trained statistical models of each actor's visual appearance, using example images from at least eight views~\cite{Gandhi13,Gandhi15}. Examples are typically extracted from the first dress rehearsal, as the appearance models are dependent on costumes.  Those models can then be used to automatically align each performance with the play script and to localize actors on stage and on screen in all subsequent dress and tech rehearsals. 
 
 \subsubsection{Alignment between play script and performances}
 
-Using the ALIZE speech recognition toolkit, we built a~play-script following algorithm where rehearsals are assumed to be generated by a~probabilistic generative model.  More specifically, each  line in the play script is a~state in a~semi-Markov model with a~duration probability and a~speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have duration models. % ADD THIS REFERENCE IF ACCEPTED FOR PUBLICATION \cite{Migniot15}. 
+Using the ALIZE speech recognition toolkit, we built a~play-script following algorithm where rehearsals are assumed to be generated by a~probabilistic generative model.  More specifically, each  line in the play script is a~state in a~Semi-Markov Model (SMM) with a~duration probability and a~speaker voice probability. In our experiments, this methods outperformed state-of-the-art speaker diarization methods based on HMM, which do not have duration models. % ADD THIS REFERENCE IF ACCEPTED FOR PUBLICATION \cite{Migniot15}. 
  
 
 %\begin{figure}[tp]
@@ -846,7 +837,7 @@ Using the ALIZE speech recognition toolkit, we built a~play-script following alg
 \subsubsection{Actor detection and recognition} 
 
 In some selected scenes, we  detected all actors present on stage in parallel based on their appearances
-using a~method described elsewhere~\cite{Gandhi13}. Despite the challenging environment, this method provided very good results for  all actors in all tested sequences, where generic state-of-the-art tracking methods quickly drifted away from the target and were unstable both in presence of occlusion and fast movements. One drawback with the method is its computational cost, which made it impossible to perform
+using a~method described elsewhere~\cite{Gandhi13,Gandhi15}. Despite the challenging environment, this method provided very good results for  all actors in all tested sequences, where generic state-of-the-art tracking methods quickly drifted away from the target and were unstable both in presence of occlusion and fast movements. One drawback with the method is its computational cost, which made it impossible to perform
 actor detection and recognition on the entire archive. Selected scenes were chosen for evaluation and validation purposes.
 
 %%Based on their appearance model, we separately detect all actors present on stage. The qualitative results on this sequence are presented in Figure~\ref{fig_tracking_coahtr}. This example is particularly challenging  because of the fast displacements of the actors and the frequent occlusions between actors. Despite the challenging environment, our method provides very good results for the tracking of the six actors, where generic state-of-the-art tracking methods quickly drifted away from the target and were unstable both in presence of occlusion and fast movements \cite{Gandhi13,Migniot15}.
@@ -910,12 +901,12 @@ This implied that every piece of information was both identified by and accessib
 was published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
 
 The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URIs~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has the common query language SPARQL~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we used an approach called Linked Data Fragments, proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying}, to make the data widely
-available while preserving scalability.
+available while preserving scalability. Technical details can be found in a related publication \cite{Steiner15}.
 
-But the benefit of Linked Data does not only lie in standardization. As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information. In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions. While Linked Data is already widely used for museums or libraries,\footnote{
-See, \emph{e.g.}, \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}}
+But the benefit of Linked Data does not only lie in standardization. As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information. In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions. While Linked Data is already widely used for museums or libraries,\footnote{See, \emph{e.g.}, \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}}
 its use with video has emerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
-and as far as we can tell, has not yet been widely considered for live performance archives.
+and as far as we can tell, has not yet been widely considered for live performance archives. 
+
 
 
 %%%%%%%%%%%%%%%%
@@ -925,12 +916,7 @@ and as far as we can tell, has not yet been widely considered for live performan
 In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenarios of the archive, taking into consideration the potential needs of future users. A~particular effort was made to address specific audiences with pedagogical scenarios, culture mediation scenarios, but also research and amateur scenarios. Some of these scenarios were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenarios according to their interests. This prospective work was indeed central in the design of the continuous workflow in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularities of this project regarding researches in the digital heritage, \emph{i.e.}, to have considered the archive as a~living cultural object, even though the archive did not exist yet.
 
 \subsection{Quantitative and qualitative analysis}
-The massive aspect of the archive makes it difficult to apprehend. Both the nature of the archive, \emph{i.e.}, video as a~temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a~comprehensive and cognitively acceptable representation. Taking the project's title literally:
-%\emph{Spectacle en ligne(s)},
-\todo{anonymized (native language)}, \emph{i.e.},
-%\emph{Performance in line(s)},
-\todo{anonymized (translated)},
-the archive can be viewed as multiple lines of rehearsals. We imagined a~matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script or score over time.
+The massive aspect of the archive makes it difficult to apprehend. Both the nature of the archive, \emph{i.e.}, video as a~temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a~comprehensive and cognitively acceptable representation. Taking the project's title literally,  the archive can be viewed as multiple lines of rehearsals. We imagined a~matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script or score over time.
 
 %\todo{Remarque BE: illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
 %NS: malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre à mon avis.  RR: Can we show the matrices for both opera and theater ? The comparison is in itself interesting ! (and we can skip the ideal matrix)}
@@ -966,13 +952,13 @@ According to our usage scenarios analysis, several requirements were identified 
 Concerning archive visualization and browsing capabilities, the multiplicity of usage scenarios highlighted the fact that end users must interact with different kinds of media or content (video captions, scripts or scores, and annotations) in different ways. As a~result, components for displaying and/or interacting with these different kinds of content were firstly implemented and can be combined with each other to form adequate hypervideos that maximize the end-user's experience. Moreover, this hypervideo design approach---based on components combinations---fosters novel usages of the archive, as new components can be added and combined to older ones in order to fulfill new needs.
 
 \subsection{Fine-grained visualization and browsing}
-%According to identified recurrent needs due to the nature of the archive, which can be seen as a set of different versions of the same object (the play or the opera), fine-grained visualisation and browsing capacities were set up to perform what we call hereafter archive temporal and spatial zooms.
+%According to identified recurrent needs due to the nature of the archive, which can be seen as a set of different versions of the same object (the play or the opera), fine-grained visualisation and browsing capacities were set up to perform what we call hereafter archive temporal and spatial zooms. 
 
 For some selected scenes, we offer a~fine-grained visualization and browsing interface allowing to zoom both temporally and spatially through the archive by making use of the audio and video processing described in Section~\ref{sec:workflow}.  Using audio-to-script alignments, we offer options to navigate a~scene one line at a~time and one rehearsal at a~time. More precisely, hyperlinks are offered to move to the previous and next lines in any given rehearsal; or to move to the previous and next rehearsals in any given line; thus providing a~``temporal zoom lens'' to the archive.
 
 Because the source material was recorded from a~distance and with a~fixed lens, the archive presents a~general view of the stage as a~default framing. This has the advantage of never hiding anything from the audience. But one shortcoming is that the archive is not very pleasant to watch, especially on a~small screen. 
 
-To remedy this problem, we implemented a~``spatial zoom lens'' to make it possible to focus on the main actors in any given scene. Based on audio and video analysis, we generated alternative framings using methods described elsewhere~\cite{Gandhi14,Gandhi15}.  For example, during a~monologue, we automatically compute a~medium-shot of the speaker, and during a~dialogue, we compute a~two-shot that contains the speaker and his addressee (see details in Figure~\ref{fig_speaker}). This greatly improves the visibility of the main actors and renders it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
+To remedy this problem, we implemented a~``spatial zoom lens'' to make it possible to focus on the main actors in any given scene. Based on audio and video analysis, we generated alternative framings using methods described elsewhere~\cite{Gandhi14}.  For example, during a~monologue, we automatically compute a~medium-shot of the speaker, and during a~dialogue, we compute a~two-shot that contains the speaker and his addressee (see details in Figure~\ref{fig_speaker}). This greatly improves the visibility of the main actors and renders it possible to focus on their gestures and facial expressions, as opposed to the general view, which is more useful to appreciate the choreography of their movements on stage.
 
 
 \begin{figure*}[tp]
@@ -984,8 +970,8 @@ To remedy this problem, we implemented a~``spatial zoom lens'' to make it possib
 
 Both the spatial and the temporal zoom lenses were assembled into 
 an online  application using Web Components. A~demonstration video showcasing the application is available at
-%\url{http://spectacleenlignes.fr/hypervideo/}
-\url{https://youtu.be/GKmH8ucLgjo}
+\url{http://spectacleenlignes.fr/hypervideo/}
+%\url{https://youtu.be/GKmH8ucLgjo}
 and the implementation is  shared as open source. A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
 
 \begin{figure}[htb!]
@@ -1074,12 +1060,13 @@ better measure its impact and usefulness in the digital humanities.
 % conference papers do not normally have an appendix
 
 % use section* for acknowledgement
-\section*{Acknowledgment}
-\todo{The authors would like to thank...}
+\section*{Acknowledgments}
+%\todo{The authors would like to thank...}
 % \todo{Balance reference columns}
 
-This work was supported by Agence Nationale de la Recherche (ANR) and Region Rhone Alpes. All images and videos are reproduced courtesy of C\'elestins, Th\'e\^atre de Lyon and Festival d'Aix-enProvence.  Special thanks to Claudia Stavisky, 
-Auxane Dutronc, J\'erome Bruneti\`ere, Joelle Lemarec  and the cast and crew of "Cat on a hot tin roof" and "Elena". 
+This work was supported by Agence Nationale de la Recherche (ANR) and Region Rhone Alpes. All images and videos are reproduced courtesy of C\'elestins, Th\'e\^atre de Lyon and Festival d'Aix-en-Provence.  Special thanks to Claudia Stavinsky, 
+Auxane Dutronc, J\'erome Bruneti\`ere, Pierre Gandar, Pauline Lambert, Joelle Le Marec  and the entire cast and crew 
+of "Cat on a hot tin roof" and "Elena". 
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
