@@ -77,7 +77,7 @@
 %\usepackage[latin1]{inputenc} %% For ISO-latin1 chars
                                 %% (accented letters).
 \usepackage[hyphens]{url}
-\usepackage[pdftex,urlcolor=black,colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
+%\usepackage[pdftex,urlcolor=black,colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
 \def\sectionautorefname{Section}
 \def\subsectionautorefname{Subsection}
 
@@ -538,11 +538,9 @@ allowing for navigation between the video and other hypermedia elements.
 %or display still images from hyperlinked videos
 %next to the clip that is currently playing''}~\cite{economist2006hypervideo}.
 %\todo{PA: je trouve cette définition trop longue, trop détaillée, et franchement, dans un article scientifique, je pense qu'on serait aussi crédible avec une définition de nous qu'avec une définition de 'The Economist'. Je serai pour simplement reprendre l'idée de la phrase qui suit}
-In standard literature, hypervideo is considered a~logical consequence
-of the related concept of \emph{hypertext}~\cite{bernerslee1990hypertext},
-In contrast to hypertext, hypervideo necessarily includes a~time component,
-as content changes over time. Therefore hypervideo has specific technical and aesthetic requirements, 
-such as the need for video segmentation into scenes and  objects. The opportunities for feature-rich 
+In standard literature, hypervideo is considered a~logical consequence of the related concept of \emph{hypertext}, with the addition of 
+a~time component, as video content changes over time. Therefore hypervideo has specific technical and aesthetic requirements, 
+such as the need for video segmentation into scenes and  objects \cite{Auffret99}. The opportunities for feature-rich 
 semantic hypervideos are endless, only limited by feasibility and ease of creation. 
 
 %In this paper, we share our approach to affordably and practically document
@@ -890,13 +888,13 @@ Figure~\ref{fig:searchengine} displays the search interface for theater, divided
 \subsection{Linked Open Data compatibility}
 In order to foster and ease multiple uses of the corpus,
 it was important to make the collected information as accessible as possible.
-For this purpose, we chose to comply with the principles of Linked Open Data~\cite{bernerslee2006linkeddata}.
+For this purpose, we chose to comply with the principles of Linked Open Data~\cite{Bizer09}.
 This implied that every piece of information was both identified by and accessible at a~given URI, and that it 
 was published using the RDF data model~\cite{cyganiak2014rdf11concepts}.
 
 The Cinélab data model maps nicely into RDF, thanks to additional standards such as Media Fragments URIs~\cite{troncy2012mediafragments} that are used to precisely anchor annotations to video temporal fragments. Furthermore, Linked Data has the common query language SPARQL~\cite{prudhommeaux2008sparql}, so building new services on top of our corpus can be achieved with relative ease by reusing standard components. Finally, we used an approach called Linked Data Fragments, proposed by Verborgh \emph{et al.}~\cite{verborgh2014querying}, to make the data widely available while preserving scalability. Technical details can be found in a related publication \cite{Steiner15}.
 
-But the benefit of Linked Data does not only lie in standardization. As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information. In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions. While Linked Data is already widely used for museums or libraries,\footnote{See, \emph{e.g.}, \url{http://data.europeana.eu/} or \url{http://data.bnf.fr/}}
+But the benefit of Linked Data does not only lie in standardization. As its name implies, the key feature of this approach is to allow linking data across different sources on the Web, in order to combine it into otherwise inaccessible information. In the context of Digital Heritage, this notion is central, as data is often scattered in multiple institutions. While Linked Data is already widely used for museums or libraries,\footnote{See, \emph{e.g.}, \url{http://data.europeana.eu} or \url{http://data.bnf.fr}}
 its use with video has emerged more recently~\cite{vandeursen2012mediafragmentannotations,steiner2014webvtt},
 and as far as we can tell, has not yet been widely considered for live performance archives. 
 
@@ -909,7 +907,7 @@ and as far as we can tell, has not yet been widely considered for live performan
 In parallel to the design and implementation of the previously described workflow, the project anticipated several usage scenarios of the archive, taking into consideration the potential needs of future users. A~particular effort was made to address specific audiences with pedagogical scenarios, culture mediation scenarios, but also research and amateur scenarios. Some of these scenarios were implemented into demonstrators, others into mock-ups, allowing the partners of the project to freely explore prospective scenarios according to their interests. This prospective work was indeed central in the design of the continuous workflow in order to articulate the newly constructed archive with existing or prospective usages. This approach is one of the particularities of this project regarding researches in the digital heritage, \emph{i.e.}, to have considered the archive as a~living cultural object, even though the archive did not exist yet.
 
 \subsection{Quantitative and qualitative analysis}
-The massive aspect of the archive makes it difficult to apprehend. Both the nature of the archive, \emph{i.e.}, video as a~temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a~comprehensive and cognitively acceptable representation. Taking the project's title literally \footnote{Spectacle-en-ligne(s) can be translated loosely to "online performances" or "lines of performance"},  the archive can be viewed as multiple lines of rehearsals. We imagined a~matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script or score over time.
+The massive aspect of the archive makes it difficult to apprehend. Both the nature of the archive, \emph{i.e.}, video as a~temporal object\cite{stiegler98}  and its total duration (419 hours for 170 video files) as well as the amount of annotations (10,498) demanded a~comprehensive and cognitively acceptable representation. Taking the project's title literally \footnote{Spectacle-en-ligne(s) can be translated loosely to both "online performances" and "lines of performance."},  the archive can be viewed as multiple lines of rehearsals. We imagined a~matrix where the columns are pages in the play-script  (or the musical score) and the rows are days of rehearsal. The result is the distribution of the rehearsals according to the script or score over time.
 
 %\todo{Remarque BE: illustration matrice sur théâtre plutôt qu'opéra (Elena), surtout si dans un futur proche il faut se concentrer sur le théâtre pour gagner de la place.. 
 %NS: malheureusement, cette matrice est beaucoup plus détaillée et pertinente. Dans un sens, ça n'est pas très grave d'alterner opéra et théatre �  mon avis.  RR: Can we show the matrices for both opera and theater ? The comparison is in itself interesting ! (and we can skip the ideal matrix)}
@@ -961,13 +959,12 @@ an online  application using Web Components. A~demonstration video showcasing th
 \url{http://spectacleenlignes.fr/hypervideo/}
 %\url{https://youtu.be/GKmH8ucLgjo}
 and the implementation is  shared as open source. A~screenshot of the application can be seen in Figure~\ref{fig:screenshot}.
-
+ 
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=1.\linewidth]{screenshot}
   \caption{Generated hypervideo including subtitles, cue selectors, timeline, and connected play script
-    showing a~rehearsal scene from day~40. A~demonstration video showcasing the application is available at
-\url{https://youtu.be/GKmH8ucLgjo}.}
+    showing a~rehearsal scene from day~40.}
   \label{fig:screenshot}
 \end{figure}
 
